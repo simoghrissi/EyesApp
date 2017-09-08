@@ -15,6 +15,8 @@
 		24AE74521F4B5C1D007D2719 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AE74501F4B5C1D007D2719 /* Main.storyboard */; };
 		24AE74541F4B5C1D007D2719 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AE74531F4B5C1D007D2719 /* Assets.xcassets */; };
 		24AE74571F4B5C1D007D2719 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AE74551F4B5C1D007D2719 /* LaunchScreen.storyboard */; };
+		24E1DFD31F617BF10003AE9A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24E1DFD11F617BF10003AE9A /* Model.xcdatamodeld */; };
+		24E1DFD51F6193D40003AE9A /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1DFD41F6193D40003AE9A /* DBManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		24AE74531F4B5C1D007D2719 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24AE74561F4B5C1D007D2719 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24AE74581F4B5C1D007D2719 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24E1DFD21F617BF10003AE9A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		24E1DFD41F6193D40003AE9A /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				24AE74581F4B5C1D007D2719 /* Info.plist */,
 				246865CB1F5C169200EA8F53 /* EyesTableViewCell.swift */,
 				246865CD1F5C17F500EA8F53 /* PostEyes.swift */,
+				24E1DFD11F617BF10003AE9A /* Model.xcdatamodeld */,
+				24E1DFD41F6193D40003AE9A /* DBManager.swift */,
 			);
 			path = EyesApp;
 			sourceTree = "<group>";
@@ -151,6 +157,8 @@
 				24AE744F1F4B5C1D007D2719 /* ViewController.swift in Sources */,
 				24AE744D1F4B5C1D007D2719 /* AppDelegate.swift in Sources */,
 				246865CC1F5C169200EA8F53 /* EyesTableViewCell.swift in Sources */,
+				24E1DFD31F617BF10003AE9A /* Model.xcdatamodeld in Sources */,
+				24E1DFD51F6193D40003AE9A /* DBManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +287,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = HHKSC9S7CP;
 				INFOPLIST_FILE = EyesApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.EyesApp.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -296,7 +304,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = HHKSC9S7CP;
 				INFOPLIST_FILE = EyesApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.EyesApp.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -327,6 +335,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		24E1DFD11F617BF10003AE9A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				24E1DFD21F617BF10003AE9A /* Model.xcdatamodel */,
+			);
+			currentVersion = 24E1DFD21F617BF10003AE9A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 24AE74411F4B5C1D007D2719 /* Project object */;
 }

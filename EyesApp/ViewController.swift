@@ -12,15 +12,13 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
     @IBOutlet weak var timeLine: UITableView!
  
-//    @IBOutlet weak var descriptionTm: UILabel!
-//    @IBOutlet weak var postImageTm: UIImageView!
-//    @IBOutlet weak var nameProfilTm: UILabel!
-//    @IBOutlet weak var imageProfilTm: UIImageView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     var posts = [PostEyes]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        posts = DBManager.getPostsFromDatas()
         timeLine.reloadData()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -78,16 +76,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return cell
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let destination  = segue.destination as?  CameraViewController{
-//            destination.delegate = self
-//        }
-//    }
     func addDataToTm(imageProfil: UIImage?, nameProfil: String, postImage: UIImage?, description: String) {
-//        imageProfilTm.image = imageProfil
-//        nameProfilTm.text = nameProfil
-//        postImageTm.image = postImage
-//        descriptionTm.text = description
         let postEyes = PostEyes(imageProfil: imageProfil, nameProfil: nameProfil, postImage: postImage, description: description)
         posts.append(postEyes!)
         

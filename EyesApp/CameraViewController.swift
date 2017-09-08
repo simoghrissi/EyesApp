@@ -24,6 +24,8 @@ class CameraViewController: UIViewController,UINavigationControllerDelegate, UII
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
+        showCamera()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -33,16 +35,19 @@ class CameraViewController: UIViewController,UINavigationControllerDelegate, UII
     }
     
 
+   func showCamera(){
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                imagePicker.allowsEditing = false
+                imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+                imagePicker.cameraCaptureMode = .photo
+                imagePicker.modalPresentationStyle = .fullScreen
+                present(imagePicker,animated: true,completion: nil)
+            } else {
+                noCamera()
+            }
+    }
     @IBAction func takePhoto(_ sender: Any) {
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            imagePicker.allowsEditing = false
-            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
-            imagePicker.cameraCaptureMode = .photo
-            imagePicker.modalPresentationStyle = .fullScreen
-            present(imagePicker,animated: true,completion: nil)
-        } else {
-            noCamera()
-        }
+
     }
     func noCamera(){
         let alertVC = UIAlertController(
@@ -80,6 +85,7 @@ class CameraViewController: UIViewController,UINavigationControllerDelegate, UII
     @IBAction func chosePost(_ sender: Any) {
         if delegate != nil{
             delegate?.addDataToTm(imageProfil: nil, nameProfil: "simo", postImage: imageTaken.image, description: self.textPost.text ?? "")
+            DBManager.putPostInData(imageProfil: nil, nameProfil: "simo", postImage: imageTaken.image, description: self.textPost.text ?? "")
         }
 
         removePopup()
@@ -87,20 +93,18 @@ class CameraViewController: UIViewController,UINavigationControllerDelegate, UII
     @IBAction func closePopup(_ sender: Any) {
         removePopup()
     }
-    
-    
-    
     func showPopup()
     {
         self.view.addSubview(self.postPopup)
-        self.postPopup.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
-        self.postPopup.alpha = 0.0
-        UIView.animate(withDuration: 0.25, animations: {
-            self.postPopup.alpha = 1.0
-            self.postPopup.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-            self.postPopup.center = self.view.center
+        self.view.backgroundColor = UIColor.lightGray
+        self.postPopup.layer.cornerRadius = 5
+        UIView.animate(withDuration: 0.33, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 10, options: UIViewAnimationOptions(rawValue: 0), animations: {
+            self.postPopup.center  = self.view.center
+        }, completion: { (completed) in
+            self.imagePopup.image = self.imageTaken.image
+            
         })
-        self.imagePopup.image = imageTaken.image
+
            }
     
     func removePopup()

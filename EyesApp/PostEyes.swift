@@ -11,31 +11,34 @@ import UIKit
 class PostEyes{
     
 
-    var imageProfil: UIImage?
-    var nameProfil: String
-    var postImage: UIImage?
-    var description: String
+    var imageProfil: UIImage? = nil
+    var nameProfil: String = ""
+    var postImage: UIImage? = nil
+    var description: String = ""
     
+    init() {}
     init?(imageProfil: UIImage?, nameProfil: String, postImage: UIImage?,description:String) {
 
                // Initialize stored properties.
         self.nameProfil = nameProfil
         self.description = description
-        if imageProfil == nil{
-            self.imageProfil = UIImage(named: "defaultImage")
+        
+        if imageProfil != nil{
+          self.imageProfil = imageProfil
         }else{
-            self.imageProfil = imageProfil
-
+         self.imageProfil =  UIImage(named: "defaultImage")
         }
-        // TODO traité le cas ou le post est null
-        if postImage == nil{
-            self.postImage = UIImage(named: "defaultImage")
-        }else{
+        
+        if postImage != nil{
             self.postImage = postImage
-
+        }else{
+            self.postImage =  UIImage(named: "defaultImage")
         }
 
         
-    }
+        
+        }
+
+    
     
 }
