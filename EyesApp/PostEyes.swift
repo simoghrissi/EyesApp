@@ -18,15 +18,15 @@ class PostEyes{
     
     init() {}
     init?(imageProfil: UIImage?, nameProfil: String, postImage: UIImage?,description:String) {
-
-               // Initialize stored properties.
+        
+        // Initialize stored properties.
         self.nameProfil = nameProfil
         self.description = description
         
         if imageProfil != nil{
-          self.imageProfil = imageProfil
+            self.imageProfil = imageProfil
         }else{
-         self.imageProfil =  UIImage(named: "defaultImage")
+            self.imageProfil =  UIImage(named: "defaultImage")
         }
         
         if postImage != nil{
@@ -34,10 +34,10 @@ class PostEyes{
         }else{
             self.postImage =  UIImage(named: "defaultImage")
         }
-
         
         
-        }
+        
+    }
 
     
     

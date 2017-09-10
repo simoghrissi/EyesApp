@@ -62,14 +62,12 @@ class DBManager {
         newPost.setValue(nameProfil, forKey: "userName")
         newPost.setValue(description, forKey: "textPost")
 
-       // let imgPost = UIImage(named: (postImage?.description)!)
         if let imgPost = postImage {
             let imgData = UIImageJPEGRepresentation(imgPost, 1)
             newPost.setValue(imgData, forKey: "imagePost")
 
         }
     
-       // let imgProfil = UIImage(named: (imageProfil?.description)!)
         if let imgProfil = imageProfil{
             let imgDataProfil = UIImageJPEGRepresentation(imgProfil, 1)
             newPost.setValue(imgDataProfil, forKey: "imageProfil")

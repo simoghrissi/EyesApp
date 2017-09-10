@@ -72,7 +72,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             cell.nameProfilCell.text = post.nameProfil
             cell.postImageCell.image = post.postImage
             cell.descriptionCell.text = post.description
-        
+        print("voila : \(String(describing: cell.descriptionCell.text))")
         return cell
     }
     

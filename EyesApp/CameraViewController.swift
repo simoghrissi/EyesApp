@@ -12,7 +12,7 @@ protocol loadDataDelegate {
     
 func addDataToTm(imageProfil:UIImage?,nameProfil:String,postImage:UIImage?,description:String)
 }
-class CameraViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class CameraViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITextFieldDelegate {
 
     @IBOutlet var postPopup: UIView!
     @IBOutlet weak var imagePopup: UIImageView!
@@ -25,15 +25,29 @@ class CameraViewController: UIViewController,UINavigationControllerDelegate, UII
         super.viewDidLoad()
         imagePicker.delegate = self
         showCamera()
-        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // Start Editing The Text Field
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        movePopup(postPopup, moveDistance: -50, up: true)
+    }
+    
+    // Finish Editing The Text Field
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        movePopup(postPopup, moveDistance: -50, up: false)
+    }
+    
+    // Hide the keyboard when the return key pressed
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
    func showCamera(){
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -122,6 +136,21 @@ class CameraViewController: UIViewController,UINavigationControllerDelegate, UII
             }
         })
     }
+    
+    
+    
+    // Move the text field in a pretty animation!
+    func movePopup(_ view: UIView, moveDistance: Int, up: Bool) {
+        let moveDuration = 0.3
+        let movement: CGFloat = CGFloat(up ? moveDistance : -moveDistance)
+                UIView.beginAnimations("popup", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(moveDuration)
+        self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+        UIView.commitAnimations()
+    }
+
+    
     /*
     // MARK: - Navigation
 

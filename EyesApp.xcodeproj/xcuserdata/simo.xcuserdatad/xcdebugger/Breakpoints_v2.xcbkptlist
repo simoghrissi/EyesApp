@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EyesApp/CameraViewController.swift"
-            timestampString = "526549222.45201"
+            timestampString = "526563111.721969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "chosePost(_:)"
             landmarkType = "7">
          </BreakpointContent>
