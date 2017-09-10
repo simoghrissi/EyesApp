@@ -42,6 +42,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             cameraVC?.delegate = self
             self.navigationController?.pushViewController(cameraVC!, animated: true)
             break
+        case 2:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let mapsVC = storyboard.instantiateViewController(withIdentifier: "MapsViewController")as? MapsViewController
+            self.navigationController?.pushViewController(mapsVC!, animated: true)
+            break
         default:
             break
         }

@@ -39,10 +39,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gDj-SU-eC9">
-                                <rect key="frame" x="127" y="79" width="121" height="29"/>
+                                <rect key="frame" x="96.5" y="79" width="182" height="29"/>
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
+                                    <segment title="maps"/>
                                 </segments>
                                 <connections>
                                     <action selector="SegmentedIndexChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="K1X-Fv-y5L"/>
@@ -221,6 +222,37 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="991" y="137"/>
+        </scene>
+        <!--Maps View Controller-->
+        <scene sceneID="6qj-dv-2TJ">
+            <objects>
+                <viewController storyboardIdentifier="MapsViewController" id="15e-VC-2lV" customClass="MapsViewController" customModule="EyesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2co-cs-E8M"/>
+                        <viewControllerLayoutGuide type="bottom" id="UCV-sa-keh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Pn-gE-bOp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="a4T-yq-IxN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a4T-yq-IxN" firstAttribute="leading" secondItem="7Pn-gE-bOp" secondAttribute="leadingMargin" constant="-16" id="9tx-xP-Qg3"/>
+                            <constraint firstItem="a4T-yq-IxN" firstAttribute="centerX" secondItem="7Pn-gE-bOp" secondAttribute="centerX" id="JTS-vg-wmu"/>
+                            <constraint firstItem="a4T-yq-IxN" firstAttribute="top" secondItem="2co-cs-E8M" secondAttribute="bottom" constant="-20" id="Rbu-Ng-iWE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a4T-yq-IxN" secondAttribute="trailing" constant="-16" id="RfZ-8l-pJY"/>
+                            <constraint firstItem="UCV-sa-keh" firstAttribute="top" secondItem="a4T-yq-IxN" secondAttribute="bottom" id="c1j-e6-d4b"/>
+                            <constraint firstItem="a4T-yq-IxN" firstAttribute="centerY" secondItem="7Pn-gE-bOp" secondAttribute="centerY" id="vur-4W-5K7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aMh-pJ-BJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="920.68965517241384"/>
         </scene>
     </scenes>
 </document>
