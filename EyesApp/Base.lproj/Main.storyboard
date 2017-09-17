@@ -20,6 +20,7 @@
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dv3-xa-awX"/>
+                        <segue destination="15e-VC-2lV" kind="push" id="30i-m2-mfb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="klS-0p-6Dh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -241,14 +242,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="a4T-yq-IxN" firstAttribute="leading" secondItem="7Pn-gE-bOp" secondAttribute="leadingMargin" constant="-16" id="9tx-xP-Qg3"/>
-                            <constraint firstItem="a4T-yq-IxN" firstAttribute="centerX" secondItem="7Pn-gE-bOp" secondAttribute="centerX" id="JTS-vg-wmu"/>
-                            <constraint firstItem="a4T-yq-IxN" firstAttribute="top" secondItem="2co-cs-E8M" secondAttribute="bottom" constant="-20" id="Rbu-Ng-iWE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="a4T-yq-IxN" secondAttribute="trailing" constant="-16" id="RfZ-8l-pJY"/>
-                            <constraint firstItem="UCV-sa-keh" firstAttribute="top" secondItem="a4T-yq-IxN" secondAttribute="bottom" id="c1j-e6-d4b"/>
-                            <constraint firstItem="a4T-yq-IxN" firstAttribute="centerY" secondItem="7Pn-gE-bOp" secondAttribute="centerY" id="vur-4W-5K7"/>
+                            <constraint firstAttribute="trailing" secondItem="a4T-yq-IxN" secondAttribute="trailing" id="2YN-OV-9kV"/>
+                            <constraint firstItem="UCV-sa-keh" firstAttribute="top" secondItem="a4T-yq-IxN" secondAttribute="bottom" id="G19-s8-bpB"/>
+                            <constraint firstItem="a4T-yq-IxN" firstAttribute="centerY" secondItem="7Pn-gE-bOp" secondAttribute="centerY" id="N27-wz-xh1"/>
+                            <constraint firstItem="a4T-yq-IxN" firstAttribute="centerX" secondItem="7Pn-gE-bOp" secondAttribute="centerX" id="cRI-dF-QQT"/>
+                            <constraint firstAttribute="leading" secondItem="a4T-yq-IxN" secondAttribute="leading" id="f87-7b-3C1"/>
+                            <constraint firstItem="a4T-yq-IxN" firstAttribute="top" secondItem="7Pn-gE-bOp" secondAttribute="topMargin" id="gD5-pB-GE7"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="xM0-Mk-kO2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="WdX-Su-YbK">
+                            <connections>
+                                <action selector="showSearchBar:" destination="15e-VC-2lV" id="Tej-gu-a5o"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="map" destination="a4T-yq-IxN" id="rgF-NL-bJP"/>
+                        <outlet property="search" destination="WdX-Su-YbK" id="R3m-c9-TkL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMh-pJ-BJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
