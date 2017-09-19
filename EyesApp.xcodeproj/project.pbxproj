@@ -18,6 +18,7 @@
 		24AE74571F4B5C1D007D2719 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AE74551F4B5C1D007D2719 /* LaunchScreen.storyboard */; };
 		24E1DFD31F617BF10003AE9A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24E1DFD11F617BF10003AE9A /* Model.xcdatamodeld */; };
 		24E1DFD51F6193D40003AE9A /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1DFD41F6193D40003AE9A /* DBManager.swift */; };
+		24FD10A61F71B45500AA1EC3 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD10A51F71B45500AA1EC3 /* LocationSearchTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		24AE74581F4B5C1D007D2719 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24E1DFD21F617BF10003AE9A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		24E1DFD41F6193D40003AE9A /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		24FD10A51F71B45500AA1EC3 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				24E1DFD11F617BF10003AE9A /* Model.xcdatamodeld */,
 				24E1DFD41F6193D40003AE9A /* DBManager.swift */,
 				242480471F65C43D00F348F5 /* MapsViewController.swift */,
+				24FD10A51F71B45500AA1EC3 /* LocationSearchTable.swift */,
 			);
 			path = EyesApp;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				246865CE1F5C17F500EA8F53 /* PostEyes.swift in Sources */,
 				240C7DB81F5DD5BA00873982 /* CameraViewController.swift in Sources */,
 				24AE744F1F4B5C1D007D2719 /* ViewController.swift in Sources */,
+				24FD10A61F71B45500AA1EC3 /* LocationSearchTable.swift in Sources */,
 				242480481F65C43D00F348F5 /* MapsViewController.swift in Sources */,
 				24AE744D1F4B5C1D007D2719 /* AppDelegate.swift in Sources */,
 				246865CC1F5C169200EA8F53 /* EyesTableViewCell.swift in Sources */,
