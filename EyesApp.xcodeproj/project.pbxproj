@@ -30,7 +30,7 @@
 		242480471F65C43D00F348F5 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapsViewController.swift; path = EyesApp/MapsViewController.swift; sourceTree = "<group>"; };
 		24412D1A1F7829C800D9E2C4 /* ImagesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagesCollectionViewController.swift; path = EyesApp/ImagesCollectionViewController.swift; sourceTree = "<group>"; };
 		24412D1C1F782A9B00D9E2C4 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCollectionViewCell.swift; path = EyesApp/ImageCollectionViewCell.swift; sourceTree = "<group>"; };
-		246865CB1F5C169200EA8F53 /* EyesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyesTableViewCell.swift; sourceTree = "<group>"; };
+		246865CB1F5C169200EA8F53 /* EyesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EyesTableViewCell.swift; path = EyesApp/EyesTableViewCell.swift; sourceTree = "<group>"; };
 		246865CD1F5C17F500EA8F53 /* PostEyes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostEyes.swift; path = EyesApp/PostEyes.swift; sourceTree = "<group>"; };
 		24AE74491F4B5C1D007D2719 /* EyesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AE744C1F4B5C1D007D2719 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +58,7 @@
 		241AFC731F77E218002EF78C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				246865CB1F5C169200EA8F53 /* EyesTableViewCell.swift */,
 				24412D1A1F7829C800D9E2C4 /* ImagesCollectionViewController.swift */,
 				240C7DB71F5DD5BA00873982 /* CameraViewController.swift */,
 				24AE744E1F4B5C1D007D2719 /* ViewController.swift */,
@@ -103,7 +104,6 @@
 				24AE74531F4B5C1D007D2719 /* Assets.xcassets */,
 				24AE74551F4B5C1D007D2719 /* LaunchScreen.storyboard */,
 				24AE74581F4B5C1D007D2719 /* Info.plist */,
-				246865CB1F5C169200EA8F53 /* EyesTableViewCell.swift */,
 				24E1DFD11F617BF10003AE9A /* Model.xcdatamodeld */,
 				24E1DFD41F6193D40003AE9A /* DBManager.swift */,
 			);

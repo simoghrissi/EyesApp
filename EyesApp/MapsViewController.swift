@@ -116,11 +116,11 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UISearchBar
     }
     func getDirections(){
     
-            //DBManager.putPoiInData(name: "simo", type: "waaw", otherInf: "bouuuh")
-//        guard let selectedPin = selectedPin else { return }
-//        let mapItem = MKMapItem(placemark: selectedPin)
-//        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
-//        mapItem.openInMaps(launchOptions: launchOptions)
+            DBManager.putPoiInData(name: "simo", type: "waaw", otherInf: "bouuuh")
+        guard let selectedPin = selectedPin else { return }
+        let mapItem = MKMapItem(placemark: selectedPin)
+        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+        mapItem.openInMaps(launchOptions: launchOptions)
     }
     
     /*
