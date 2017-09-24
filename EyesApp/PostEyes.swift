@@ -12,9 +12,9 @@ class PostEyes{
     
 
     var imageProfil: UIImage? = nil
-    var nameProfil: String = ""
+    var nameProfil: String? = ""
     var postImage: UIImage? = nil
-    var description: String = ""
+    var description: String? = ""
     
     init() {}
     init?(imageProfil: UIImage?, nameProfil: String, postImage: UIImage?,description:String) {
