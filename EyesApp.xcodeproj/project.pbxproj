@@ -10,6 +10,8 @@
 		240C7DB81F5DD5BA00873982 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240C7DB71F5DD5BA00873982 /* CameraViewController.swift */; };
 		241AFC761F77E26D002EF78C /* PoiEyes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241AFC751F77E26D002EF78C /* PoiEyes.swift */; };
 		242480481F65C43D00F348F5 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242480471F65C43D00F348F5 /* MapsViewController.swift */; };
+		24412D1B1F7829C800D9E2C4 /* ImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24412D1A1F7829C800D9E2C4 /* ImagesCollectionViewController.swift */; };
+		24412D1D1F782A9B00D9E2C4 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24412D1C1F782A9B00D9E2C4 /* ImageCollectionViewCell.swift */; };
 		246865CC1F5C169200EA8F53 /* EyesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246865CB1F5C169200EA8F53 /* EyesTableViewCell.swift */; };
 		246865CE1F5C17F500EA8F53 /* PostEyes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246865CD1F5C17F500EA8F53 /* PostEyes.swift */; };
 		24AE744D1F4B5C1D007D2719 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE744C1F4B5C1D007D2719 /* AppDelegate.swift */; };
@@ -26,6 +28,8 @@
 		240C7DB71F5DD5BA00873982 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = EyesApp/CameraViewController.swift; sourceTree = "<group>"; };
 		241AFC751F77E26D002EF78C /* PoiEyes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoiEyes.swift; sourceTree = "<group>"; };
 		242480471F65C43D00F348F5 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapsViewController.swift; path = EyesApp/MapsViewController.swift; sourceTree = "<group>"; };
+		24412D1A1F7829C800D9E2C4 /* ImagesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagesCollectionViewController.swift; path = EyesApp/ImagesCollectionViewController.swift; sourceTree = "<group>"; };
+		24412D1C1F782A9B00D9E2C4 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCollectionViewCell.swift; path = EyesApp/ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		246865CB1F5C169200EA8F53 /* EyesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EyesTableViewCell.swift; sourceTree = "<group>"; };
 		246865CD1F5C17F500EA8F53 /* PostEyes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostEyes.swift; path = EyesApp/PostEyes.swift; sourceTree = "<group>"; };
 		24AE74491F4B5C1D007D2719 /* EyesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,10 +58,12 @@
 		241AFC731F77E218002EF78C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				24412D1A1F7829C800D9E2C4 /* ImagesCollectionViewController.swift */,
 				240C7DB71F5DD5BA00873982 /* CameraViewController.swift */,
 				24AE744E1F4B5C1D007D2719 /* ViewController.swift */,
 				242480471F65C43D00F348F5 /* MapsViewController.swift */,
 				24FD10A51F71B45500AA1EC3 /* LocationSearchTable.swift */,
+				24412D1C1F782A9B00D9E2C4 /* ImageCollectionViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -183,6 +189,8 @@
 				24AE744F1F4B5C1D007D2719 /* ViewController.swift in Sources */,
 				24FD10A61F71B45500AA1EC3 /* LocationSearchTable.swift in Sources */,
 				242480481F65C43D00F348F5 /* MapsViewController.swift in Sources */,
+				24412D1D1F782A9B00D9E2C4 /* ImageCollectionViewCell.swift in Sources */,
+				24412D1B1F7829C800D9E2C4 /* ImagesCollectionViewController.swift in Sources */,
 				24AE744D1F4B5C1D007D2719 /* AppDelegate.swift in Sources */,
 				246865CC1F5C169200EA8F53 /* EyesTableViewCell.swift in Sources */,
 				24E1DFD31F617BF10003AE9A /* Model.xcdatamodeld in Sources */,

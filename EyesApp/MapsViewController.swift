@@ -105,13 +105,18 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UISearchBar
         let smallSquare = CGSize(width: 30, height: 30)
         let button = UIButton(frame: CGRect(origin: CGPoint.zero, size: smallSquare))
         button.setBackgroundImage(UIImage(named: "defaultImage"), for: UIControlState())
-        button.addTarget(self, action: #selector(MapsViewController.getDirections), for: .touchUpInside)
+        button.addTarget(self, action: #selector(MapsViewController.presentCollectionImageView), for: .touchUpInside)
         pinView?.leftCalloutAccessoryView = button
         
         return pinView
     }
+    func presentCollectionImageView(){
+        let imageCollectionVc = storyboard?.instantiateViewController(withIdentifier: "ImageCollectionView") as? ImagesCollectionViewController
+        self.navigationController?.pushViewController(imageCollectionVc!, animated: true)
+    }
     func getDirections(){
-        DBManager.putPoiInData(name: "simo", type: "waaw", otherInf: "bouuuh")
+    
+            //DBManager.putPoiInData(name: "simo", type: "waaw", otherInf: "bouuuh")
 //        guard let selectedPin = selectedPin else { return }
 //        let mapItem = MKMapItem(placemark: selectedPin)
 //        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
