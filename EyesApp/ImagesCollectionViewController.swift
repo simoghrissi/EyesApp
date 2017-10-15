@@ -21,6 +21,7 @@ class ImagesCollectionViewController: UIViewController,UICollectionViewDataSourc
         // Register cell classes
        // self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
+        self.title = "photos"
         // Do any additional setup after loading the view.
     }
 

@@ -14,7 +14,6 @@ protocol HandleMapSearch: class {
 }
 class MapsViewController: UIViewController,CLLocationManagerDelegate,UISearchBarDelegate,MKMapViewDelegate,HandleMapSearch {
    
-    @IBOutlet weak var search: UIBarButtonItem!
     @IBOutlet weak var map: MKMapView!
     var searchController:UISearchController!
     var annotation:MKAnnotation!
@@ -34,17 +33,14 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UISearchBar
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         map.delegate = self
-        
-        
-        
+        searchPoi()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func showSearchBar(_ sender: Any) {
+    func searchPoi(){
         let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
         searchController = UISearchController(searchResultsController: locationSearchTable)
         searchController.searchResultsUpdater = locationSearchTable
@@ -56,8 +52,8 @@ class MapsViewController: UIViewController,CLLocationManagerDelegate,UISearchBar
         definesPresentationContext = true
         locationSearchTable.mapView = map
         locationSearchTable.handleMapSearchDelegate = self
-        present(searchController, animated: true, completion: nil)
     }
+   
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
         let location = locations[0]

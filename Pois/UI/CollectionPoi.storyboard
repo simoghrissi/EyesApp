@@ -12,7 +12,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Images Collection View Controller-->
         <scene sceneID="e07-yB-clh">
             <objects>
                 <viewController storyboardIdentifier="ImageCollectionView" id="pwo-Te-XUH" customClass="ImagesCollectionViewController" customModule="EyesApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,24 +66,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="foA-Zw-5aS">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="mFV-dq-DH5"/>
-                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V02-tf-QVJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="434" y="535"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Suggestion Table View-->
         <scene sceneID="N3X-W5-ZzD">
             <objects>
-                <tableViewController id="Prh-nH-4zL" sceneMemberID="viewController">
+                <tableViewController id="Prh-nH-4zL" customClass="SuggestionTableView" customModule="EyesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gdZ-Se-Ngh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KnE-Yq-Ulh">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KnE-Yq-Ulh" customClass="SuggestTableViewCell" customModule="EyesApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KnE-Yq-Ulh" id="I2H-to-Rye">
@@ -102,6 +99,9 @@
                                         <constraint firstItem="L7C-19-3ho" firstAttribute="top" secondItem="I2H-to-Rye" secondAttribute="topMargin" constant="3" id="wCw-RI-M32"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="suggestionLabel" destination="L7C-19-3ho" id="rWn-IE-pc1"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -112,7 +112,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UtA-FM-R5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1864" y="835"/>
+            <point key="canvasLocation" x="1273" y="535"/>
         </scene>
     </scenes>
 </document>
