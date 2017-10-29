@@ -21,5 +21,8 @@ class SuggestTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    func configCell(text:String) {
+        self.suggestionLabel.text = text
+    }
 
 }

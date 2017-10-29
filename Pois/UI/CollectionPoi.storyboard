@@ -12,7 +12,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Images Collection View Controller-->
+        <!--Title-->
         <scene sceneID="e07-yB-clh">
             <objects>
                 <viewController storyboardIdentifier="ImageCollectionView" id="pwo-Te-XUH" customClass="ImagesCollectionViewController" customModule="EyesApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,22 +66,46 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="4lQ-uc-Fgg">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="5eY-Re-yGl">
+                            <connections>
+                                <action selector="show:" destination="pwo-Te-XUH" id="gfn-7s-Y4f"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="6mK-2y-eJ8" id="2M5-Lq-Ged"/>
+                        <outlet property="searchItem" destination="5eY-Re-yGl" id="biW-T7-zBE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V02-tf-QVJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="6mK-2y-eJ8">
+                    <connections>
+                        <outlet property="delegate" destination="pwo-Te-XUH" id="HyA-n1-M5u"/>
+                        <outlet property="searchContentsController" destination="pwo-Te-XUH" id="WrQ-WU-FfV"/>
+                        <outlet property="searchResultsDataSource" destination="pwo-Te-XUH" id="X6O-8x-lBf"/>
+                        <outlet property="searchResultsDelegate" destination="pwo-Te-XUH" id="KNV-n6-Ae9"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="434" y="535"/>
         </scene>
         <!--Suggestion Table View-->
         <scene sceneID="N3X-W5-ZzD">
             <objects>
-                <tableViewController id="Prh-nH-4zL" customClass="SuggestionTableView" customModule="EyesApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SuggectionTableView" id="Prh-nH-4zL" customClass="SuggestionTableView" customModule="EyesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gdZ-Se-Ngh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="gWH-UB-7AT">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KnE-Yq-Ulh" customClass="SuggestTableViewCell" customModule="EyesApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="suggestCell" id="KnE-Yq-Ulh" customClass="SuggestTableViewCell" customModule="EyesApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KnE-Yq-Ulh" id="I2H-to-Rye">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -109,6 +133,9 @@
                             <outlet property="delegate" destination="Prh-nH-4zL" id="wJv-Mx-zub"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="searchBar" destination="gWH-UB-7AT" id="XGC-WZ-676"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UtA-FM-R5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

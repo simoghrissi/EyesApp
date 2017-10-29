@@ -20,6 +20,7 @@
 		24412D1D1F782A9B00D9E2C4 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24412D1C1F782A9B00D9E2C4 /* ImageCollectionViewCell.swift */; };
 		246865CC1F5C169200EA8F53 /* EyesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246865CB1F5C169200EA8F53 /* EyesTableViewCell.swift */; };
 		246865CE1F5C17F500EA8F53 /* PostEyes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246865CD1F5C17F500EA8F53 /* PostEyes.swift */; };
+		249966C31F952C2500B8C96C /* PoiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249966C21F952C2500B8C96C /* PoiViewModel.swift */; };
 		24AE744D1F4B5C1D007D2719 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE744C1F4B5C1D007D2719 /* AppDelegate.swift */; };
 		24AE744F1F4B5C1D007D2719 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE744E1F4B5C1D007D2719 /* ViewController.swift */; };
 		24AE74541F4B5C1D007D2719 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AE74531F4B5C1D007D2719 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		24412D1C1F782A9B00D9E2C4 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCollectionViewCell.swift; path = EyesApp/ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		246865CB1F5C169200EA8F53 /* EyesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EyesTableViewCell.swift; path = EyesApp/EyesTableViewCell.swift; sourceTree = "<group>"; };
 		246865CD1F5C17F500EA8F53 /* PostEyes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostEyes.swift; path = EyesApp/PostEyes.swift; sourceTree = "<group>"; };
+		249966C21F952C2500B8C96C /* PoiViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoiViewModel.swift; path = Pois/ViewModel/PoiViewModel.swift; sourceTree = "<group>"; };
 		24AE74491F4B5C1D007D2719 /* EyesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AE744C1F4B5C1D007D2719 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24AE744E1F4B5C1D007D2719 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = EyesApp/ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		241AFC741F77E233002EF78C /* Pois */ = {
 			isa = PBXGroup;
 			children = (
+				249966C11F952BCD00B8C96C /* ViewModel */,
 				243E40FE1F8EB4BA0012BCB0 /* Model */,
 				243E41001F8EB4CE0012BCB0 /* UI */,
 			);
@@ -187,6 +190,14 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		249966C11F952BCD00B8C96C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				249966C21F952C2500B8C96C /* PoiViewModel.swift */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 		24AE74401F4B5C1D007D2719 = {
@@ -384,6 +395,7 @@
 				242FA88F1F938A96002FE28B /* SuggestTableViewCell.swift in Sources */,
 				246865CE1F5C17F500EA8F53 /* PostEyes.swift in Sources */,
 				240C7DB81F5DD5BA00873982 /* CameraViewController.swift in Sources */,
+				249966C31F952C2500B8C96C /* PoiViewModel.swift in Sources */,
 				24AE744F1F4B5C1D007D2719 /* ViewController.swift in Sources */,
 				24FD10A61F71B45500AA1EC3 /* LocationSearchTable.swift in Sources */,
 				242480481F65C43D00F348F5 /* MapsViewController.swift in Sources */,

@@ -12,15 +12,14 @@ private let reuseIdentifier = "Cell"
 
 class ImagesCollectionViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate {
     var myImage = UIImage(named: "defaultImage")
+    var searchController:UISearchController!
 
+
+    @IBOutlet weak var searchItem: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-       // self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+        
+       
         self.title = "photos"
         // Do any additional setup after loading the view.
     }
@@ -29,6 +28,14 @@ class ImagesCollectionViewController: UIViewController,UICollectionViewDataSourc
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func show(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "CollectionPoi", bundle: nil)
+        
+        let suggestionTableView = storyboard.instantiateViewController(withIdentifier: "SuggectionTableView") as! SuggestionTableView
+        self.show(suggestionTableView, sender: nil)
+    }
+    
+
 
     /*
     // MARK: - Navigation
