@@ -7,54 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		240C7DB81F5DD5BA00873982 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240C7DB71F5DD5BA00873982 /* CameraViewController.swift */; };
-		242480481F65C43D00F348F5 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242480471F65C43D00F348F5 /* MapsViewController.swift */; };
 		242FA88F1F938A96002FE28B /* SuggestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242FA88E1F938A96002FE28B /* SuggestTableViewCell.swift */; };
 		242FA8911F938BA5002FE28B /* SuggestionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242FA8901F938BA5002FE28B /* SuggestionTableView.swift */; };
-		243E40F31F8EB1E70012BCB0 /* Maps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243E40F21F8EB1E70012BCB0 /* Maps.storyboard */; };
 		243E41051F8EBBBF0012BCB0 /* CollectionPoi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243E41041F8EBBBF0012BCB0 /* CollectionPoi.storyboard */; };
 		243E41071F8EBBDB0012BCB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243E41061F8EBBDB0012BCB0 /* Main.storyboard */; };
-		243E41091F8EBBE60012BCB0 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243E41081F8EBBE60012BCB0 /* Camera.storyboard */; };
 		243E410B1F8EBC090012BCB0 /* PoiEyes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243E410A1F8EBC090012BCB0 /* PoiEyes.swift */; };
-		24412D1B1F7829C800D9E2C4 /* ImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24412D1A1F7829C800D9E2C4 /* ImagesCollectionViewController.swift */; };
-		24412D1D1F782A9B00D9E2C4 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24412D1C1F782A9B00D9E2C4 /* ImageCollectionViewCell.swift */; };
-		246865CC1F5C169200EA8F53 /* EyesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246865CB1F5C169200EA8F53 /* EyesTableViewCell.swift */; };
-		246865CE1F5C17F500EA8F53 /* PostEyes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246865CD1F5C17F500EA8F53 /* PostEyes.swift */; };
 		249966C31F952C2500B8C96C /* PoiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249966C21F952C2500B8C96C /* PoiViewModel.swift */; };
+		24AE14CA1FAF98F90048BF4E /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AE14C81FAF98F90048BF4E /* Camera.storyboard */; };
+		24AE14CB1FAF98F90048BF4E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE14C91FAF98F90048BF4E /* CameraViewController.swift */; };
+		24AE14CF1FAF99410048BF4E /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE14CC1FAF99410048BF4E /* LocationSearchTable.swift */; };
+		24AE14D01FAF99410048BF4E /* Maps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AE14CD1FAF99410048BF4E /* Maps.storyboard */; };
+		24AE14D11FAF99410048BF4E /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE14CE1FAF99410048BF4E /* MapsViewController.swift */; };
+		24AE14D41FAF99E50048BF4E /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE14D21FAF99E50048BF4E /* ImageCollectionViewCell.swift */; };
+		24AE14D51FAF99E50048BF4E /* ImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE14D31FAF99E50048BF4E /* ImagesCollectionViewController.swift */; };
+		24AE14D71FAF9A030048BF4E /* EyesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE14D61FAF9A030048BF4E /* EyesTableViewCell.swift */; };
+		24AE14D91FAF9A370048BF4E /* PostEyes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE14D81FAF9A370048BF4E /* PostEyes.swift */; };
+		24AE14DB1FAF9A660048BF4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE14DA1FAF9A660048BF4E /* ViewController.swift */; };
 		24AE744D1F4B5C1D007D2719 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE744C1F4B5C1D007D2719 /* AppDelegate.swift */; };
-		24AE744F1F4B5C1D007D2719 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE744E1F4B5C1D007D2719 /* ViewController.swift */; };
 		24AE74541F4B5C1D007D2719 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24AE74531F4B5C1D007D2719 /* Assets.xcassets */; };
 		24AE74571F4B5C1D007D2719 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AE74551F4B5C1D007D2719 /* LaunchScreen.storyboard */; };
 		24E1DFD31F617BF10003AE9A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 24E1DFD11F617BF10003AE9A /* Model.xcdatamodeld */; };
 		24E1DFD51F6193D40003AE9A /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E1DFD41F6193D40003AE9A /* DBManager.swift */; };
-		24FD10A61F71B45500AA1EC3 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FD10A51F71B45500AA1EC3 /* LocationSearchTable.swift */; };
 		7B58AA7DCDFD247EC96F996D /* Pods_EyesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE91020D9D0FA0055B269ED /* Pods_EyesApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		240C7DB71F5DD5BA00873982 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = EyesApp/CameraViewController.swift; sourceTree = "<group>"; };
-		242480471F65C43D00F348F5 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapsViewController.swift; path = EyesApp/MapsViewController.swift; sourceTree = "<group>"; };
 		242FA88E1F938A96002FE28B /* SuggestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuggestTableViewCell.swift; path = Pois/UI/SuggestTableViewCell.swift; sourceTree = "<group>"; };
 		242FA8901F938BA5002FE28B /* SuggestionTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuggestionTableView.swift; path = Pois/UI/SuggestionTableView.swift; sourceTree = "<group>"; };
-		243E40F21F8EB1E70012BCB0 /* Maps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Maps.storyboard; path = EyesApp/Maps.storyboard; sourceTree = "<group>"; };
 		243E41041F8EBBBF0012BCB0 /* CollectionPoi.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CollectionPoi.storyboard; path = Pois/UI/CollectionPoi.storyboard; sourceTree = "<group>"; };
 		243E41061F8EBBDB0012BCB0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Posts/UI/Main.storyboard; sourceTree = "<group>"; };
-		243E41081F8EBBE60012BCB0 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Camera.storyboard; path = Camera/UI/Camera.storyboard; sourceTree = "<group>"; };
 		243E410A1F8EBC090012BCB0 /* PoiEyes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoiEyes.swift; path = Pois/Model/PoiEyes.swift; sourceTree = "<group>"; };
-		24412D1A1F7829C800D9E2C4 /* ImagesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagesCollectionViewController.swift; path = EyesApp/ImagesCollectionViewController.swift; sourceTree = "<group>"; };
-		24412D1C1F782A9B00D9E2C4 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCollectionViewCell.swift; path = EyesApp/ImageCollectionViewCell.swift; sourceTree = "<group>"; };
-		246865CB1F5C169200EA8F53 /* EyesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EyesTableViewCell.swift; path = EyesApp/EyesTableViewCell.swift; sourceTree = "<group>"; };
-		246865CD1F5C17F500EA8F53 /* PostEyes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostEyes.swift; path = EyesApp/PostEyes.swift; sourceTree = "<group>"; };
 		249966C21F952C2500B8C96C /* PoiViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoiViewModel.swift; path = Pois/ViewModel/PoiViewModel.swift; sourceTree = "<group>"; };
+		24AE14C81FAF98F90048BF4E /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Camera.storyboard; path = EyesApp/Camera/UI/Camera.storyboard; sourceTree = "<group>"; };
+		24AE14C91FAF98F90048BF4E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = EyesApp/Camera/UI/CameraViewController.swift; sourceTree = "<group>"; };
+		24AE14CC1FAF99410048BF4E /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationSearchTable.swift; path = EyesApp/Maps/UI/LocationSearchTable.swift; sourceTree = "<group>"; };
+		24AE14CD1FAF99410048BF4E /* Maps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Maps.storyboard; path = EyesApp/Maps/UI/Maps.storyboard; sourceTree = "<group>"; };
+		24AE14CE1FAF99410048BF4E /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapsViewController.swift; path = EyesApp/Maps/UI/MapsViewController.swift; sourceTree = "<group>"; };
+		24AE14D21FAF99E50048BF4E /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCollectionViewCell.swift; path = EyesApp/Pois/UI/ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		24AE14D31FAF99E50048BF4E /* ImagesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagesCollectionViewController.swift; path = EyesApp/Pois/UI/ImagesCollectionViewController.swift; sourceTree = "<group>"; };
+		24AE14D61FAF9A030048BF4E /* EyesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EyesTableViewCell.swift; path = EyesApp/Posts/UI/EyesTableViewCell.swift; sourceTree = "<group>"; };
+		24AE14D81FAF9A370048BF4E /* PostEyes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostEyes.swift; path = Posts/Model/PostEyes.swift; sourceTree = "<group>"; };
+		24AE14DA1FAF9A660048BF4E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Posts/UI/ViewController.swift; sourceTree = "<group>"; };
 		24AE74491F4B5C1D007D2719 /* EyesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24AE744C1F4B5C1D007D2719 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		24AE744E1F4B5C1D007D2719 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = EyesApp/ViewController.swift; sourceTree = "<group>"; };
 		24AE74531F4B5C1D007D2719 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24AE74561F4B5C1D007D2719 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24AE74581F4B5C1D007D2719 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24E1DFD21F617BF10003AE9A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		24E1DFD41F6193D40003AE9A /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
-		24FD10A51F71B45500AA1EC3 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationSearchTable.swift; path = EyesApp/LocationSearchTable.swift; sourceTree = "<group>"; };
 		4845E3CDCDCB360E173B7025 /* Pods-EyesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyesApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EyesApp/Pods-EyesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		50A9930B2C7C2BD58C696513 /* Pods-EyesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EyesApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-EyesApp/Pods-EyesApp.release.xcconfig"; sourceTree = "<group>"; };
 		EDE91020D9D0FA0055B269ED /* Pods_EyesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EyesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,9 +94,9 @@
 		243E40F01F8EB1700012BCB0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				242480471F65C43D00F348F5 /* MapsViewController.swift */,
-				243E40F21F8EB1E70012BCB0 /* Maps.storyboard */,
-				24FD10A51F71B45500AA1EC3 /* LocationSearchTable.swift */,
+				24AE14CC1FAF99410048BF4E /* LocationSearchTable.swift */,
+				24AE14CD1FAF99410048BF4E /* Maps.storyboard */,
+				24AE14CE1FAF99410048BF4E /* MapsViewController.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -124,9 +124,9 @@
 		243E40F51F8EB2880012BCB0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				24AE14DA1FAF9A660048BF4E /* ViewController.swift */,
+				24AE14D61FAF9A030048BF4E /* EyesTableViewCell.swift */,
 				243E41061F8EBBDB0012BCB0 /* Main.storyboard */,
-				24AE744E1F4B5C1D007D2719 /* ViewController.swift */,
-				246865CB1F5C169200EA8F53 /* EyesTableViewCell.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -134,7 +134,7 @@
 		243E40F61F8EB2990012BCB0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				246865CD1F5C17F500EA8F53 /* PostEyes.swift */,
+				24AE14D81FAF9A370048BF4E /* PostEyes.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -152,8 +152,8 @@
 		243E40FA1F8EB45A0012BCB0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				243E41081F8EBBE60012BCB0 /* Camera.storyboard */,
-				240C7DB71F5DD5BA00873982 /* CameraViewController.swift */,
+				24AE14C81FAF98F90048BF4E /* Camera.storyboard */,
+				24AE14C91FAF98F90048BF4E /* CameraViewController.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -176,9 +176,9 @@
 		243E41001F8EB4CE0012BCB0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				24AE14D21FAF99E50048BF4E /* ImageCollectionViewCell.swift */,
+				24AE14D31FAF99E50048BF4E /* ImagesCollectionViewController.swift */,
 				243E41041F8EBBBF0012BCB0 /* CollectionPoi.storyboard */,
-				24412D1A1F7829C800D9E2C4 /* ImagesCollectionViewController.swift */,
-				24412D1C1F782A9B00D9E2C4 /* ImageCollectionViewCell.swift */,
 				242FA88E1F938A96002FE28B /* SuggestTableViewCell.swift */,
 				242FA8901F938BA5002FE28B /* SuggestionTableView.swift */,
 			);
@@ -317,10 +317,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				24AE74571F4B5C1D007D2719 /* LaunchScreen.storyboard in Resources */,
-				243E41091F8EBBE60012BCB0 /* Camera.storyboard in Resources */,
+				24AE14D01FAF99410048BF4E /* Maps.storyboard in Resources */,
+				24AE14CA1FAF98F90048BF4E /* Camera.storyboard in Resources */,
 				243E41071F8EBBDB0012BCB0 /* Main.storyboard in Resources */,
 				24AE74541F4B5C1D007D2719 /* Assets.xcassets in Resources */,
-				243E40F31F8EB1E70012BCB0 /* Maps.storyboard in Resources */,
 				243E41051F8EBBBF0012BCB0 /* CollectionPoi.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,20 +392,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24AE14DB1FAF9A660048BF4E /* ViewController.swift in Sources */,
+				24AE14D11FAF99410048BF4E /* MapsViewController.swift in Sources */,
 				242FA88F1F938A96002FE28B /* SuggestTableViewCell.swift in Sources */,
-				246865CE1F5C17F500EA8F53 /* PostEyes.swift in Sources */,
-				240C7DB81F5DD5BA00873982 /* CameraViewController.swift in Sources */,
+				24AE14D71FAF9A030048BF4E /* EyesTableViewCell.swift in Sources */,
 				249966C31F952C2500B8C96C /* PoiViewModel.swift in Sources */,
-				24AE744F1F4B5C1D007D2719 /* ViewController.swift in Sources */,
-				24FD10A61F71B45500AA1EC3 /* LocationSearchTable.swift in Sources */,
-				242480481F65C43D00F348F5 /* MapsViewController.swift in Sources */,
-				24412D1D1F782A9B00D9E2C4 /* ImageCollectionViewCell.swift in Sources */,
 				242FA8911F938BA5002FE28B /* SuggestionTableView.swift in Sources */,
 				243E410B1F8EBC090012BCB0 /* PoiEyes.swift in Sources */,
-				24412D1B1F7829C800D9E2C4 /* ImagesCollectionViewController.swift in Sources */,
+				24AE14CF1FAF99410048BF4E /* LocationSearchTable.swift in Sources */,
 				24AE744D1F4B5C1D007D2719 /* AppDelegate.swift in Sources */,
-				246865CC1F5C169200EA8F53 /* EyesTableViewCell.swift in Sources */,
+				24AE14CB1FAF98F90048BF4E /* CameraViewController.swift in Sources */,
+				24AE14D91FAF9A370048BF4E /* PostEyes.swift in Sources */,
+				24AE14D41FAF99E50048BF4E /* ImageCollectionViewCell.swift in Sources */,
 				24E1DFD31F617BF10003AE9A /* Model.xcdatamodeld in Sources */,
+				24AE14D51FAF99E50048BF4E /* ImagesCollectionViewController.swift in Sources */,
 				24E1DFD51F6193D40003AE9A /* DBManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

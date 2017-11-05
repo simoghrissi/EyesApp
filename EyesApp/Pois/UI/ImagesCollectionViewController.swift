@@ -10,17 +10,18 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class ImagesCollectionViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate {
+class ImagesCollectionViewController: UICollectionViewController {
     var myImage = UIImage(named: "defaultImage")
-    var searchController:UISearchController!
 
-
-    @IBOutlet weak var searchItem: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
-        self.title = "photos"
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Register cell classes
+       // self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+
         // Do any additional setup after loading the view.
     }
 
@@ -28,14 +29,6 @@ class ImagesCollectionViewController: UIViewController,UICollectionViewDataSourc
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func show(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "CollectionPoi", bundle: nil)
-        
-        let suggestionTableView = storyboard.instantiateViewController(withIdentifier: "SuggectionTableView") as! SuggestionTableView
-        self.show(suggestionTableView, sender: nil)
-    }
-    
-
 
     /*
     // MARK: - Navigation
@@ -49,18 +42,18 @@ class ImagesCollectionViewController: UIViewController,UICollectionViewDataSourc
 
     // MARK: UICollectionViewDataSource
 
-     func numberOfSections(in collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
 
-     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return 100
     }
 
-     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
          let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageCollectionViewCell
         // Configure the cell
         
