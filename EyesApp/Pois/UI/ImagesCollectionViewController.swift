@@ -10,18 +10,17 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class ImagesCollectionViewController: UICollectionViewController {
+class ImagesCollectionViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate {
     var myImage = UIImage(named: "defaultImage")
+    var searchController:UISearchController!
 
+
+    @IBOutlet weak var searchItem: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-       // self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+        
+       
+        self.title = "photos"
         // Do any additional setup after loading the view.
     }
 
@@ -29,6 +28,14 @@ class ImagesCollectionViewController: UICollectionViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func show(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "CollectionPoi", bundle: nil)
+        
+        let suggestionTableView = storyboard.instantiateViewController(withIdentifier: "SuggectionTableView") as! SuggestionTableView
+        self.show(suggestionTableView, sender: nil)
+    }
+    
+
 
     /*
     // MARK: - Navigation
@@ -42,18 +49,18 @@ class ImagesCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+     func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return 100
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
          let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ImageCollectionViewCell
         // Configure the cell
         

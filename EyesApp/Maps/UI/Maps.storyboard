@@ -36,16 +36,8 @@
                             <constraint firstAttribute="trailing" secondItem="fd3-A3-cYc" secondAttribute="trailing" id="ztE-Ap-oV6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="776-Gz-knF">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="5s3-Fc-fCr">
-                            <connections>
-                                <action selector="showSearchBar:" destination="dpc-wK-YeM" id="pTn-H1-WBl"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="map" destination="fd3-A3-cYc" id="1ef-Gt-Tbd"/>
-                        <outlet property="search" destination="5s3-Fc-fCr" id="mbg-nE-djq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mdc-KB-Gkv" userLabel="First Responder" sceneMemberID="firstResponder"/>
