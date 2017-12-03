@@ -12,12 +12,15 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
     @IBOutlet weak var timeLine: UITableView!
  
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
     var posts = [PostEyes]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         posts = DBManager.getPostsFromDatas()
-        timeLine.reloadData()
+        
+        let storyboard = UIStoryboard(name: "Camera", bundle: nil)
+                    let cameraVC = storyboard.instantiateViewController(withIdentifier: "CameraViewController")as? CameraViewController
+                    cameraVC?.delegate = self
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -27,32 +30,31 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         // Dispose of any resources that can be recreated.
     }
     override func viewWillAppear(_ animated: Bool) {
-        segmentedControl.selectedSegmentIndex = 0
         timeLine.reloadData()
     }
 
-    @IBAction func SegmentedIndexChange(_ sender: Any) {
-        switch segmentedControl.selectedSegmentIndex {
-        case 0:
-            print("first one")
-            break
-        case 1:
-            let storyboard = UIStoryboard(name: "Camera", bundle: nil)
-            let cameraVC = storyboard.instantiateViewController(withIdentifier: "CameraViewController")as? CameraViewController
-            cameraVC?.delegate = self
-            self.navigationController?.pushViewController(cameraVC!, animated: true)
-            break
-        case 2:
-            let storyboard = UIStoryboard(name: "Maps", bundle: nil)
-            let mapsVC = storyboard.instantiateViewController(withIdentifier: "MapsViewController")as? MapsViewController
-            self.navigationController?.pushViewController(mapsVC!, animated: true)
-            break
-        default:
-            break
-        }
-        
-        
-    }
+//    @IBAction func SegmentedIndexChange(_ sender: Any) {
+//        switch segmentedControl.selectedSegmentIndex {
+//        case 0:
+//            print("first one")
+//            break
+//        case 1:
+//            let storyboard = UIStoryboard(name: "Camera", bundle: nil)
+//            let cameraVC = storyboard.instantiateViewController(withIdentifier: "CameraViewController")as? CameraViewController
+//            cameraVC?.delegate = self
+//            self.navigationController?.pushViewController(cameraVC!, animated: true)
+//            break
+//        case 2:
+//            let storyboard = UIStoryboard(name: "Maps", bundle: nil)
+//            let mapsVC = storyboard.instantiateViewController(withIdentifier: "MapsViewController")as? MapsViewController
+//            self.navigationController?.pushViewController(mapsVC!, animated: true)
+//            break
+//        default:
+//            break
+//        }
+//        
+//        
+//    }
      func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

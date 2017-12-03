@@ -67,7 +67,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="4lQ-uc-Fgg">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="5eY-Re-yGl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="5eY-Re-yGl">
                             <connections>
                                 <action selector="show:" destination="pwo-Te-XUH" id="gfn-7s-Y4f"/>
                             </connections>
