@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		243EA5141FD4321700B8FBA3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5131FD4321700B8FBA3 /* GradientView.swift */; };
+		243EA5171FD4376B00B8FBA3 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5151FD4376B00B8FBA3 /* DesignableTextField.swift */; };
+		243EA5181FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5161FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift */; };
 		24AE14CA1FAF98F90048BF4E /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AE14C81FAF98F90048BF4E /* Camera.storyboard */; };
 		24AE14CB1FAF98F90048BF4E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE14C91FAF98F90048BF4E /* CameraViewController.swift */; };
 		24AE14CF1FAF99410048BF4E /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE14CC1FAF99410048BF4E /* LocationSearchTable.swift */; };
@@ -32,6 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		243EA5131FD4321700B8FBA3 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = EyesApp/Common/GradientView.swift; sourceTree = "<group>"; };
+		243EA5151FD4376B00B8FBA3 /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignableTextField.swift; path = EyesApp/Common/DesignableTextField.swift; sourceTree = "<group>"; };
+		243EA5161FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SizeZeroWhenHiddenView.swift; path = EyesApp/Common/SizeZeroWhenHiddenView.swift; sourceTree = "<group>"; };
 		24AE14C81FAF98F90048BF4E /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Camera.storyboard; path = EyesApp/Camera/UI/Camera.storyboard; sourceTree = "<group>"; };
 		24AE14C91FAF98F90048BF4E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = EyesApp/Camera/UI/CameraViewController.swift; sourceTree = "<group>"; };
 		24AE14CC1FAF99410048BF4E /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationSearchTable.swift; path = EyesApp/Maps/UI/LocationSearchTable.swift; sourceTree = "<group>"; };
@@ -75,6 +81,9 @@
 		241AFC731F77E218002EF78C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				243EA5151FD4376B00B8FBA3 /* DesignableTextField.swift */,
+				243EA5161FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift */,
+				243EA5131FD4321700B8FBA3 /* GradientView.swift */,
 			);
 			name = Common;
 			path = ..;
@@ -405,7 +414,10 @@
 				24AE14D71FAF9A030048BF4E /* EyesTableViewCell.swift in Sources */,
 				24F888861FAFA8C9008E851A /* PoiViewModel.swift in Sources */,
 				24AE14CF1FAF99410048BF4E /* LocationSearchTable.swift in Sources */,
+				243EA5171FD4376B00B8FBA3 /* DesignableTextField.swift in Sources */,
 				24AE744D1F4B5C1D007D2719 /* AppDelegate.swift in Sources */,
+				243EA5181FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift in Sources */,
+				243EA5141FD4321700B8FBA3 /* GradientView.swift in Sources */,
 				24F8887B1FAFA70D008E851A /* PoiEyes.swift in Sources */,
 				24AE14CB1FAF98F90048BF4E /* CameraViewController.swift in Sources */,
 				24AE14D41FAF99E50048BF4E /* ImageCollectionViewCell.swift in Sources */,
