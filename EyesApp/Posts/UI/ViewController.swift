@@ -18,7 +18,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.viewDidLoad()
         posts = DBManager.getPostsFromDatas()
         
-        let storyboard = UIStoryboard(name: "Camera", bundle: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let cameraVC = storyboard.instantiateViewController(withIdentifier: "CameraViewController")as? CameraViewController
                     cameraVC?.delegate = self
         

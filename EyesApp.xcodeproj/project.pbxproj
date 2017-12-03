@@ -10,7 +10,6 @@
 		243EA5141FD4321700B8FBA3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5131FD4321700B8FBA3 /* GradientView.swift */; };
 		243EA5171FD4376B00B8FBA3 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5151FD4376B00B8FBA3 /* DesignableTextField.swift */; };
 		243EA5181FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5161FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift */; };
-		24AE14CA1FAF98F90048BF4E /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AE14C81FAF98F90048BF4E /* Camera.storyboard */; };
 		24AE14CB1FAF98F90048BF4E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE14C91FAF98F90048BF4E /* CameraViewController.swift */; };
 		24AE14CF1FAF99410048BF4E /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE14CC1FAF99410048BF4E /* LocationSearchTable.swift */; };
 		24AE14D01FAF99410048BF4E /* Maps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AE14CD1FAF99410048BF4E /* Maps.storyboard */; };
@@ -38,7 +37,6 @@
 		243EA5131FD4321700B8FBA3 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = EyesApp/Common/GradientView.swift; sourceTree = "<group>"; };
 		243EA5151FD4376B00B8FBA3 /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignableTextField.swift; path = EyesApp/Common/DesignableTextField.swift; sourceTree = "<group>"; };
 		243EA5161FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SizeZeroWhenHiddenView.swift; path = EyesApp/Common/SizeZeroWhenHiddenView.swift; sourceTree = "<group>"; };
-		24AE14C81FAF98F90048BF4E /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Camera.storyboard; path = EyesApp/Camera/UI/Camera.storyboard; sourceTree = "<group>"; };
 		24AE14C91FAF98F90048BF4E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = EyesApp/Camera/UI/CameraViewController.swift; sourceTree = "<group>"; };
 		24AE14CC1FAF99410048BF4E /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationSearchTable.swift; path = EyesApp/Maps/UI/LocationSearchTable.swift; sourceTree = "<group>"; };
 		24AE14CD1FAF99410048BF4E /* Maps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Maps.storyboard; path = EyesApp/Maps/UI/Maps.storyboard; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 		243E40FA1F8EB45A0012BCB0 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				24AE14C81FAF98F90048BF4E /* Camera.storyboard */,
 				24AE14C91FAF98F90048BF4E /* CameraViewController.swift */,
 			);
 			name = UI;
@@ -337,7 +334,6 @@
 				24F888771FAFA6EA008E851A /* CollectionPoi.storyboard in Resources */,
 				24AE74571F4B5C1D007D2719 /* LaunchScreen.storyboard in Resources */,
 				24AE14D01FAF99410048BF4E /* Maps.storyboard in Resources */,
-				24AE14CA1FAF98F90048BF4E /* Camera.storyboard in Resources */,
 				24AE74541F4B5C1D007D2719 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
