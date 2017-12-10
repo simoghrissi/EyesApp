@@ -10,6 +10,15 @@
 		243EA5141FD4321700B8FBA3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5131FD4321700B8FBA3 /* GradientView.swift */; };
 		243EA5171FD4376B00B8FBA3 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5151FD4376B00B8FBA3 /* DesignableTextField.swift */; };
 		243EA5181FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5161FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift */; };
+		243EA51A1FDD670300B8FBA3 /* RestUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5191FDD670300B8FBA3 /* RestUser.swift */; };
+		243EA51C1FDD67AA00B8FBA3 /* RestAdresse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA51B1FDD67AA00B8FBA3 /* RestAdresse.swift */; };
+		243EA51E1FDD6B4A00B8FBA3 /* RestLieu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA51D1FDD6B4A00B8FBA3 /* RestLieu.swift */; };
+		243EA5201FDD6CB400B8FBA3 /* RestEtat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA51F1FDD6CB400B8FBA3 /* RestEtat.swift */; };
+		243EA5221FDD6D7A00B8FBA3 /* RestReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5211FDD6D7A00B8FBA3 /* RestReponse.swift */; };
+		243EA5241FDD6E8D00B8FBA3 /* RestDemande.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5231FDD6E8D00B8FBA3 /* RestDemande.swift */; };
+		243EA5261FDD6EBE00B8FBA3 /* RestTypeDemande.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5251FDD6EBE00B8FBA3 /* RestTypeDemande.swift */; };
+		243EA5281FDD73CA00B8FBA3 /* RestHistorique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5271FDD73CA00B8FBA3 /* RestHistorique.swift */; };
+		243EA52A1FDD74DF00B8FBA3 /* RestTypeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5291FDD74DF00B8FBA3 /* RestTypeAction.swift */; };
 		24AE14CB1FAF98F90048BF4E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE14C91FAF98F90048BF4E /* CameraViewController.swift */; };
 		24AE14CF1FAF99410048BF4E /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE14CC1FAF99410048BF4E /* LocationSearchTable.swift */; };
 		24AE14D01FAF99410048BF4E /* Maps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AE14CD1FAF99410048BF4E /* Maps.storyboard */; };
@@ -37,6 +46,15 @@
 		243EA5131FD4321700B8FBA3 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = EyesApp/Common/GradientView.swift; sourceTree = "<group>"; };
 		243EA5151FD4376B00B8FBA3 /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignableTextField.swift; path = EyesApp/Common/DesignableTextField.swift; sourceTree = "<group>"; };
 		243EA5161FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SizeZeroWhenHiddenView.swift; path = EyesApp/Common/SizeZeroWhenHiddenView.swift; sourceTree = "<group>"; };
+		243EA5191FDD670300B8FBA3 /* RestUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestUser.swift; path = Data/RestUser.swift; sourceTree = "<group>"; };
+		243EA51B1FDD67AA00B8FBA3 /* RestAdresse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestAdresse.swift; path = Data/RestAdresse.swift; sourceTree = "<group>"; };
+		243EA51D1FDD6B4A00B8FBA3 /* RestLieu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestLieu.swift; path = Data/RestLieu.swift; sourceTree = "<group>"; };
+		243EA51F1FDD6CB400B8FBA3 /* RestEtat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestEtat.swift; path = Data/RestEtat.swift; sourceTree = "<group>"; };
+		243EA5211FDD6D7A00B8FBA3 /* RestReponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestReponse.swift; path = Data/RestReponse.swift; sourceTree = "<group>"; };
+		243EA5231FDD6E8D00B8FBA3 /* RestDemande.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestDemande.swift; path = Data/RestDemande.swift; sourceTree = "<group>"; };
+		243EA5251FDD6EBE00B8FBA3 /* RestTypeDemande.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestTypeDemande.swift; path = Data/RestTypeDemande.swift; sourceTree = "<group>"; };
+		243EA5271FDD73CA00B8FBA3 /* RestHistorique.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestHistorique.swift; path = Data/RestHistorique.swift; sourceTree = "<group>"; };
+		243EA5291FDD74DF00B8FBA3 /* RestTypeAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestTypeAction.swift; path = Data/RestTypeAction.swift; sourceTree = "<group>"; };
 		24AE14C91FAF98F90048BF4E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = EyesApp/Camera/UI/CameraViewController.swift; sourceTree = "<group>"; };
 		24AE14CC1FAF99410048BF4E /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationSearchTable.swift; path = EyesApp/Maps/UI/LocationSearchTable.swift; sourceTree = "<group>"; };
 		24AE14CD1FAF99410048BF4E /* Maps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Maps.storyboard; path = EyesApp/Maps/UI/Maps.storyboard; sourceTree = "<group>"; };
@@ -246,6 +264,15 @@
 		24F888731FAFA677008E851A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				243EA5191FDD670300B8FBA3 /* RestUser.swift */,
+				243EA51B1FDD67AA00B8FBA3 /* RestAdresse.swift */,
+				243EA51D1FDD6B4A00B8FBA3 /* RestLieu.swift */,
+				243EA51F1FDD6CB400B8FBA3 /* RestEtat.swift */,
+				243EA5211FDD6D7A00B8FBA3 /* RestReponse.swift */,
+				243EA5231FDD6E8D00B8FBA3 /* RestDemande.swift */,
+				243EA5251FDD6EBE00B8FBA3 /* RestTypeDemande.swift */,
+				243EA5271FDD73CA00B8FBA3 /* RestHistorique.swift */,
+				243EA5291FDD74DF00B8FBA3 /* RestTypeAction.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -406,17 +433,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				24F888811FAFA73C008E851A /* ViewController.swift in Sources */,
+				243EA5261FDD6EBE00B8FBA3 /* RestTypeDemande.swift in Sources */,
+				243EA5281FDD73CA00B8FBA3 /* RestHistorique.swift in Sources */,
 				24AE14D11FAF99410048BF4E /* MapsViewController.swift in Sources */,
 				24AE14D71FAF9A030048BF4E /* EyesTableViewCell.swift in Sources */,
+				243EA51E1FDD6B4A00B8FBA3 /* RestLieu.swift in Sources */,
 				24F888861FAFA8C9008E851A /* PoiViewModel.swift in Sources */,
+				243EA5201FDD6CB400B8FBA3 /* RestEtat.swift in Sources */,
 				24AE14CF1FAF99410048BF4E /* LocationSearchTable.swift in Sources */,
+				243EA5221FDD6D7A00B8FBA3 /* RestReponse.swift in Sources */,
 				243EA5171FD4376B00B8FBA3 /* DesignableTextField.swift in Sources */,
 				24AE744D1F4B5C1D007D2719 /* AppDelegate.swift in Sources */,
 				243EA5181FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift in Sources */,
 				243EA5141FD4321700B8FBA3 /* GradientView.swift in Sources */,
 				24F8887B1FAFA70D008E851A /* PoiEyes.swift in Sources */,
+				243EA52A1FDD74DF00B8FBA3 /* RestTypeAction.swift in Sources */,
 				24AE14CB1FAF98F90048BF4E /* CameraViewController.swift in Sources */,
+				243EA51A1FDD670300B8FBA3 /* RestUser.swift in Sources */,
 				24AE14D41FAF99E50048BF4E /* ImageCollectionViewCell.swift in Sources */,
+				243EA5241FDD6E8D00B8FBA3 /* RestDemande.swift in Sources */,
+				243EA51C1FDD67AA00B8FBA3 /* RestAdresse.swift in Sources */,
 				24E1DFD31F617BF10003AE9A /* Model.xcdatamodeld in Sources */,
 				24F8887D1FAFA722008E851A /* PostEyes.swift in Sources */,
 				24AE14D51FAF99E50048BF4E /* ImagesCollectionViewController.swift in Sources */,
