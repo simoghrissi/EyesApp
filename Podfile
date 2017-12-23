@@ -10,6 +10,12 @@ target 'EyesApp' do
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'RxDataSources'
-    
+    pod 'RxAlamofire'
+    pod 'RealmSwift'
+    pod 'AlamofireObjectMapper'
+    pod 'RxRealm'
+    pod 'Alamofire'
+
+
 
 end
