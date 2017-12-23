@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct RestLieu{
+public struct RestLieu: Codable{
     
     var idLieu: Int?
     var libelleLieu: String?

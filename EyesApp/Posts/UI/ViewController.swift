@@ -16,7 +16,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        posts = DBManager.getPostsFromDatas()
+      //  posts = DBManager.getPostsFromDatas()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let cameraVC = storyboard.instantiateViewController(withIdentifier: "CameraViewController")as? CameraViewController

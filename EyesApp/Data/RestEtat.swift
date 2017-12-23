@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct RestEtat{
+public struct RestEtat: Codable{
     
     var idEtat: Int?
     var libelle :String?

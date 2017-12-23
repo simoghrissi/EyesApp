@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct RestDemande{
+public struct RestDemande: Codable{
     
     var idDemande: Int?
     var commentDemande: String?

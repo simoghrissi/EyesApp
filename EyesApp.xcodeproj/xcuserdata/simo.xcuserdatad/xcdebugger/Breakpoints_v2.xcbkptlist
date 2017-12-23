@@ -57,22 +57,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EyesApp/DBManager.swift"
-            timestampString = "527956979.608905"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "putPostInData(imageProfil:nameProfil:postImage:description:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "EyesApp/ViewController.swift"
             timestampString = "530040813.72705"
             startingColumnNumber = "9223372036854775807"
@@ -96,22 +80,6 @@
             startingLineNumber = "26"
             endingLineNumber = "26"
             landmarkName = "init(imageProfil:nameProfil:postImage:description:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EyesApp/DBManager.swift"
-            timestampString = "527957122.66776"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "putPoiInData(name:type:otherInf:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

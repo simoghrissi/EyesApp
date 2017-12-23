@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct RestAdresse{
+public struct RestAdresse:Codable{
     
     var numVoie: String?
     var libelleVoie: String?

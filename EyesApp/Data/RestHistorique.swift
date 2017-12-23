@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct RestHistorique{
+public struct RestHistorique: Codable{
     
     var idHistorique: Int?
     var date: String?

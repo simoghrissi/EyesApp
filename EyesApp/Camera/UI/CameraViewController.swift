@@ -99,7 +99,7 @@ class CameraViewController: UIViewController,UINavigationControllerDelegate, UII
     @IBAction func chosePost(_ sender: Any) {
         if delegate != nil{
             delegate?.addDataToTm(imageProfil: nil, nameProfil: "simo", postImage: imageTaken.image, description: self.textPost.text ?? "")
-            DBManager.putPostInData(imageProfil: nil, nameProfil: "simo", postImage: imageTaken.image, description: self.textPost.text ?? "")
+           // DBManager.putPostInData(imageProfil: nil, nameProfil: "simo", postImage: imageTaken.image, description: self.textPost.text ?? "")
         }
 
         removePopup()

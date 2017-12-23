@@ -7,7 +7,13 @@
 //
 
 import Foundation
-public struct RestUser{
+extension Encodable {
+    var dictionary: [String: Any]? {
+        guard let data = try? JSONEncoder().encode(self) else { return nil }
+        return (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String: Any] }
+    }
+}
+public struct RestUser:Codable{
     
     var idUser: Int?
     var nomUser: String?
@@ -18,9 +24,9 @@ public struct RestUser{
     var dateCreateUser: String?
     var nbrPointUser: String?
     var adresse: RestAdresse?
+    let encoder = JSONEncoder()
+ init(idUser:Int,nomUser:String,prenomUser:String,mailUser:String,passwordUser:String,phoneUser:String,dateCreateUser:String,nbrPointUser:String,adresse:RestAdresse) {
 
-    init(idUser:Int,nomUser:String,prenomUser:String,mailUser:String,passwordUser:String,phoneUser:String,dateCreateUser:String,nbrPointUser:String,adresse:RestAdresse) {
-        
         self.idUser = idUser
         self.nomUser = nomUser
         self.prenomUser = prenomUser
@@ -30,5 +36,33 @@ public struct RestUser{
         self.dateCreateUser = nbrPointUser
         self.adresse = adresse
     }
+    
+    enum CodingKeys: String, CodingKey {
+        
+        case idUser = "idUser"
+        case nomUser = "nomUser"
+        case prenomUser = "prenomUser"
+        case mailUser = "mailUser"
+        case passwordUser = "passwordUser"
+        case phoneUser = "phoneUser"
+        case dateCreateUser = "dateCreateUser"
+        case adresse = "adresse"
+
+    }
+    
+    public init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        idUser = try values.decodeIfPresent(Int.self, forKey: .idUser)
+        nomUser = try values.decodeIfPresent(String.self, forKey: .nomUser)
+        prenomUser = try values.decodeIfPresent(String.self, forKey: .prenomUser)
+        mailUser = try values.decodeIfPresent(String.self, forKey: .mailUser)
+        passwordUser = try values.decodeIfPresent(String.self, forKey: .passwordUser)
+        phoneUser = try values.decodeIfPresent(String.self, forKey: .phoneUser)
+        dateCreateUser = try values.decodeIfPresent(String.self, forKey: .dateCreateUser)
+        adresse = try values.decodeIfPresent(RestAdresse.self, forKey: .adresse)
+
+
+    }
+    
     
 }

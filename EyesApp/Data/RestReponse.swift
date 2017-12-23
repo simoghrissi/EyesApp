@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct RestReponse{
+public struct RestReponse: Codable{
     
     var idReponse: Int?
     var dateReponse: String?

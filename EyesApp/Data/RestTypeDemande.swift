@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct RestTypeDemande{
+public struct RestTypeDemande: Codable{
     
     var idTypeDemande: Int?
     var descriptionTypeDemande: String?

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct RestTypeAction{
+public struct RestTypeAction: Codable{
     
     var idTypeAction: Int?
     var nomAction: String?
@@ -18,5 +18,6 @@ public struct RestTypeAction{
         self.idTypeAction = idTypeAction
         self.nomAction = nomAction
     }
+    
     
 }

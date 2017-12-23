@@ -19,6 +19,10 @@
 		243EA5261FDD6EBE00B8FBA3 /* RestTypeDemande.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5251FDD6EBE00B8FBA3 /* RestTypeDemande.swift */; };
 		243EA5281FDD73CA00B8FBA3 /* RestHistorique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5271FDD73CA00B8FBA3 /* RestHistorique.swift */; };
 		243EA52A1FDD74DF00B8FBA3 /* RestTypeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5291FDD74DF00B8FBA3 /* RestTypeAction.swift */; };
+		24A7D7BD1FEEBAB90077EC52 /* UserNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A7D7BC1FEEBAB90077EC52 /* UserNetwork.swift */; };
+		24A7D7BF1FEEBB320077EC52 /* RestBaseParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A7D7BE1FEEBB320077EC52 /* RestBaseParams.swift */; };
+		24A7D7C11FEECB8C0077EC52 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A7D7C01FEECB8C0077EC52 /* Network.swift */; };
+		24A7D7C31FEEF95A0077EC52 /* BuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A7D7C21FEEF95A0077EC52 /* BuildConfig.swift */; };
 		24AE14CB1FAF98F90048BF4E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE14C91FAF98F90048BF4E /* CameraViewController.swift */; };
 		24AE14CF1FAF99410048BF4E /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE14CC1FAF99410048BF4E /* LocationSearchTable.swift */; };
 		24AE14D01FAF99410048BF4E /* Maps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AE14CD1FAF99410048BF4E /* Maps.storyboard */; };
@@ -55,6 +59,10 @@
 		243EA5251FDD6EBE00B8FBA3 /* RestTypeDemande.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestTypeDemande.swift; path = Data/RestTypeDemande.swift; sourceTree = "<group>"; };
 		243EA5271FDD73CA00B8FBA3 /* RestHistorique.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestHistorique.swift; path = Data/RestHistorique.swift; sourceTree = "<group>"; };
 		243EA5291FDD74DF00B8FBA3 /* RestTypeAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestTypeAction.swift; path = Data/RestTypeAction.swift; sourceTree = "<group>"; };
+		24A7D7BC1FEEBAB90077EC52 /* UserNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetwork.swift; sourceTree = "<group>"; };
+		24A7D7BE1FEEBB320077EC52 /* RestBaseParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RestBaseParams.swift; path = Data/RestBaseParams.swift; sourceTree = "<group>"; };
+		24A7D7C01FEECB8C0077EC52 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		24A7D7C21FEEF95A0077EC52 /* BuildConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfig.swift; sourceTree = "<group>"; };
 		24AE14C91FAF98F90048BF4E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = EyesApp/Camera/UI/CameraViewController.swift; sourceTree = "<group>"; };
 		24AE14CC1FAF99410048BF4E /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationSearchTable.swift; path = EyesApp/Maps/UI/LocationSearchTable.swift; sourceTree = "<group>"; };
 		24AE14CD1FAF99410048BF4E /* Maps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Maps.storyboard; path = EyesApp/Maps/UI/Maps.storyboard; sourceTree = "<group>"; };
@@ -224,6 +232,22 @@
 			name = ViewModel;
 			sourceTree = "<group>";
 		};
+		24A7D7BA1FEEB8D80077EC52 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				24A7D7BC1FEEBAB90077EC52 /* UserNetwork.swift */,
+				24A7D7C01FEECB8C0077EC52 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		24A7D7BB1FEEBA5E0077EC52 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		24AE74401F4B5C1D007D2719 = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +269,8 @@
 		24AE744B1F4B5C1D007D2719 /* EyesApp */ = {
 			isa = PBXGroup;
 			children = (
+				24A7D7BB1FEEBA5E0077EC52 /* Repository */,
+				24A7D7BA1FEEB8D80077EC52 /* Network */,
 				24F888731FAFA677008E851A /* Data */,
 				24AE744C1F4B5C1D007D2719 /* AppDelegate.swift */,
 				24AE74531F4B5C1D007D2719 /* Assets.xcassets */,
@@ -257,6 +283,7 @@
 				243E40F11F8EB1880012BCB0 /* Maps */,
 				241AFC741F77E233002EF78C /* Pois */,
 				241AFC731F77E218002EF78C /* Common */,
+				24A7D7C21FEEF95A0077EC52 /* BuildConfig.swift */,
 			);
 			path = EyesApp;
 			sourceTree = "<group>";
@@ -273,6 +300,7 @@
 				243EA5251FDD6EBE00B8FBA3 /* RestTypeDemande.swift */,
 				243EA5271FDD73CA00B8FBA3 /* RestHistorique.swift */,
 				243EA5291FDD74DF00B8FBA3 /* RestTypeAction.swift */,
+				24A7D7BE1FEEBB320077EC52 /* RestBaseParams.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -453,6 +481,7 @@
 				24AE14D71FAF9A030048BF4E /* EyesTableViewCell.swift in Sources */,
 				243EA51E1FDD6B4A00B8FBA3 /* RestLieu.swift in Sources */,
 				24F888861FAFA8C9008E851A /* PoiViewModel.swift in Sources */,
+				24A7D7C31FEEF95A0077EC52 /* BuildConfig.swift in Sources */,
 				243EA5201FDD6CB400B8FBA3 /* RestEtat.swift in Sources */,
 				24AE14CF1FAF99410048BF4E /* LocationSearchTable.swift in Sources */,
 				243EA5221FDD6D7A00B8FBA3 /* RestReponse.swift in Sources */,
@@ -466,6 +495,9 @@
 				243EA51A1FDD670300B8FBA3 /* RestUser.swift in Sources */,
 				24AE14D41FAF99E50048BF4E /* ImageCollectionViewCell.swift in Sources */,
 				243EA5241FDD6E8D00B8FBA3 /* RestDemande.swift in Sources */,
+				24A7D7C11FEECB8C0077EC52 /* Network.swift in Sources */,
+				24A7D7BF1FEEBB320077EC52 /* RestBaseParams.swift in Sources */,
+				24A7D7BD1FEEBAB90077EC52 /* UserNetwork.swift in Sources */,
 				243EA51C1FDD67AA00B8FBA3 /* RestAdresse.swift in Sources */,
 				24E1DFD31F617BF10003AE9A /* Model.xcdatamodeld in Sources */,
 				24F8887D1FAFA722008E851A /* PostEyes.swift in Sources */,
@@ -537,6 +569,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -580,6 +613,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
