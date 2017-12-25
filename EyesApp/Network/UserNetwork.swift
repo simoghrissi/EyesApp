@@ -1,5 +1,5 @@
 //
-//  userTest.swift
+//  UserNetwork.swift
 //  EyesApp
 //
 //  Created by simo on 23/12/2017.
@@ -11,17 +11,19 @@ import RxSwift
 import Alamofire
 
 public protocol UserNetworkProtocol {
-    func getUser(post: RestUser) -> Observable<RestUser>
+    func getUser(post: RestBaseParams) -> Observable<RestUser>
 }
 public final class UserNetwork: UserNetworkProtocol {
 
     init() {
     }
 
-    public func getUser(post: RestUser) -> Observable<RestUser> {
+    public func getUser(post: RestBaseParams) -> Observable<RestUser> {
         let network: Network<RestUser> = Network()
         let user: Observable<(HTTPURLResponse, RestUser)> = network.postItem("UserInfos", parameters: post.dictionary)
-        return user.map({ _, restUser in return restUser})
+        return user.map({ _, restUser in
+            print(restUser)
+            return restUser})
     }
 
 }

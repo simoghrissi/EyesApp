@@ -17,8 +17,7 @@ final class Network<T: Codable> {
     private let endPoint: String = BuildConfig.sharedInstance.endpoint
     private let scheduler: ConcurrentDispatchQueueScheduler
     private var headers: [String: String] = [
-        "Content-Type": "application/json",
-        "DIG_ID_CLIENT": "DVMOBILE",
+        "Content-Type": "application/json"
         ]
     
     init() {

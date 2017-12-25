@@ -119,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="846" y="-1019"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="yXI-Hh-OPJ">
             <objects>
-                <viewController id="cQe-Tx-7dA" sceneMemberID="viewController">
+                <viewController id="cQe-Tx-7dA" customClass="LoginViewController" customModule="EyesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NmD-wR-O96"/>
                         <viewControllerLayoutGuide type="bottom" id="aq6-WX-0Ic"/>
@@ -233,7 +233,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <segue destination="MSd-zq-bgw" kind="show" id="lnC-DM-hHF"/>
+                                                        <action selector="loginAction:" destination="cQe-Tx-7dA" eventType="touchUpInside" id="J0k-zI-8Vl"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
