@@ -21,6 +21,10 @@
 		243EA52A1FDD74DF00B8FBA3 /* RestTypeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5291FDD74DF00B8FBA3 /* RestTypeAction.swift */; };
 		244B18EE1FF04AB700E50F14 /* BuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B18EC1FF04AB700E50F14 /* BuildConfig.swift */; };
 		244B18F21FF04E8800E50F14 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B18F11FF04E8800E50F14 /* UserRepository.swift */; };
+		2457A1CD1FF4DAB700465FDF /* FIRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2457A1CB1FF4DAB600465FDF /* FIRImage.swift */; };
+		2457A1CE1FF4DAB700465FDF /* FirebaseReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2457A1CC1FF4DAB700465FDF /* FirebaseReference.swift */; };
+		2457A1D01FF4DB2800465FDF /* CreateAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2457A1CF1FF4DB2800465FDF /* CreateAccountTableViewController.swift */; };
+		2457A1D21FF4DB3C00465FDF /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2457A1D11FF4DB3C00465FDF /* CreateAccountViewModel.swift */; };
 		248E85C71FF172C30047CADE /* Info_Stubs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 248E85C61FF172C30047CADE /* Info_Stubs.plist */; };
 		248E85CB1FF192950047CADE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 248E85CA1FF192950047CADE /* GoogleService-Info.plist */; };
 		248E85D11FF198660047CADE /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 248E85D01FF198660047CADE /* Login.storyboard */; };
@@ -66,6 +70,10 @@
 		243EA5291FDD74DF00B8FBA3 /* RestTypeAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestTypeAction.swift; path = Data/RestTypeAction.swift; sourceTree = "<group>"; };
 		244B18EC1FF04AB700E50F14 /* BuildConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildConfig.swift; sourceTree = "<group>"; };
 		244B18F11FF04E8800E50F14 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		2457A1CB1FF4DAB600465FDF /* FIRImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIRImage.swift; sourceTree = "<group>"; };
+		2457A1CC1FF4DAB700465FDF /* FirebaseReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseReference.swift; sourceTree = "<group>"; };
+		2457A1CF1FF4DB2800465FDF /* CreateAccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountTableViewController.swift; sourceTree = "<group>"; };
+		2457A1D11FF4DB3C00465FDF /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		248E85C61FF172C30047CADE /* Info_Stubs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_Stubs.plist; sourceTree = "<group>"; };
 		248E85CA1FF192950047CADE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		248E85D01FF198660047CADE /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -252,9 +260,19 @@
 			name = ViewModel;
 			sourceTree = "<group>";
 		};
+		2457A1CA1FF4DA5200465FDF /* FireBaseUtils */ = {
+			isa = PBXGroup;
+			children = (
+				2457A1CC1FF4DAB700465FDF /* FirebaseReference.swift */,
+				2457A1CB1FF4DAB600465FDF /* FIRImage.swift */,
+			);
+			path = FireBaseUtils;
+			sourceTree = "<group>";
+		};
 		248E85CC1FF197F70047CADE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2457A1D11FF4DB3C00465FDF /* CreateAccountViewModel.swift */,
 				248E85D21FF19D9C0047CADE /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
@@ -275,6 +293,7 @@
 			children = (
 				248E85D41FF19DA70047CADE /* LoginViewController.swift */,
 				248E85D01FF198660047CADE /* Login.storyboard */,
+				2457A1CF1FF4DB2800465FDF /* CreateAccountTableViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -332,6 +351,7 @@
 		24AE744B1F4B5C1D007D2719 /* EyesApp */ = {
 			isa = PBXGroup;
 			children = (
+				2457A1CA1FF4DA5200465FDF /* FireBaseUtils */,
 				248E85CD1FF198130047CADE /* Login */,
 				244B18EA1FF04A7B00E50F14 /* Configuration */,
 				24A7D7BB1FEEBA5E0077EC52 /* Repository */,
@@ -522,6 +542,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
@@ -531,6 +552,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -538,6 +560,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -547,6 +570,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,20 +602,24 @@
 				24F8887B1FAFA70D008E851A /* PoiEyes.swift in Sources */,
 				243EA52A1FDD74DF00B8FBA3 /* RestTypeAction.swift in Sources */,
 				24AE14CB1FAF98F90048BF4E /* CameraViewController.swift in Sources */,
+				2457A1D21FF4DB3C00465FDF /* CreateAccountViewModel.swift in Sources */,
 				244B18EE1FF04AB700E50F14 /* BuildConfig.swift in Sources */,
 				243EA51A1FDD670300B8FBA3 /* RestUser.swift in Sources */,
 				24AE14D41FAF99E50048BF4E /* ImageCollectionViewCell.swift in Sources */,
 				248E85D31FF19D9C0047CADE /* LoginViewModel.swift in Sources */,
 				248E85D51FF19DA70047CADE /* LoginViewController.swift in Sources */,
 				243EA5241FDD6E8D00B8FBA3 /* RestDemande.swift in Sources */,
+				2457A1CD1FF4DAB700465FDF /* FIRImage.swift in Sources */,
 				24A7D7C11FEECB8C0077EC52 /* Network.swift in Sources */,
 				24A7D7BF1FEEBB320077EC52 /* RestBaseParams.swift in Sources */,
 				244B18F21FF04E8800E50F14 /* UserRepository.swift in Sources */,
 				24A7D7BD1FEEBAB90077EC52 /* UserNetwork.swift in Sources */,
 				243EA51C1FDD67AA00B8FBA3 /* RestAdresse.swift in Sources */,
 				24F8887D1FAFA722008E851A /* PostEyes.swift in Sources */,
+				2457A1CE1FF4DAB700465FDF /* FirebaseReference.swift in Sources */,
 				24AE14D51FAF99E50048BF4E /* ImagesCollectionViewController.swift in Sources */,
 				24E1DFD51F6193D40003AE9A /* DBManager.swift in Sources */,
+				2457A1D01FF4DB2800465FDF /* CreateAccountTableViewController.swift in Sources */,
 				24F888781FAFA6EA008E851A /* SuggestionTableView.swift in Sources */,
 				24F888791FAFA6EA008E851A /* SuggestTableViewCell.swift in Sources */,
 			);

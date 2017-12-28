@@ -14,15 +14,22 @@ class EyesTableViewCell: UITableViewCell {
     @IBOutlet weak var nameProfilCell: UILabel!
     @IBOutlet weak var postImageCell: UIImageView!
     @IBOutlet weak var descriptionCell: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    var post: PostEyes! {
+        didSet {
+            self.updateUI()
+        }
     }
+    
+    func updateUI(){
+        
+        imageProfilCell.image = post.imageProfil
+        imageProfilCell.layer.cornerRadius = imageProfilCell.bounds.width / 2.0
+        imageProfilCell.layer.masksToBounds = true
+        
+        descriptionCell.text = post.description
+        nameProfilCell.text = post.nameProfil
+        postImageCell.image = post.postImage
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
 }

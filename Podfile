@@ -15,8 +15,11 @@ target 'EyesApp' do
     pod 'AlamofireObjectMapper'
     pod 'RxRealm'
     pod 'Alamofire'
+    pod 'Firebase'
+    pod 'Firebase/Database'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Storage'
     pod 'Firebase/Core'
-
 
 
 end
