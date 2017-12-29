@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		242C19401FF67CD5006DEA38 /* FIRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C193E1FF67CD5006DEA38 /* FIRImage.swift */; };
+		242C19411FF67CD5006DEA38 /* FirebaseReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C193F1FF67CD5006DEA38 /* FirebaseReference.swift */; };
 		243EA5141FD4321700B8FBA3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5131FD4321700B8FBA3 /* GradientView.swift */; };
 		243EA5171FD4376B00B8FBA3 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5151FD4376B00B8FBA3 /* DesignableTextField.swift */; };
 		243EA5181FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5161FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift */; };
@@ -21,8 +23,6 @@
 		243EA52A1FDD74DF00B8FBA3 /* RestTypeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5291FDD74DF00B8FBA3 /* RestTypeAction.swift */; };
 		244B18EE1FF04AB700E50F14 /* BuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B18EC1FF04AB700E50F14 /* BuildConfig.swift */; };
 		244B18F21FF04E8800E50F14 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B18F11FF04E8800E50F14 /* UserRepository.swift */; };
-		2457A1CD1FF4DAB700465FDF /* FIRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2457A1CB1FF4DAB600465FDF /* FIRImage.swift */; };
-		2457A1CE1FF4DAB700465FDF /* FirebaseReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2457A1CC1FF4DAB700465FDF /* FirebaseReference.swift */; };
 		2457A1D01FF4DB2800465FDF /* CreateAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2457A1CF1FF4DB2800465FDF /* CreateAccountTableViewController.swift */; };
 		2457A1D21FF4DB3C00465FDF /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2457A1D11FF4DB3C00465FDF /* CreateAccountViewModel.swift */; };
 		248E85C71FF172C30047CADE /* Info_Stubs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 248E85C61FF172C30047CADE /* Info_Stubs.plist */; };
@@ -56,6 +56,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		242C193E1FF67CD5006DEA38 /* FIRImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIRImage.swift; sourceTree = "<group>"; };
+		242C193F1FF67CD5006DEA38 /* FirebaseReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseReference.swift; sourceTree = "<group>"; };
 		243EA5131FD4321700B8FBA3 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = EyesApp/Common/GradientView.swift; sourceTree = "<group>"; };
 		243EA5151FD4376B00B8FBA3 /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignableTextField.swift; path = EyesApp/Common/DesignableTextField.swift; sourceTree = "<group>"; };
 		243EA5161FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SizeZeroWhenHiddenView.swift; path = EyesApp/Common/SizeZeroWhenHiddenView.swift; sourceTree = "<group>"; };
@@ -70,8 +72,6 @@
 		243EA5291FDD74DF00B8FBA3 /* RestTypeAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestTypeAction.swift; path = Data/RestTypeAction.swift; sourceTree = "<group>"; };
 		244B18EC1FF04AB700E50F14 /* BuildConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildConfig.swift; sourceTree = "<group>"; };
 		244B18F11FF04E8800E50F14 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
-		2457A1CB1FF4DAB600465FDF /* FIRImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIRImage.swift; sourceTree = "<group>"; };
-		2457A1CC1FF4DAB700465FDF /* FirebaseReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseReference.swift; sourceTree = "<group>"; };
 		2457A1CF1FF4DB2800465FDF /* CreateAccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountTableViewController.swift; sourceTree = "<group>"; };
 		2457A1D11FF4DB3C00465FDF /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		248E85C61FF172C30047CADE /* Info_Stubs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_Stubs.plist; sourceTree = "<group>"; };
@@ -263,8 +263,8 @@
 		2457A1CA1FF4DA5200465FDF /* FireBaseUtils */ = {
 			isa = PBXGroup;
 			children = (
-				2457A1CC1FF4DAB700465FDF /* FirebaseReference.swift */,
-				2457A1CB1FF4DAB600465FDF /* FIRImage.swift */,
+				242C193F1FF67CD5006DEA38 /* FirebaseReference.swift */,
+				242C193E1FF67CD5006DEA38 /* FIRImage.swift */,
 			);
 			path = FireBaseUtils;
 			sourceTree = "<group>";
@@ -351,8 +351,6 @@
 		24AE744B1F4B5C1D007D2719 /* EyesApp */ = {
 			isa = PBXGroup;
 			children = (
-				2457A1CA1FF4DA5200465FDF /* FireBaseUtils */,
-				248E85CD1FF198130047CADE /* Login */,
 				244B18EA1FF04A7B00E50F14 /* Configuration */,
 				24A7D7BB1FEEBA5E0077EC52 /* Repository */,
 				24A7D7BA1FEEB8D80077EC52 /* Network */,
@@ -363,6 +361,8 @@
 				24E1DFD41F6193D40003AE9A /* DBManager.swift */,
 				24AE74581F4B5C1D007D2719 /* Info.plist */,
 				248E85CA1FF192950047CADE /* GoogleService-Info.plist */,
+				2457A1CA1FF4DA5200465FDF /* FireBaseUtils */,
+				248E85CD1FF198130047CADE /* Login */,
 				243E40F91F8EB4510012BCB0 /* Camera */,
 				243E40F41F8EB27A0012BCB0 /* Posts */,
 				243E40F11F8EB1880012BCB0 /* Maps */,
@@ -598,6 +598,7 @@
 				243EA5171FD4376B00B8FBA3 /* DesignableTextField.swift in Sources */,
 				24AE744D1F4B5C1D007D2719 /* AppDelegate.swift in Sources */,
 				243EA5181FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift in Sources */,
+				242C19401FF67CD5006DEA38 /* FIRImage.swift in Sources */,
 				243EA5141FD4321700B8FBA3 /* GradientView.swift in Sources */,
 				24F8887B1FAFA70D008E851A /* PoiEyes.swift in Sources */,
 				243EA52A1FDD74DF00B8FBA3 /* RestTypeAction.swift in Sources */,
@@ -606,17 +607,16 @@
 				244B18EE1FF04AB700E50F14 /* BuildConfig.swift in Sources */,
 				243EA51A1FDD670300B8FBA3 /* RestUser.swift in Sources */,
 				24AE14D41FAF99E50048BF4E /* ImageCollectionViewCell.swift in Sources */,
+				242C19411FF67CD5006DEA38 /* FirebaseReference.swift in Sources */,
 				248E85D31FF19D9C0047CADE /* LoginViewModel.swift in Sources */,
 				248E85D51FF19DA70047CADE /* LoginViewController.swift in Sources */,
 				243EA5241FDD6E8D00B8FBA3 /* RestDemande.swift in Sources */,
-				2457A1CD1FF4DAB700465FDF /* FIRImage.swift in Sources */,
 				24A7D7C11FEECB8C0077EC52 /* Network.swift in Sources */,
 				24A7D7BF1FEEBB320077EC52 /* RestBaseParams.swift in Sources */,
 				244B18F21FF04E8800E50F14 /* UserRepository.swift in Sources */,
 				24A7D7BD1FEEBAB90077EC52 /* UserNetwork.swift in Sources */,
 				243EA51C1FDD67AA00B8FBA3 /* RestAdresse.swift in Sources */,
 				24F8887D1FAFA722008E851A /* PostEyes.swift in Sources */,
-				2457A1CE1FF4DAB700465FDF /* FirebaseReference.swift in Sources */,
 				24AE14D51FAF99E50048BF4E /* ImagesCollectionViewController.swift in Sources */,
 				24E1DFD51F6193D40003AE9A /* DBManager.swift in Sources */,
 				2457A1D01FF4DB2800465FDF /* CreateAccountTableViewController.swift in Sources */,

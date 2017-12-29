@@ -151,6 +151,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="loginAction:" destination="6tb-Ez-M8N" eventType="touchUpInside" id="hTB-Hk-02l"/>
+                                                        <segue destination="vl1-lt-MXZ" kind="show" id="w2j-Xd-HmS"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -282,7 +283,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AQB-8s-T9l" customClass="DesignableTextField" customModule="EyesApp" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AQB-8s-T9l" customClass="DesignableTextField" customModule="EyesApp" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -307,7 +308,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VHY-sk-0LI" customClass="DesignableTextField" customModule="EyesApp" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="LastName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VHY-sk-0LI" customClass="DesignableTextField" customModule="EyesApp" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -325,12 +326,37 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="ogD-hu-9E7">
+                                        <rect key="frame" x="0.0" y="355.5" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ogD-hu-9E7" id="FCW-5p-VEs">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cL1-Q6-YLE" customClass="DesignableTextField" customModule="EyesApp" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="eye"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="cL1-Q6-YLE" secondAttribute="bottom" id="5qs-JY-eP5"/>
+                                                <constraint firstAttribute="trailing" secondItem="cL1-Q6-YLE" secondAttribute="trailing" id="Srn-IY-WbG"/>
+                                                <constraint firstItem="cL1-Q6-YLE" firstAttribute="leading" secondItem="FCW-5p-VEs" secondAttribute="leading" id="SsN-QS-X9c"/>
+                                                <constraint firstItem="cL1-Q6-YLE" firstAttribute="top" secondItem="FCW-5p-VEs" secondAttribute="top" id="sLO-PJ-6Uw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="" id="ukG-6J-Y47">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="Sql-zf-S4m">
-                                        <rect key="frame" x="0.0" y="391.5" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="451.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sql-zf-S4m" id="rdL-uP-Jfm">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
@@ -340,7 +366,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="eye"/>
                                                     </userDefinedRuntimeAttributes>
@@ -359,7 +385,7 @@
                             <tableViewSection headerTitle="" id="Fr9-na-Oah">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="vKE-9g-XSG">
-                                        <rect key="frame" x="0.0" y="487.5" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="547.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vKE-9g-XSG" id="uhk-Hm-riv">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
@@ -396,9 +422,11 @@
                     <connections>
                         <outlet property="createAccountButton" destination="t4i-Cu-1Ef" id="r3M-81-803"/>
                         <outlet property="emailAdressText" destination="fAP-OJ-HaF" id="XdF-Hk-9Q1"/>
-                        <outlet property="fullNameText" destination="AQB-8s-T9l" id="x9w-nz-Qpy"/>
-                        <outlet property="loginText" destination="VHY-sk-0LI" id="SC4-an-m3H"/>
+                        <outlet property="firstNameText" destination="AQB-8s-T9l" id="7Ek-Rd-yYq"/>
+                        <outlet property="lastNameText" destination="VHY-sk-0LI" id="SC4-an-m3H"/>
                         <outlet property="passwordText" destination="dXY-52-iUW" id="7aj-uP-nB7"/>
+                        <outlet property="phoneNumberText" destination="cL1-Q6-YLE" id="YS0-Xg-NE1"/>
+                        <outlet property="userImageView" destination="I3V-J2-TgD" id="VKM-os-QOp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pYw-Ud-idb" userLabel="First Responder" sceneMemberID="firstResponder"/>

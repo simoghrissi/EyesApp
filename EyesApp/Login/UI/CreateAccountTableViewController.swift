@@ -9,14 +9,16 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import Firebase
+
 
 class CreateAccountTableViewController: UITableViewController {
-
+    
+    @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var phoneNumberText: DesignableTextField!
     @IBOutlet weak var createAccountButton: UIButton!
-    @IBOutlet weak var loginText: DesignableTextField!
+    @IBOutlet weak var lastNameText: DesignableTextField!
     @IBOutlet weak var passwordText: DesignableTextField!
-    @IBOutlet weak var fullNameText: DesignableTextField!
+    @IBOutlet weak var firstNameText: DesignableTextField!
     @IBOutlet weak var emailAdressText: DesignableTextField!
     
     let viewModel = CreateAccountViewModel()
@@ -27,7 +29,7 @@ class CreateAccountTableViewController: UITableViewController {
     }
 
     @IBAction func createAccountAction(_ sender: Any) {
-     
+     viewModel.createAccount()
         
     }
     
@@ -37,17 +39,28 @@ class CreateAccountTableViewController: UITableViewController {
         .bind(to: viewModel.emailAdress)
         .disposed(by: disposeBag)
         
-        loginText.rx.text.map{$0 ?? ""}
-            .bind(to: viewModel.login)
+        phoneNumberText.rx.text.map{$0 ?? ""}
+            .bind(to: viewModel.phoneNumber)
+            .disposed(by: disposeBag)
+        
+        lastNameText.rx.text.map{$0 ?? ""}
+            .bind(to: viewModel.lastName)
             .disposed(by: disposeBag)
         
         passwordText.rx.text.map{$0 ?? ""}
             .bind(to: viewModel.password)
             .disposed(by: disposeBag)
         
-        fullNameText.rx.text.map{$0 ?? ""}
-            .bind(to: viewModel.fullName)
+        firstNameText.rx.text.map{$0 ?? ""}
+            .bind(to: viewModel.firstName)
             .disposed(by: disposeBag)
+        
+        viewModel.imageUser.asObservable()
+        .bind(to: self.userImageView.rx.image)
+        .disposed(by: disposeBag)
+        
+//        viewModel.imageUser.asObservable()
+//            .bind(to:self.userImageView.rx.)
         
     }
 }

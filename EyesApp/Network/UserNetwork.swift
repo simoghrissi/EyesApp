@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import Alamofire
 
+
 public protocol UserNetworkProtocol {
     func getUser(post: RestBaseParams) -> Observable<RestUser>
 }
@@ -21,10 +22,8 @@ public final class UserNetwork: UserNetworkProtocol {
     public func getUser(post: RestBaseParams) -> Observable<RestUser> {
         let network: Network<RestUser> = Network()
         let user: Observable<(HTTPURLResponse, RestUser)> = network.postItem("UserInfos", parameters: post.dictionary)
-        return user.map({ _, restUser in
-            print(restUser)
-            return restUser})
+        return user.map({ _, restUser in return restUser})
     }
-
+    
 }
 

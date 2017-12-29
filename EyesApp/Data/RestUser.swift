@@ -15,7 +15,7 @@ extension Encodable {
 }
 public struct RestUser:Codable{
     
-    var idUser: Int?
+    var idUser: String?
     var nomUser: String?
     var prenomUser: String?
     var mailUser: String?
@@ -25,7 +25,7 @@ public struct RestUser:Codable{
     var nbrPointUser: String?
     var adresse: RestAdresse?
     let encoder = JSONEncoder()
- init(idUser:Int,nomUser:String,prenomUser:String,mailUser:String,passwordUser:String,phoneUser:String,dateCreateUser:String,nbrPointUser:String,adresse:RestAdresse) {
+ init(idUser:String,nomUser:String,prenomUser:String,mailUser:String,passwordUser:String,phoneUser:String,dateCreateUser:String,nbrPointUser:String,adresse:RestAdresse?) {
 
         self.idUser = idUser
         self.nomUser = nomUser
@@ -33,7 +33,7 @@ public struct RestUser:Codable{
         self.mailUser = mailUser
         self.passwordUser = passwordUser
         self.phoneUser = phoneUser
-        self.dateCreateUser = nbrPointUser
+        self.dateCreateUser = dateCreateUser
         self.adresse = adresse
     }
     
@@ -52,7 +52,7 @@ public struct RestUser:Codable{
     
     public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        idUser = try values.decodeIfPresent(Int.self, forKey: .idUser)
+        idUser = try values.decodeIfPresent(String.self, forKey: .idUser)
         nomUser = try values.decodeIfPresent(String.self, forKey: .nomUser)
         prenomUser = try values.decodeIfPresent(String.self, forKey: .prenomUser)
         mailUser = try values.decodeIfPresent(String.self, forKey: .mailUser)
@@ -64,5 +64,27 @@ public struct RestUser:Codable{
 
     }
     
+    func toDictionary() -> [String : Any]
+    {
+        return [
+            "idUser": self.idUser ?? "",
+            "nomUser":self.nomUser ?? "",
+            "prenomUser": self.prenomUser ?? "",
+            "mailUser": self.mailUser ?? "",
+            "passwordUser": self.passwordUser ?? "",
+            "phoneUser": self.phoneUser ?? "",
+            "dateCreateUser": self.dateCreateUser ?? "",
+            "nbrPointUser": self.nbrPointUser ?? "",
+            "adresse":
+                [
+                    "numVoie": self.adresse?.numVoie ?? "",
+                    "libelleVoie": self.adresse?.libelleVoie ?? "",
+                    "codePostal": self.adresse?.codePostal ?? "",
+                    "ville": self.adresse?.ville ?? ""
+            ]
+            
+            
+        ]
+    }
     
 }
