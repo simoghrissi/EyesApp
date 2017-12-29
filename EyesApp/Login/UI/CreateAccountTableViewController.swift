@@ -35,6 +35,15 @@ class CreateAccountTableViewController: UITableViewController {
     
     func setupBinding(){
         
+        _ = viewModel.errorMessage
+            .asObservable()
+            .observeOn(MainScheduler.instance)
+            .subscribe{
+                if $0.element != "" {
+                    UIAlertController.okAlert(controller: self, title: "Error_title".localized, message: self.viewModel.errorMessage.value)
+                }
+        }
+        
         emailAdressText.rx.text.map{$0 ?? ""}
         .bind(to: viewModel.emailAdress)
         .disposed(by: disposeBag)

@@ -11,6 +11,7 @@
 		242C19411FF67CD5006DEA38 /* FirebaseReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C193F1FF67CD5006DEA38 /* FirebaseReference.swift */; };
 		242C19431FF6A407006DEA38 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 242C19421FF6A407006DEA38 /* Localizable.strings */; };
 		242C19451FF6B0AC006DEA38 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C19441FF6B0AC006DEA38 /* String.swift */; };
+		242C19471FF6D348006DEA38 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C19461FF6D348006DEA38 /* UIAlertController.swift */; };
 		243EA5141FD4321700B8FBA3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5131FD4321700B8FBA3 /* GradientView.swift */; };
 		243EA5171FD4376B00B8FBA3 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5151FD4376B00B8FBA3 /* DesignableTextField.swift */; };
 		243EA5181FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5161FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift */; };
@@ -62,6 +63,7 @@
 		242C193F1FF67CD5006DEA38 /* FirebaseReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseReference.swift; sourceTree = "<group>"; };
 		242C19421FF6A407006DEA38 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = EyesApp/Common/Localizable.strings; sourceTree = "<group>"; };
 		242C19441FF6B0AC006DEA38 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = String.swift; path = EyesApp/Common/String.swift; sourceTree = "<group>"; };
+		242C19461FF6D348006DEA38 /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertController.swift; path = EyesApp/Common/UIAlertController.swift; sourceTree = "<group>"; };
 		243EA5131FD4321700B8FBA3 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = EyesApp/Common/GradientView.swift; sourceTree = "<group>"; };
 		243EA5151FD4376B00B8FBA3 /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignableTextField.swift; path = EyesApp/Common/DesignableTextField.swift; sourceTree = "<group>"; };
 		243EA5161FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SizeZeroWhenHiddenView.swift; path = EyesApp/Common/SizeZeroWhenHiddenView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		241AFC731F77E218002EF78C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				242C19461FF6D348006DEA38 /* UIAlertController.swift */,
 				243EA5151FD4376B00B8FBA3 /* DesignableTextField.swift */,
 				243EA5161FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift */,
 				243EA5131FD4321700B8FBA3 /* GradientView.swift */,
@@ -617,6 +620,7 @@
 				24AE14D41FAF99E50048BF4E /* ImageCollectionViewCell.swift in Sources */,
 				242C19411FF67CD5006DEA38 /* FirebaseReference.swift in Sources */,
 				248E85D31FF19D9C0047CADE /* LoginViewModel.swift in Sources */,
+				242C19471FF6D348006DEA38 /* UIAlertController.swift in Sources */,
 				248E85D51FF19DA70047CADE /* LoginViewController.swift in Sources */,
 				243EA5241FDD6E8D00B8FBA3 /* RestDemande.swift in Sources */,
 				24A7D7C11FEECB8C0077EC52 /* Network.swift in Sources */,
