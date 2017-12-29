@@ -19,7 +19,7 @@ class CreateAccountViewModel{
         var emailAdress = Variable<String>("")
         var phoneNumber = Variable<String>("")
         var imageUser = Variable<UIImage>(UIImage(named: "loginIcon")!)
-    
+        var errorMessage = Variable<String>("")
         let repository = UserRepository()
     
     init(){
@@ -64,6 +64,22 @@ class CreateAccountViewModel{
             }
         })
         
+    }
+    
+    func manageError(error e: Error) {
+        if let e = e as? ApiError {
+            switch (e) {
+            case .KO_TECHNIQUE:
+                errorMessage.value = "technical_error".localized
+                break
+            
+            default:
+                errorMessage.value = "technical_error".localized
+                break
+            }
+        } else {
+            errorMessage.value = "technical_error".localized
+        }
     }
     
 }

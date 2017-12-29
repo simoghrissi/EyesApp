@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		242C19401FF67CD5006DEA38 /* FIRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C193E1FF67CD5006DEA38 /* FIRImage.swift */; };
 		242C19411FF67CD5006DEA38 /* FirebaseReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C193F1FF67CD5006DEA38 /* FirebaseReference.swift */; };
+		242C19431FF6A407006DEA38 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 242C19421FF6A407006DEA38 /* Localizable.strings */; };
+		242C19451FF6B0AC006DEA38 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C19441FF6B0AC006DEA38 /* String.swift */; };
 		243EA5141FD4321700B8FBA3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5131FD4321700B8FBA3 /* GradientView.swift */; };
 		243EA5171FD4376B00B8FBA3 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5151FD4376B00B8FBA3 /* DesignableTextField.swift */; };
 		243EA5181FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5161FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift */; };
@@ -58,6 +60,8 @@
 /* Begin PBXFileReference section */
 		242C193E1FF67CD5006DEA38 /* FIRImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIRImage.swift; sourceTree = "<group>"; };
 		242C193F1FF67CD5006DEA38 /* FirebaseReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseReference.swift; sourceTree = "<group>"; };
+		242C19421FF6A407006DEA38 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = EyesApp/Common/Localizable.strings; sourceTree = "<group>"; };
+		242C19441FF6B0AC006DEA38 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = String.swift; path = EyesApp/Common/String.swift; sourceTree = "<group>"; };
 		243EA5131FD4321700B8FBA3 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = EyesApp/Common/GradientView.swift; sourceTree = "<group>"; };
 		243EA5151FD4376B00B8FBA3 /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignableTextField.swift; path = EyesApp/Common/DesignableTextField.swift; sourceTree = "<group>"; };
 		243EA5161FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SizeZeroWhenHiddenView.swift; path = EyesApp/Common/SizeZeroWhenHiddenView.swift; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 				243EA5151FD4376B00B8FBA3 /* DesignableTextField.swift */,
 				243EA5161FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift */,
 				243EA5131FD4321700B8FBA3 /* GradientView.swift */,
+				242C19421FF6A407006DEA38 /* Localizable.strings */,
+				242C19441FF6B0AC006DEA38 /* String.swift */,
 			);
 			name = Common;
 			path = ..;
@@ -475,6 +481,7 @@
 				24F888801FAFA73C008E851A /* Main.storyboard in Resources */,
 				24F888771FAFA6EA008E851A /* CollectionPoi.storyboard in Resources */,
 				248E85C71FF172C30047CADE /* Info_Stubs.plist in Resources */,
+				242C19431FF6A407006DEA38 /* Localizable.strings in Resources */,
 				24AE74571F4B5C1D007D2719 /* LaunchScreen.storyboard in Resources */,
 				24AE14D01FAF99410048BF4E /* Maps.storyboard in Resources */,
 				24AE74541F4B5C1D007D2719 /* Assets.xcassets in Resources */,
@@ -585,6 +592,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				242C19451FF6B0AC006DEA38 /* String.swift in Sources */,
 				24F888811FAFA73C008E851A /* ViewController.swift in Sources */,
 				243EA5261FDD6EBE00B8FBA3 /* RestTypeDemande.swift in Sources */,
 				243EA5281FDD73CA00B8FBA3 /* RestHistorique.swift in Sources */,

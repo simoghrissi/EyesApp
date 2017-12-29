@@ -11,6 +11,10 @@ import Alamofire
 import RxAlamofire
 import RxSwift
 
+enum ApiError: Error {
+    case KO_TECHNIQUE
+}
+
 final class Network<T: Codable> {
     
     let jsonDecoder = JSONDecoder()
