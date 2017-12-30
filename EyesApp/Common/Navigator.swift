@@ -16,7 +16,7 @@ public class Navigator {
     func navigateToMain(controller:UIViewController){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController")as? ViewController{
-            controller.present(viewController, animated: true, completion: nil)
+            controller.present(viewController, animated: false, completion: nil)
 
         }
     }

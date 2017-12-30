@@ -209,6 +209,10 @@
                     <navigationItem key="navigationItem" id="a9A-XQ-bpd">
                         <barButtonItem key="backBarButtonItem" title=" " id="JPQ-RQ-CLL"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailText" destination="Tvf-tv-WbG" id="6dI-4q-MS5"/>
+                        <outlet property="passwordText" destination="u5S-Th-2Wz" id="xpW-F6-9cp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwb-x5-hpA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

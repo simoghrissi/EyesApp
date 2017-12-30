@@ -8,3 +8,8 @@
 "technical_error" = "Une erreur est survenue";
 "Error_title" = "Erreur";
 "ok_message" = "Ok";
+
+"from_library" = "Add from Library";
+"take_photo" = "Take Photo";
+"delete_photo" = "Delete Photo";
+"cancel" = "Cancel";

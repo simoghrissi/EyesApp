@@ -15,8 +15,8 @@ class CreateAccountViewModel{
 
         var lastName = Variable<String>("")
         var password = Variable<String>("")
-        var firstName = Variable<String>("")
         var emailAdress = Variable<String>("")
+        var firstName = Variable<String>("")
         var phoneNumber = Variable<String>("")
         var imageUser = Variable<UIImage>(UIImage(named: "defaultProfileImage")!)
         var errorMessage = Variable<String>("")
@@ -27,7 +27,7 @@ class CreateAccountViewModel{
         
     }
     
-    func createAccount(sucess:@escaping()->()){
+    func createAccount(success:@escaping()->()){
         // 1. sign up a new account
         Auth.auth().createUser(withEmail: self.emailAdress.value, password: self.password.value, completion: { (firUser, error) in
             
@@ -57,7 +57,7 @@ class CreateAccountViewModel{
                             if let error = error {
                                 self.manageError(error: error)
                             } else {
-                                sucess()
+                                success()
                                 print("SUCCESS SIGN IN")
                             }
                         })

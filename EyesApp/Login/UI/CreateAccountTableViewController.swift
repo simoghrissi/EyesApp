@@ -19,9 +19,10 @@ class CreateAccountTableViewController: UITableViewController {
     @IBOutlet weak var passwordText: DesignableTextField!
     @IBOutlet weak var firstNameText: DesignableTextField!
     @IBOutlet weak var emailAdressText: DesignableTextField!
-    
+
     let viewModel = CreateAccountViewModel()
     let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBinding()

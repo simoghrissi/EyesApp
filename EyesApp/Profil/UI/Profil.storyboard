@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profil Table View Controller-->
+        <!--Profil-->
         <scene sceneID="AeH-lA-uJd">
             <objects>
                 <tableViewController id="AdQ-4G-YtU" customClass="ProfilTableViewController" customModule="EyesApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -268,6 +268,13 @@
                             <outlet property="delegate" destination="AdQ-4G-YtU" id="ggh-HW-GQF"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Profil" id="U6J-7U-IvV">
+                        <barButtonItem key="rightBarButtonItem" image="logout" id="S0W-FK-bJo">
+                            <connections>
+                                <action selector="logoutAction:" destination="AdQ-4G-YtU" id="LJW-oi-TBJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addressText" destination="oqX-cb-feC" id="e5l-Cy-PgD"/>
                         <outlet property="birthDayText" destination="cj1-Sm-fSY" id="drC-tm-KC0"/>
@@ -289,6 +296,7 @@
         <image name="defaultProfileImage" width="60" height="60"/>
         <image name="emailIcon" width="50" height="50"/>
         <image name="eye" width="64" height="64"/>
+        <image name="logout" width="24" height="24"/>
         <image name="nameIcon" width="50" height="50"/>
         <image name="passwordIcon-1" width="50" height="50"/>
         <image name="phoneIcon" width="256" height="256"/>

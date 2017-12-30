@@ -8,11 +8,16 @@
 
 import Foundation
 import RxSwift
+import Firebase
+import FirebaseAuth
 
 class LoginViewModel {
-    
+
+    var password = Variable<String>("")
+    var emailAdress = Variable<String>("")
+    var errorMessage = Variable<String>("")
+
     let disposeBag = DisposeBag()
-    
     let repository  = UserRepository()
     
     init() {
@@ -24,5 +29,28 @@ class LoginViewModel {
 
             
         }).disposed(by: disposeBag)
+    }
+    
+    func signIn(success:@escaping()->()){
+        Auth.auth().signIn(withEmail: self.emailAdress.value, password: self.password.value, completion: { (firUser, error) in
+            
+            if let error = error {
+                self.manageError(error: error)
+            } else {
+                success()
+            }
+        })
+    }
+    
+    func manageError(error e: Error) {
+        if let e = e as? ApiError {
+            switch (e) {
+            case .KO_TECHNIQUE:
+                errorMessage.value = "technical_error".localized
+                break
+            }
+        } else {
+            errorMessage.value = "technical_error".localized
+        }
     }
 }

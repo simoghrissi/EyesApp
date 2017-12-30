@@ -13,11 +13,16 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var passwordText: DesignableTextField!
+    @IBOutlet weak var emailText: DesignableTextField!
+    
     let viewModel = LoginViewModel()
+    let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-       
+       setupBinding()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +42,29 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginAction(_ sender: Any) {
+        viewModel.signIn{
+            Navigator.sharedInstance.navigateToMain(controller: self)
+        }
+    }
+    
+    func setupBinding(){
         
+        passwordText.rx.text.map{$0 ?? ""}
+        .bind(to: viewModel.password)
+        .disposed(by: disposeBag)
+        
+        emailText.rx.text.map{$0 ?? ""}
+        .bind(to: viewModel.emailAdress)
+        .disposed(by: disposeBag)
+        
+        _ = viewModel.errorMessage
+            .asObservable()
+            .observeOn(MainScheduler.instance)
+            .subscribe{
+                if $0.element != "" {
+                    UIAlertController.okAlert(controller: self, title: "Error_title".localized, message: self.viewModel.errorMessage.value)
+                }
+        }
     }
     
     func setupNavigationBar(){
