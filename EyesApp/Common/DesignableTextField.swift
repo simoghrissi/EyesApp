@@ -96,8 +96,8 @@ class DesignableTextField: UITextField {
                 
             self.rightViewButton = UIButton(frame: CGRect(x:0, y:0, width: width, height:20))
             self.rightViewButton?.setImage(self.rightImageView?.image, for: .normal)
-           // self.rightViewButton?.tintColor = type.Color.lightGrey2
-            //self.rightViewButton?.addTarget(self, action: #selector(showPassword), for: .touchUpInside)
+            self.rightViewButton?.tintColor = UIColor.lightGray
+            self.rightViewButton?.addTarget(self, action: #selector(showPassword), for: .touchUpInside)
             rightView = self.rightViewButton
             rightView?.isHidden = true
         } else {
@@ -111,14 +111,14 @@ class DesignableTextField: UITextField {
                 placeholder! : "", attributes:[NSForegroundColorAttributeName: color])
     }
 
-//    func showPassword() {
-//        if self.isSecureTextEntry {
-//            self.rightViewButton?.tintColor = Style.Color.blue
-//            self.isSecureTextEntry = false
-//        } else {
-//            self.rightViewButton?.tintColor = Style.Color.lightGrey2
-//            self.isSecureTextEntry = true
-//            
-//        }
-//    }
+    func showPassword() {
+        if self.isSecureTextEntry {
+            self.rightViewButton?.tintColor = UIColor.blue
+            self.isSecureTextEntry = false
+        } else {
+            self.rightViewButton?.tintColor = UIColor.blue
+            self.isSecureTextEntry = true
+            
+        }
+    }
 }

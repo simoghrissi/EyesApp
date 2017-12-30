@@ -12,6 +12,9 @@
 		242C19431FF6A407006DEA38 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 242C19421FF6A407006DEA38 /* Localizable.strings */; };
 		242C19451FF6B0AC006DEA38 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C19441FF6B0AC006DEA38 /* String.swift */; };
 		242C19471FF6D348006DEA38 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C19461FF6D348006DEA38 /* UIAlertController.swift */; };
+		242C19491FF70BED006DEA38 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C19481FF70BED006DEA38 /* Navigator.swift */; };
+		242C194F1FF7C48C006DEA38 /* Profil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242C194E1FF7C48C006DEA38 /* Profil.storyboard */; };
+		242C19511FF7C4AA006DEA38 /* ProfilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C19501FF7C4AA006DEA38 /* ProfilTableViewController.swift */; };
 		243EA5141FD4321700B8FBA3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5131FD4321700B8FBA3 /* GradientView.swift */; };
 		243EA5171FD4376B00B8FBA3 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5151FD4376B00B8FBA3 /* DesignableTextField.swift */; };
 		243EA5181FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5161FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift */; };
@@ -64,6 +67,9 @@
 		242C19421FF6A407006DEA38 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = EyesApp/Common/Localizable.strings; sourceTree = "<group>"; };
 		242C19441FF6B0AC006DEA38 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = String.swift; path = EyesApp/Common/String.swift; sourceTree = "<group>"; };
 		242C19461FF6D348006DEA38 /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertController.swift; path = EyesApp/Common/UIAlertController.swift; sourceTree = "<group>"; };
+		242C19481FF70BED006DEA38 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Navigator.swift; path = EyesApp/Common/Navigator.swift; sourceTree = "<group>"; };
+		242C194E1FF7C48C006DEA38 /* Profil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profil.storyboard; sourceTree = "<group>"; };
+		242C19501FF7C4AA006DEA38 /* ProfilTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilTableViewController.swift; sourceTree = "<group>"; };
 		243EA5131FD4321700B8FBA3 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = EyesApp/Common/GradientView.swift; sourceTree = "<group>"; };
 		243EA5151FD4376B00B8FBA3 /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignableTextField.swift; path = EyesApp/Common/DesignableTextField.swift; sourceTree = "<group>"; };
 		243EA5161FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SizeZeroWhenHiddenView.swift; path = EyesApp/Common/SizeZeroWhenHiddenView.swift; sourceTree = "<group>"; };
@@ -136,6 +142,7 @@
 				243EA5131FD4321700B8FBA3 /* GradientView.swift */,
 				242C19421FF6A407006DEA38 /* Localizable.strings */,
 				242C19441FF6B0AC006DEA38 /* String.swift */,
+				242C19481FF70BED006DEA38 /* Navigator.swift */,
 			);
 			name = Common;
 			path = ..;
@@ -150,6 +157,39 @@
 			);
 			name = Pois;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		242C194A1FF7C44C006DEA38 /* Profil */ = {
+			isa = PBXGroup;
+			children = (
+				242C194D1FF7C467006DEA38 /* Model */,
+				242C194C1FF7C464006DEA38 /* ViewModel */,
+				242C194B1FF7C461006DEA38 /* UI */,
+			);
+			path = Profil;
+			sourceTree = "<group>";
+		};
+		242C194B1FF7C461006DEA38 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				242C194E1FF7C48C006DEA38 /* Profil.storyboard */,
+				242C19501FF7C4AA006DEA38 /* ProfilTableViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		242C194C1FF7C464006DEA38 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		242C194D1FF7C467006DEA38 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		243E40F01F8EB1700012BCB0 /* UI */ = {
@@ -364,19 +404,20 @@
 				24A7D7BB1FEEBA5E0077EC52 /* Repository */,
 				24A7D7BA1FEEB8D80077EC52 /* Network */,
 				24F888731FAFA677008E851A /* Data */,
+				2457A1CA1FF4DA5200465FDF /* FireBaseUtils */,
+				248E85CD1FF198130047CADE /* Login */,
+				242C194A1FF7C44C006DEA38 /* Profil */,
+				243E40F91F8EB4510012BCB0 /* Camera */,
+				243E40F41F8EB27A0012BCB0 /* Posts */,
+				243E40F11F8EB1880012BCB0 /* Maps */,
+				241AFC741F77E233002EF78C /* Pois */,
+				241AFC731F77E218002EF78C /* Common */,
 				24AE744C1F4B5C1D007D2719 /* AppDelegate.swift */,
 				24AE74531F4B5C1D007D2719 /* Assets.xcassets */,
 				24AE74551F4B5C1D007D2719 /* LaunchScreen.storyboard */,
 				24E1DFD41F6193D40003AE9A /* DBManager.swift */,
 				24AE74581F4B5C1D007D2719 /* Info.plist */,
 				248E85CA1FF192950047CADE /* GoogleService-Info.plist */,
-				2457A1CA1FF4DA5200465FDF /* FireBaseUtils */,
-				248E85CD1FF198130047CADE /* Login */,
-				243E40F91F8EB4510012BCB0 /* Camera */,
-				243E40F41F8EB27A0012BCB0 /* Posts */,
-				243E40F11F8EB1880012BCB0 /* Maps */,
-				241AFC741F77E233002EF78C /* Pois */,
-				241AFC731F77E218002EF78C /* Common */,
 			);
 			path = EyesApp;
 			sourceTree = "<group>";
@@ -482,6 +523,7 @@
 			files = (
 				248E85D11FF198660047CADE /* Login.storyboard in Resources */,
 				24F888801FAFA73C008E851A /* Main.storyboard in Resources */,
+				242C194F1FF7C48C006DEA38 /* Profil.storyboard in Resources */,
 				24F888771FAFA6EA008E851A /* CollectionPoi.storyboard in Resources */,
 				248E85C71FF172C30047CADE /* Info_Stubs.plist in Resources */,
 				242C19431FF6A407006DEA38 /* Localizable.strings in Resources */,
@@ -616,6 +658,7 @@
 				24AE14CB1FAF98F90048BF4E /* CameraViewController.swift in Sources */,
 				2457A1D21FF4DB3C00465FDF /* CreateAccountViewModel.swift in Sources */,
 				244B18EE1FF04AB700E50F14 /* BuildConfig.swift in Sources */,
+				242C19491FF70BED006DEA38 /* Navigator.swift in Sources */,
 				243EA51A1FDD670300B8FBA3 /* RestUser.swift in Sources */,
 				24AE14D41FAF99E50048BF4E /* ImageCollectionViewCell.swift in Sources */,
 				242C19411FF67CD5006DEA38 /* FirebaseReference.swift in Sources */,
@@ -627,6 +670,7 @@
 				24A7D7BF1FEEBB320077EC52 /* RestBaseParams.swift in Sources */,
 				244B18F21FF04E8800E50F14 /* UserRepository.swift in Sources */,
 				24A7D7BD1FEEBAB90077EC52 /* UserNetwork.swift in Sources */,
+				242C19511FF7C4AA006DEA38 /* ProfilTableViewController.swift in Sources */,
 				243EA51C1FDD67AA00B8FBA3 /* RestAdresse.swift in Sources */,
 				24F8887D1FAFA722008E851A /* PostEyes.swift in Sources */,
 				24AE14D51FAF99E50048BF4E /* ImagesCollectionViewController.swift in Sources */,

@@ -9,16 +9,28 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
 
     let viewModel = LoginViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupNavigationBar()
+       
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        Auth.auth().addStateDidChangeListener({ (auth, user) in
+            if user != nil {
+                // just logged in successfully
+                self.dismiss(animated: false, completion: nil)
+            }
+        })
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -26,6 +38,15 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginAction(_ sender: Any) {
         
+    }
+    
+    func setupNavigationBar(){
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+       
     }
     
     /*

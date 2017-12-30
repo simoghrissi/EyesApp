@@ -18,22 +18,23 @@ class CreateAccountViewModel{
         var firstName = Variable<String>("")
         var emailAdress = Variable<String>("")
         var phoneNumber = Variable<String>("")
-        var imageUser = Variable<UIImage>(UIImage(named: "loginIcon")!)
+        var imageUser = Variable<UIImage>(UIImage(named: "defaultProfileImage")!)
         var errorMessage = Variable<String>("")
         let repository = UserRepository()
+        let isloaderHidden = Variable<Bool>(false)
     
     init(){
         
     }
     
-    func createAccount(){
+    func createAccount(sucess:@escaping()->()){
         // 1. sign up a new account
         Auth.auth().createUser(withEmail: self.emailAdress.value, password: self.password.value, completion: { (firUser, error) in
             
             if error != nil {
                 // ERROR - report
-                print(error)
-                
+                self.manageError(error: error!)
+
             } else if let firUser = firUser {
                 let date = Date()
                 let calendar = Calendar.current
@@ -46,7 +47,7 @@ class CreateAccountViewModel{
                 
                 self.repository.save(user: newUser, imgeUser: self.imageUser.value, completion: { (error) in
                     if error != nil {
-                        print(error)
+                        self.manageError(error: error!)
                     } else {
                         
                         // SUCCESSFULLY SIGNED UP A NEW ACCOUNT!
@@ -54,8 +55,9 @@ class CreateAccountViewModel{
                         Auth.auth().signIn(withEmail: self.emailAdress.value, password: self.password.value, completion: { (firUser, error) in
                             
                             if let error = error {
-                                print(error)
+                                self.manageError(error: error)
                             } else {
+                                sucess()
                                 print("SUCCESS SIGN IN")
                             }
                         })
@@ -70,10 +72,6 @@ class CreateAccountViewModel{
         if let e = e as? ApiError {
             switch (e) {
             case .KO_TECHNIQUE:
-                errorMessage.value = "technical_error".localized
-                break
-            
-            default:
                 errorMessage.value = "technical_error".localized
                 break
             }

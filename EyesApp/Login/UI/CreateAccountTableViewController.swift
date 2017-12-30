@@ -10,7 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-
 class CreateAccountTableViewController: UITableViewController {
     
     @IBOutlet weak var userImageView: UIImageView!
@@ -29,7 +28,9 @@ class CreateAccountTableViewController: UITableViewController {
     }
 
     @IBAction func createAccountAction(_ sender: Any) {
-     viewModel.createAccount()
+        viewModel.createAccount{
+            Navigator.sharedInstance.navigateToMain(controller: self)
+        }
         
     }
     
@@ -68,8 +69,6 @@ class CreateAccountTableViewController: UITableViewController {
         .bind(to: self.userImageView.rx.image)
         .disposed(by: disposeBag)
         
-//        viewModel.imageUser.asObservable()
-//            .bind(to:self.userImageView.rx.)
         
     }
 }

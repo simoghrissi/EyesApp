@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6tb-Ez-M8N">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vl1-lt-MXZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,12 +24,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AcP-Sx-MfC">
-                                <rect key="frame" x="16" y="70" width="343" height="547"/>
+                                <rect key="frame" x="16" y="114" width="343" height="503"/>
                                 <subviews>
                                     <visualEffectView opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNu-hn-as4">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="547"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="503"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Qyb-eL-7J0">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="547"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="503"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye" translatesAutoresizingMaskIntoConstraints="NO" id="ZGg-mU-mhe">
@@ -105,7 +105,7 @@
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDd-xo-J3T">
                                                     <rect key="frame" x="20" y="330" width="303" height="56"/>
-                                                    <color key="backgroundColor" red="0.46589213610000002" green="0.031351577489999997" blue="0.80094474550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.7062353321" green="0.66568809110000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="56" id="5lk-sc-BnR"/>
                                                     </constraints>
@@ -129,7 +129,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTF-AN-cgv">
-                                                    <rect key="frame" x="20" y="481" width="303" height="56"/>
+                                                    <rect key="frame" x="20" y="437" width="303" height="56"/>
                                                     <color key="backgroundColor" red="0.21960784310000001" green="0.59999999999999998" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="56" id="3fP-DT-e40"/>
@@ -150,8 +150,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="loginAction:" destination="6tb-Ez-M8N" eventType="touchUpInside" id="hTB-Hk-02l"/>
-                                                        <segue destination="vl1-lt-MXZ" kind="show" id="w2j-Xd-HmS"/>
+                                                        <segue destination="1Dw-RP-GNg" kind="show" id="gMh-35-ylE"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -207,10 +206,13 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <navigationItem key="navigationItem" id="a9A-XQ-bpd">
+                        <barButtonItem key="backBarButtonItem" title=" " id="JPQ-RQ-CLL"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwb-x5-hpA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2774" y="-307"/>
+            <point key="canvasLocation" x="-1846" y="-290"/>
         </scene>
         <!--Create new Account-->
         <scene sceneID="EJU-l3-sjv">
@@ -225,7 +227,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginIcon" translatesAutoresizingMaskIntoConstraints="NO" id="I3V-J2-TgD">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="I3V-J2-TgD">
                                     <rect key="frame" x="155.5" y="20" width="64" height="64"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="64" id="JyU-UT-JYb"/>
@@ -235,7 +237,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKn-u3-UDP">
                                     <rect key="frame" x="114.5" y="89" width="147" height="23"/>
                                     <state key="normal" title="Change Profile Image">
-                                        <color key="titleColor" red="0.7062353321" green="0.66568809110000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleColor" red="0.64367266104061804" green="0.60994669684681868" blue="0.92758565989847719" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                 </button>
                             </subviews>
@@ -259,19 +261,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fAP-OJ-HaF" customClass="DesignableTextField" customModule="EyesApp" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                                    <rect key="frame" x="5" y="0.0" width="370" height="59.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="eye"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="emailIcon"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="fAP-OJ-HaF" secondAttribute="trailing" id="6ov-Bv-T0d"/>
                                                 <constraint firstAttribute="bottom" secondItem="fAP-OJ-HaF" secondAttribute="bottom" id="MT1-2l-OX4"/>
-                                                <constraint firstItem="fAP-OJ-HaF" firstAttribute="leading" secondItem="btv-IZ-293" secondAttribute="leading" id="Qku-ns-FZr"/>
+                                                <constraint firstItem="fAP-OJ-HaF" firstAttribute="leading" secondItem="btv-IZ-293" secondAttribute="leading" constant="5" id="Qku-ns-FZr"/>
                                                 <constraint firstItem="fAP-OJ-HaF" firstAttribute="top" secondItem="btv-IZ-293" secondAttribute="top" id="kuY-1n-DQD"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -284,19 +286,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AQB-8s-T9l" customClass="DesignableTextField" customModule="EyesApp" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                                    <rect key="frame" x="5" y="0.0" width="370" height="59.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="eye"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="nameIcon"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="AQB-8s-T9l" secondAttribute="trailing" id="30G-Nh-qaq"/>
                                                 <constraint firstItem="AQB-8s-T9l" firstAttribute="top" secondItem="nRW-zu-ayO" secondAttribute="top" id="YHv-5c-Gc2"/>
-                                                <constraint firstItem="AQB-8s-T9l" firstAttribute="leading" secondItem="nRW-zu-ayO" secondAttribute="leading" id="aJQ-kZ-l3X"/>
+                                                <constraint firstItem="AQB-8s-T9l" firstAttribute="leading" secondItem="nRW-zu-ayO" secondAttribute="leading" constant="5" id="aJQ-kZ-l3X"/>
                                                 <constraint firstAttribute="bottom" secondItem="AQB-8s-T9l" secondAttribute="bottom" id="hYQ-Xe-6Ui"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -309,19 +311,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="LastName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VHY-sk-0LI" customClass="DesignableTextField" customModule="EyesApp" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                                    <rect key="frame" x="5" y="0.0" width="370" height="59.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="eye"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="nameIcon"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="VHY-sk-0LI" secondAttribute="trailing" id="5Bf-bF-afS"/>
                                                 <constraint firstItem="VHY-sk-0LI" firstAttribute="top" secondItem="Gdu-zl-utE" secondAttribute="top" id="FEe-og-0ZO"/>
-                                                <constraint firstItem="VHY-sk-0LI" firstAttribute="leading" secondItem="Gdu-zl-utE" secondAttribute="leading" id="dT4-M2-G2D"/>
+                                                <constraint firstItem="VHY-sk-0LI" firstAttribute="leading" secondItem="Gdu-zl-utE" secondAttribute="leading" constant="5" id="dT4-M2-G2D"/>
                                                 <constraint firstAttribute="bottom" secondItem="VHY-sk-0LI" secondAttribute="bottom" id="xFW-oT-KuY"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -334,19 +336,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cL1-Q6-YLE" customClass="DesignableTextField" customModule="EyesApp" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                                    <rect key="frame" x="5" y="0.0" width="370" height="59.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="eye"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="phoneIcon"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="cL1-Q6-YLE" secondAttribute="bottom" id="5qs-JY-eP5"/>
                                                 <constraint firstAttribute="trailing" secondItem="cL1-Q6-YLE" secondAttribute="trailing" id="Srn-IY-WbG"/>
-                                                <constraint firstItem="cL1-Q6-YLE" firstAttribute="leading" secondItem="FCW-5p-VEs" secondAttribute="leading" id="SsN-QS-X9c"/>
+                                                <constraint firstItem="cL1-Q6-YLE" firstAttribute="leading" secondItem="FCW-5p-VEs" secondAttribute="leading" constant="5" id="SsN-QS-X9c"/>
                                                 <constraint firstItem="cL1-Q6-YLE" firstAttribute="top" secondItem="FCW-5p-VEs" secondAttribute="top" id="sLO-PJ-6Uw"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -363,18 +365,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dXY-52-iUW" customClass="DesignableTextField" customModule="EyesApp" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                                    <rect key="frame" x="5" y="0.0" width="370" height="59.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="eye"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="passwordIcon-1"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="eye"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="dXY-52-iUW" firstAttribute="top" secondItem="rdL-uP-Jfm" secondAttribute="top" id="Lps-zQ-8T8"/>
-                                                <constraint firstItem="dXY-52-iUW" firstAttribute="leading" secondItem="rdL-uP-Jfm" secondAttribute="leading" id="kpn-jO-GuD"/>
+                                                <constraint firstItem="dXY-52-iUW" firstAttribute="leading" secondItem="rdL-uP-Jfm" secondAttribute="leading" constant="5" id="kpn-jO-GuD"/>
                                                 <constraint firstAttribute="bottom" secondItem="dXY-52-iUW" secondAttribute="bottom" id="rz8-Pu-oad"/>
                                                 <constraint firstAttribute="trailing" secondItem="dXY-52-iUW" secondAttribute="trailing" id="x79-AC-Iug"/>
                                             </constraints>
@@ -417,7 +420,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Create new Account" id="roJ-J3-zvq">
-                        <barButtonItem key="leftBarButtonItem" id="xC2-bB-Svq"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="7Ju-zw-0WX"/>
                     </navigationItem>
                     <connections>
                         <outlet property="createAccountButton" destination="t4i-Cu-1Ef" id="r3M-81-803"/>
@@ -431,7 +434,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pYw-Ud-idb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-999" y="-321"/>
+            <point key="canvasLocation" x="-1050" y="-290"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cDm-Wy-sL3">
@@ -442,17 +445,22 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="1Dw-RP-GNg" kind="relationship" relationship="rootViewController" id="y6Y-KG-im5"/>
+                        <segue destination="6tb-Ez-M8N" kind="relationship" relationship="rootViewController" id="71r-nF-rIv"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ySF-sa-KwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1937" y="-322"/>
+            <point key="canvasLocation" x="-2652" y="-290"/>
         </scene>
     </scenes>
     <resources>
+        <image name="defaultProfileImage" width="60" height="60"/>
+        <image name="emailIcon" width="50" height="50"/>
         <image name="eye" width="64" height="64"/>
         <image name="loginIcon" width="250" height="250"/>
+        <image name="nameIcon" width="50" height="50"/>
         <image name="passwordIcon" width="200" height="256"/>
+        <image name="passwordIcon-1" width="50" height="50"/>
+        <image name="phoneIcon" width="256" height="256"/>
     </resources>
 </document>
