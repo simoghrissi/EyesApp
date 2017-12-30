@@ -15,6 +15,7 @@
 		242C19491FF70BED006DEA38 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C19481FF70BED006DEA38 /* Navigator.swift */; };
 		242C194F1FF7C48C006DEA38 /* Profil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242C194E1FF7C48C006DEA38 /* Profil.storyboard */; };
 		242C19511FF7C4AA006DEA38 /* ProfilTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C19501FF7C4AA006DEA38 /* ProfilTableViewController.swift */; };
+		242C19531FF807DB006DEA38 /* ProfilViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242C19521FF807DB006DEA38 /* ProfilViewModel.swift */; };
 		243EA5141FD4321700B8FBA3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5131FD4321700B8FBA3 /* GradientView.swift */; };
 		243EA5171FD4376B00B8FBA3 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5151FD4376B00B8FBA3 /* DesignableTextField.swift */; };
 		243EA5181FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5161FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift */; };
@@ -70,6 +71,7 @@
 		242C19481FF70BED006DEA38 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Navigator.swift; path = EyesApp/Common/Navigator.swift; sourceTree = "<group>"; };
 		242C194E1FF7C48C006DEA38 /* Profil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profil.storyboard; sourceTree = "<group>"; };
 		242C19501FF7C4AA006DEA38 /* ProfilTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilTableViewController.swift; sourceTree = "<group>"; };
+		242C19521FF807DB006DEA38 /* ProfilViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilViewModel.swift; sourceTree = "<group>"; };
 		243EA5131FD4321700B8FBA3 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = EyesApp/Common/GradientView.swift; sourceTree = "<group>"; };
 		243EA5151FD4376B00B8FBA3 /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DesignableTextField.swift; path = EyesApp/Common/DesignableTextField.swift; sourceTree = "<group>"; };
 		243EA5161FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SizeZeroWhenHiddenView.swift; path = EyesApp/Common/SizeZeroWhenHiddenView.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		242C194C1FF7C464006DEA38 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				242C19521FF807DB006DEA38 /* ProfilViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 				243EA5181FD4376B00B8FBA3 /* SizeZeroWhenHiddenView.swift in Sources */,
 				242C19401FF67CD5006DEA38 /* FIRImage.swift in Sources */,
 				243EA5141FD4321700B8FBA3 /* GradientView.swift in Sources */,
+				242C19531FF807DB006DEA38 /* ProfilViewModel.swift in Sources */,
 				24F8887B1FAFA70D008E851A /* PoiEyes.swift in Sources */,
 				243EA52A1FDD74DF00B8FBA3 /* RestTypeAction.swift in Sources */,
 				24AE14CB1FAF98F90048BF4E /* CameraViewController.swift in Sources */,
