@@ -21,7 +21,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="am6-nQ-NdU">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="am6-nQ-NdU">
                                     <rect key="frame" x="20" y="10" width="56" height="56"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="56" id="4Np-Pm-Sef"/>
@@ -285,11 +285,20 @@
                         <outlet property="passwordText" destination="9ME-xS-2ol" id="neR-ny-oq9"/>
                         <outlet property="phoneText" destination="spJ-w4-hHr" id="ZCa-Ey-CGY"/>
                         <outlet property="profileImageView" destination="am6-nQ-NdU" id="9oS-7E-Df6"/>
+                        <segue destination="sPw-yA-u2g" kind="presentation" identifier="logout" id="EPL-TD-rWG"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0H7-Sc-SDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="160.80000000000001" y="52.623688155922046"/>
+        </scene>
+        <!--LoginViewController-->
+        <scene sceneID="Sam-zi-1Va">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LKZ-Mz-MmT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Login" referencedIdentifier="LoginViewController" id="sPw-yA-u2g" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="746" y="52"/>
         </scene>
     </scenes>
     <resources>

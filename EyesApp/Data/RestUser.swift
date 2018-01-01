@@ -24,8 +24,9 @@ public struct RestUser:Codable{
     var dateCreateUser: String?
     var nbrPointUser: String?
     var adresse: RestAdresse?
+    var gender:String?
     let encoder = JSONEncoder()
- init(idUser:String,nomUser:String,prenomUser:String,mailUser:String,passwordUser:String,phoneUser:String,dateCreateUser:String,nbrPointUser:String,adresse:RestAdresse?) {
+    init(idUser:String,nomUser:String,prenomUser:String,mailUser:String,passwordUser:String,phoneUser:String,dateCreateUser:String?,nbrPointUser:String,adresse:RestAdresse?,gender:String) {
 
         self.idUser = idUser
         self.nomUser = nomUser
@@ -33,8 +34,21 @@ public struct RestUser:Codable{
         self.mailUser = mailUser
         self.passwordUser = passwordUser
         self.phoneUser = phoneUser
+        self.nbrPointUser = nbrPointUser
         self.dateCreateUser = dateCreateUser
         self.adresse = adresse
+        self.gender = gender
+    }
+    
+    init(idUser:String,nomUser:String,prenomUser:String,mailUser:String,passwordUser:String,phoneUser:String,adresse:RestAdresse?,gender:String) {
+        self.idUser = idUser
+        self.nomUser = nomUser
+        self.prenomUser = prenomUser
+        self.mailUser = mailUser
+        self.passwordUser = passwordUser
+        self.phoneUser = phoneUser
+        self.adresse = adresse
+        self.gender = gender
     }
     
     enum CodingKeys: String, CodingKey {
@@ -46,6 +60,7 @@ public struct RestUser:Codable{
         case passwordUser = "passwordUser"
         case phoneUser = "phoneUser"
         case dateCreateUser = "dateCreateUser"
+        case nbrPointUser = "nbrPointUser"
         case adresse = "adresse"
 
     }
@@ -59,12 +74,13 @@ public struct RestUser:Codable{
         passwordUser = try values.decodeIfPresent(String.self, forKey: .passwordUser)
         phoneUser = try values.decodeIfPresent(String.self, forKey: .phoneUser)
         dateCreateUser = try values.decodeIfPresent(String.self, forKey: .dateCreateUser)
+        nbrPointUser = try values.decodeIfPresent(String.self, forKey: .nbrPointUser)
         adresse = try values.decodeIfPresent(RestAdresse.self, forKey: .adresse)
 
 
     }
     
-    func toDictionary() -> [String : Any]
+    func toSaveAsDictionary() -> [String : Any]
     {
         return [
             "idUser": self.idUser ?? "",
@@ -75,6 +91,7 @@ public struct RestUser:Codable{
             "phoneUser": self.phoneUser ?? "",
             "dateCreateUser": self.dateCreateUser ?? "",
             "nbrPointUser": self.nbrPointUser ?? "",
+            "genderUser":self.gender ?? "",
             "adresse":
                 [
                     "numVoie": self.adresse?.numVoie ?? "",
@@ -86,5 +103,26 @@ public struct RestUser:Codable{
             
         ]
     }
+    func toUpdateAsDictionary() -> [String : Any]
+    {
+        return [
+            "nomUser":self.nomUser ?? "",
+            "prenomUser": self.prenomUser ?? "",
+            "mailUser": self.mailUser ?? "",
+            "passwordUser": self.passwordUser ?? "",
+            "phoneUser": self.phoneUser ?? "",
+            "genderUser":self.gender ?? "",
+            "adresse":
+                [
+                    "numVoie": self.adresse?.numVoie ?? "",
+                    "libelleVoie": self.adresse?.libelleVoie ?? "",
+                    "codePostal": self.adresse?.codePostal ?? "",
+                    "ville": self.adresse?.ville ?? ""
+            ]
+            
+            
+        ]
+    }
+
     
 }

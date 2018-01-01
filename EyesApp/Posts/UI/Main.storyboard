@@ -135,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BdW-Z7-Fw7" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="846" y="-1019"/>
+            <point key="canvasLocation" x="943" y="-1021"/>
         </scene>
         <!--Login-->
         <scene sceneID="auf-af-ndr">
@@ -148,7 +148,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="U3c-tb-beW">
             <objects>
-                <tabBarController id="MSd-zq-bgw" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBar" id="MSd-zq-bgw" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Pbl-hx-n4b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

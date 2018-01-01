@@ -36,7 +36,7 @@ public final class UserRepository: UserRepositoryProtocol {
         let ref = DBFireReference.users(uid: user.idUser!).reference()
         
         // 2. setValue of the reference
-        ref.setValue(user.toDictionary())
+        ref.setValue(user.toSaveAsDictionary())
         
         // 3. save the user's profile Image
         if let profileImage = imgeUser {
@@ -48,7 +48,19 @@ public final class UserRepository: UserRepositoryProtocol {
         }
     }
     
-    
+    func updateValue(user : RestUser,imgeUser:UIImage?,completion: @escaping (Error?) -> Void){
+       
+        let ref = DBFireReference.users(uid: user.idUser!).reference()
+        ref.updateChildValues(user.toUpdateAsDictionary())
+        
+        if let profileImage = imgeUser {
+            let firImage = FIRImage(image: profileImage)
+            firImage.saveProfileImage(user.idUser!, { (error) in
+                // is caleld whenever the profile image is successfully uploaded - takes time!!!!!!
+                completion(error)
+            })
+        }
+    }
 
     
 }

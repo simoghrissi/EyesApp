@@ -30,6 +30,7 @@
 		243EA52A1FDD74DF00B8FBA3 /* RestTypeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243EA5291FDD74DF00B8FBA3 /* RestTypeAction.swift */; };
 		244B18EE1FF04AB700E50F14 /* BuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B18EC1FF04AB700E50F14 /* BuildConfig.swift */; };
 		244B18F21FF04E8800E50F14 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244B18F11FF04E8800E50F14 /* UserRepository.swift */; };
+		244C90721FF8F83B006D8475 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244C90711FF8F83B006D8475 /* Extension.swift */; };
 		2457A1D01FF4DB2800465FDF /* CreateAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2457A1CF1FF4DB2800465FDF /* CreateAccountTableViewController.swift */; };
 		2457A1D21FF4DB3C00465FDF /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2457A1D11FF4DB3C00465FDF /* CreateAccountViewModel.swift */; };
 		248E85C71FF172C30047CADE /* Info_Stubs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 248E85C61FF172C30047CADE /* Info_Stubs.plist */; };
@@ -86,6 +87,7 @@
 		243EA5291FDD74DF00B8FBA3 /* RestTypeAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestTypeAction.swift; path = Data/RestTypeAction.swift; sourceTree = "<group>"; };
 		244B18EC1FF04AB700E50F14 /* BuildConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildConfig.swift; sourceTree = "<group>"; };
 		244B18F11FF04E8800E50F14 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		244C90711FF8F83B006D8475 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = EyesApp/Common/Extension.swift; sourceTree = "<group>"; };
 		2457A1CF1FF4DB2800465FDF /* CreateAccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountTableViewController.swift; sourceTree = "<group>"; };
 		2457A1D11FF4DB3C00465FDF /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		248E85C61FF172C30047CADE /* Info_Stubs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_Stubs.plist; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				242C19421FF6A407006DEA38 /* Localizable.strings */,
 				242C19441FF6B0AC006DEA38 /* String.swift */,
 				242C19481FF70BED006DEA38 /* Navigator.swift */,
+				244C90711FF8F83B006D8475 /* Extension.swift */,
 			);
 			name = Common;
 			path = ..;
@@ -673,6 +676,7 @@
 				24A7D7C11FEECB8C0077EC52 /* Network.swift in Sources */,
 				24A7D7BF1FEEBB320077EC52 /* RestBaseParams.swift in Sources */,
 				244B18F21FF04E8800E50F14 /* UserRepository.swift in Sources */,
+				244C90721FF8F83B006D8475 /* Extension.swift in Sources */,
 				24A7D7BD1FEEBAB90077EC52 /* UserNetwork.swift in Sources */,
 				242C19511FF7C4AA006DEA38 /* ProfilTableViewController.swift in Sources */,
 				243EA51C1FDD67AA00B8FBA3 /* RestAdresse.swift in Sources */,

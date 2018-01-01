@@ -24,22 +24,23 @@ class ProfilTableViewController: UITableViewController,UIImagePickerControllerDe
     
     var imagePicker = UIImagePickerController()
 
-    let viewModel = ProfilViewModel()
+    var viewModel:ProfilViewModel?
     let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
+        viewModel = ProfilViewModel()
         setupBinding()
     }
 
     @IBAction func saveAction(_ sender: Any) {
-
+        viewModel?.saveUser()
     }
     
     @IBAction func logoutAction(_ sender: Any) {
-        viewModel.logout()
-        Navigator.sharedInstance.navigateToMain(controller: self)
+        viewModel?.logout()
+        self.performSegue(withIdentifier: "logout", sender: sender)
     }
     
     @IBAction func changeProfilAction(_ sender: Any) {
@@ -50,63 +51,97 @@ class ProfilTableViewController: UITableViewController,UIImagePickerControllerDe
                                didFinishPickingMediaWithInfo info: [String : AnyObject])
     {
         var  chosenImage = UIImage()
-        chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
-        profileImageView.contentMode = .scaleAspectFit //3
-        profileImageView.image = chosenImage //4
-        dismiss(animated:true, completion: nil) //5
+        chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage 
+        profileImageView.contentMode = .scaleAspectFit
+        profileImageView.image = chosenImage
+        dismiss(animated:true, completion: nil)
         
         
     }
  
     func setupBinding(){
-        
-        _ = viewModel.errorMessage
+
+        _ = viewModel?.errorMessage
             .asObservable()
             .observeOn(MainScheduler.instance)
             .subscribe{
                 if $0.element != "" {
-                    UIAlertController.okAlert(controller: self, title: "Error_title".localized, message: self.viewModel.errorMessage.value)
+                    UIAlertController.okAlert(controller: self, title: "Error_title".localized, message: (self.viewModel?.errorMessage.value)!)
                 }
         }
+
+        viewModel?.email.asObservable()
+        .bind(to: self.emailText.rx.text)
+        .disposed(by: disposeBag)
         
         emailText.rx.text.map{$0 ?? ""}
-            .bind(to: viewModel.email)
+            .bind(to: (viewModel?.email)!)
             .disposed(by: disposeBag)
-        
-        viewModel.profilImage.asObservable()
+
+        viewModel?.profilImage.asObservable().map({image in
+            return self.profileImageView.circleImage(image: image)
+        })
         .bind(to: self.profileImageView.rx.image)
         .disposed(by: disposeBag)
         
+        viewModel?.phone.asObservable()
+            .bind(to: self.phoneText.rx.text)
+            .disposed(by: disposeBag)
+
         phoneText.rx.text.map{$0 ?? ""}
-        .bind(to: viewModel.phone)
+            .bind(to: (viewModel?.phone)!)
         .disposed(by: disposeBag)
+
+        viewModel?.address.asObservable()
+            .bind(to: self.addressText.rx.text)
+            .disposed(by: disposeBag)
         
         addressText.rx.text.map{$0 ?? ""}
-        .bind(to: viewModel.address)
+            .bind(to: (viewModel?.address)!)
         .disposed(by: disposeBag)
+
+        viewModel?.password.asObservable()
+            .bind(to: self.passwordText.rx.text)
+            .disposed(by: disposeBag)
         
         passwordText.rx.text.map{$0 ?? ""}
-        .bind(to: viewModel.password)
+            .bind(to: (viewModel?.password)!)
         .disposed(by: disposeBag)
         
+        viewModel?.birthDay.asObservable()
+            .bind(to: self.birthDayText.rx.text)
+            .disposed(by: disposeBag)
+
         birthDayText.rx.text.map{$0 ?? ""}
-        .bind(to: viewModel.birthDay)
+            .bind(to: (viewModel?.birthDay)!)
         .disposed(by: disposeBag)
         
+        viewModel?.gender.asObservable()
+            .bind(to: self.genderText.rx.text)
+            .disposed(by: disposeBag)
+
         genderText.rx.text.map{$0 ?? ""}
-        .bind(to: viewModel.gender)
+            .bind(to: (viewModel?.gender)!)
         .disposed(by: disposeBag)
         
+        viewModel?.firstName.asObservable()
+            .bind(to: self.firstNameText.rx.text)
+            .disposed(by: disposeBag)
+
         firstNameText.rx.text.map{$0 ?? ""}
-        .bind(to: viewModel.firstName)
+            .bind(to: (viewModel?.firstName)!)
         .disposed(by: disposeBag)
         
+        viewModel?.lastName.asObservable()
+            .bind(to: self.lastNameText.rx.text)
+            .disposed(by: disposeBag)
+
         lastNameText.rx.text.map{$0 ?? ""}
-        .bind(to: viewModel.lastName)
+            .bind(to: (viewModel?.lastName)!)
         .disposed(by: disposeBag)
-        
-        
-        
+
+
+
     }
     
 }

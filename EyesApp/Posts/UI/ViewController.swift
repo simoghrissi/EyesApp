@@ -23,7 +23,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let cameraVC = storyboard.instantiateViewController(withIdentifier: "CameraViewController")as? CameraViewController
                     cameraVC?.delegate = self
-        
+            
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -31,6 +31,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         // one-time sign-in - if the user logs in already or not
 

@@ -43,7 +43,7 @@ class CreateAccountViewModel{
                 let month = calendar.component(.month, from: date)
                 let day = calendar.component(.day, from: date)
                 // 2. save the user's information -- User class!!!
-                let newUser  = RestUser(idUser: firUser.uid, nomUser: self.lastName.value, prenomUser: self.firstName.value, mailUser: self.emailAdress.value, passwordUser: self.password.value, phoneUser: self.phoneNumber.value, dateCreateUser: "\(month)/\(day)/\(year)", nbrPointUser: "", adresse: nil)
+                let newUser  = RestUser(idUser: firUser.uid, nomUser: self.lastName.value, prenomUser: self.firstName.value, mailUser: self.emailAdress.value, passwordUser: self.password.value, phoneUser: self.phoneNumber.value, dateCreateUser: "\(month)/\(day)/\(year)", nbrPointUser: "", adresse: nil,gender :"")
                 
                 self.repository.save(user: newUser, imgeUser: self.imageUser.value, completion: { (error) in
                     if error != nil {

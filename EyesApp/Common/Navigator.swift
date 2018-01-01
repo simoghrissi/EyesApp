@@ -17,7 +17,6 @@ public class Navigator {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController")as? ViewController{
             controller.present(viewController, animated: false, completion: nil)
-
         }
     }
   
