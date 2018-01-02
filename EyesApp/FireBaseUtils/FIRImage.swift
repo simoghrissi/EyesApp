@@ -35,6 +35,7 @@ class FIRImage
             })
         }
     }
+    
 }
 
 private extension UIImage
@@ -62,27 +63,3 @@ private extension UIImage
         return resizedImage!
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

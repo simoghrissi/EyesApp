@@ -21,7 +21,8 @@ class ProfilTableViewController: UITableViewController,UIImagePickerControllerDe
     @IBOutlet weak var emailText: DesignableTextField!
     @IBOutlet weak var lastNameText: UITextField!
     @IBOutlet weak var firstNameText: UITextField!
-    
+    let defaultImage = UIImage(named: "defaultProfileImage")!
+
     var imagePicker = UIImagePickerController()
 
     var viewModel:ProfilViewModel?
@@ -35,6 +36,7 @@ class ProfilTableViewController: UITableViewController,UIImagePickerControllerDe
     }
 
     @IBAction func saveAction(_ sender: Any) {
+        self.viewModel?.profilImage.value = self.profileImageView.image ?? self.defaultImage
         viewModel?.saveUser()
     }
     
@@ -44,7 +46,11 @@ class ProfilTableViewController: UITableViewController,UIImagePickerControllerDe
     }
     
     @IBAction func changeProfilAction(_ sender: Any) {
-         UIAlertController.alertShowCamera(controller: self, imagePicker: imagePicker, imageView: profileImageView)
+        UIAlertController.alertShowCamera(controller: self, imagePicker: imagePicker, imageView: profileImageView)
+//        profileImageView.rx.observe(UIImage.self, "image")
+//            .map({$0 ?? self.defaultImage})
+//            .bind(to: (viewModel?.profilImage)!)
+//            .dispose()
     }
     
     func imagePickerController(_ picker: UIImagePickerController,
@@ -52,8 +58,7 @@ class ProfilTableViewController: UITableViewController,UIImagePickerControllerDe
     {
         var  chosenImage = UIImage()
         chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage 
-        profileImageView.contentMode = .scaleAspectFit
-        profileImageView.image = chosenImage
+        profileImageView.image = profileImageView.circleImage(image: chosenImage)
         dismiss(animated:true, completion: nil)
         
         
@@ -78,13 +83,16 @@ class ProfilTableViewController: UITableViewController,UIImagePickerControllerDe
             .bind(to: (viewModel?.email)!)
             .disposed(by: disposeBag)
 
-        viewModel?.profilImage.asObservable().map({image in
-            return self.profileImageView.circleImage(image: image)
-        })
+        viewModel?.profilImage.asObservable()
         .bind(to: self.profileImageView.rx.image)
         .disposed(by: disposeBag)
+
         
-        viewModel?.phone.asObservable()
+        viewModel?.profilImage.asObservable().subscribe({ image in
+            self.profileImageView.image =  self.profileImageView.circleImage(image: image.element!)
+        }).disposed(by: disposeBag)
+        
+            viewModel?.phone.asObservable()
             .bind(to: self.phoneText.rx.text)
             .disposed(by: disposeBag)
 
@@ -107,6 +115,7 @@ class ProfilTableViewController: UITableViewController,UIImagePickerControllerDe
         passwordText.rx.text.map{$0 ?? ""}
             .bind(to: (viewModel?.password)!)
         .disposed(by: disposeBag)
+        
         
         viewModel?.birthDay.asObservable()
             .bind(to: self.birthDayText.rx.text)
