@@ -25,8 +25,9 @@ public struct RestUser:Codable{
     var nbrPointUser: String?
     var adresse: RestAdresse?
     var gender:String?
+    var profilePhotoUrl:String?
     let encoder = JSONEncoder()
-    init(idUser:String,nomUser:String,prenomUser:String,mailUser:String,passwordUser:String,phoneUser:String,dateCreateUser:String?,nbrPointUser:String,adresse:RestAdresse?,gender:String) {
+    init(idUser:String,nomUser:String,prenomUser:String,mailUser:String,passwordUser:String,phoneUser:String,dateCreateUser:String?,nbrPointUser:String,adresse:RestAdresse?,gender:String,profilePhotoUrl:String?) {
 
         self.idUser = idUser
         self.nomUser = nomUser
@@ -38,9 +39,10 @@ public struct RestUser:Codable{
         self.dateCreateUser = dateCreateUser
         self.adresse = adresse
         self.gender = gender
+        self.profilePhotoUrl = profilePhotoUrl
     }
     
-    init(idUser:String,nomUser:String,prenomUser:String,mailUser:String,passwordUser:String,phoneUser:String,adresse:RestAdresse?,gender:String) {
+    init(idUser:String,nomUser:String,prenomUser:String,mailUser:String,passwordUser:String,phoneUser:String,adresse:RestAdresse?,gender:String,profilePhotoUrl:String) {
         self.idUser = idUser
         self.nomUser = nomUser
         self.prenomUser = prenomUser
@@ -49,6 +51,7 @@ public struct RestUser:Codable{
         self.phoneUser = phoneUser
         self.adresse = adresse
         self.gender = gender
+        self.profilePhotoUrl = profilePhotoUrl
     }
     
     enum CodingKeys: String, CodingKey {
@@ -62,6 +65,8 @@ public struct RestUser:Codable{
         case dateCreateUser = "dateCreateUser"
         case nbrPointUser = "nbrPointUser"
         case adresse = "adresse"
+        case gender = "gender"
+        case profilePhotoUrl = "profilePhotoUrl"
 
     }
     
@@ -76,6 +81,8 @@ public struct RestUser:Codable{
         dateCreateUser = try values.decodeIfPresent(String.self, forKey: .dateCreateUser)
         nbrPointUser = try values.decodeIfPresent(String.self, forKey: .nbrPointUser)
         adresse = try values.decodeIfPresent(RestAdresse.self, forKey: .adresse)
+        profilePhotoUrl = try values.decodeIfPresent(String.self, forKey: .profilePhotoUrl)
+        gender = try values.decodeIfPresent(String.self, forKey: .gender)
 
 
     }
@@ -91,7 +98,8 @@ public struct RestUser:Codable{
             "phoneUser": self.phoneUser ?? "",
             "dateCreateUser": self.dateCreateUser ?? "",
             "nbrPointUser": self.nbrPointUser ?? "",
-            "genderUser":self.gender ?? "",
+            "gender":self.gender ?? "",
+            "profilePhotoUrl":self.profilePhotoUrl ?? "",
             "adresse":
                 [
                     "numVoie": self.adresse?.numVoie ?? "",
@@ -111,7 +119,8 @@ public struct RestUser:Codable{
             "mailUser": self.mailUser ?? "",
             "passwordUser": self.passwordUser ?? "",
             "phoneUser": self.phoneUser ?? "",
-            "genderUser":self.gender ?? "",
+            "gender":self.gender ?? "",
+            "profilePhotoUrl":self.profilePhotoUrl ?? "",
             "adresse":
                 [
                     "numVoie": self.adresse?.numVoie ?? "",

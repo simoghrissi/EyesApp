@@ -60,8 +60,6 @@ class ProfilTableViewController: UITableViewController,UIImagePickerControllerDe
         chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage 
         profileImageView.image = profileImageView.circleImage(image: chosenImage)
         dismiss(animated:true, completion: nil)
-        
-        
     }
  
     func setupBinding(){
