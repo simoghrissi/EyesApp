@@ -24,6 +24,7 @@ class ProfilViewModel {
     var lastName = Variable<String>("")
     var firstName = Variable<String>("")
     var errorMessage = Variable<String>("")
+    var profilImageUrl = Variable<String>("")
     
     let repository = UserRepository()
     let firebaseAuth = Auth.auth()
@@ -69,13 +70,41 @@ class ProfilViewModel {
 
     }
     
-    func saveUser(){
+    func changeProfilImage(idUser:String,success:@escaping()->()){
+        
+        let resizedImage = profilImage.value.resize()
+        if let imageData = UIImageJPEGRepresentation(resizedImage, 0.9) {
+            let ref = DBFireStorage.profileImages.reference().child(idUser)
+            let putTask = ref.putData(imageData)
+            putTask.observe(.success, handler: { (snapchot) in
+                self.profilImageUrl.value = (snapchot.metadata?.downloadURL()?.absoluteString)!
+                success()
+            })
+            putTask.observe(.failure, handler: { errorSnapchot
+              in
+            self.manageError(error: errorSnapchot as? Error)
+            })
+        }
+    }
+    
+    func updateUserInfo(){
         //let userRef = Database.database().reference().child("users").child(firebaseAuth.currentUser!.uid)
       let user = firebaseAuth.currentUser
-     
-        let restUser = RestUser(idUser: (user?.uid)!, nomUser: self.lastName.value, prenomUser: self.firstName.value, mailUser: self.email.value, passwordUser: self.password.value, phoneUser: self.phone.value, adresse: nil, gender: "femme")
-        repository.updateValue(user: restUser, imgeUser: self.profilImage.value) { (error) in
-            print("")
+        self.changeProfilImage(idUser: (user?.uid)!, success: {
+            let restUser = RestUser(idUser: (user?.uid)!, nomUser: self.lastName.value, prenomUser: self.firstName.value, mailUser: self.email.value, passwordUser: self.password.value, phoneUser: self.phone.value, adresse: nil, gender: "femme",profilePhotoUrl: self.profilImageUrl.value)
+            self.repository.update(user: restUser)
+        })
+    }
+    
+    func manageError(error e: Error?) {
+        if let e = e as? ApiError {
+            switch (e) {
+            case .KO_TECHNIQUE:
+                errorMessage.value = "technical_error".localized
+                break
+            }
+        } else {
+            errorMessage.value = "technical_error".localized
         }
     }
 }

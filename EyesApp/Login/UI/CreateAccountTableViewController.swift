@@ -19,6 +19,7 @@ class CreateAccountTableViewController: UITableViewController {
     @IBOutlet weak var passwordText: DesignableTextField!
     @IBOutlet weak var firstNameText: DesignableTextField!
     @IBOutlet weak var emailAdressText: DesignableTextField!
+    let defaultImage = UIImage(named: "defaultProfileImage")!
 
     let viewModel = CreateAccountViewModel()
     let disposeBag = DisposeBag()
@@ -28,11 +29,13 @@ class CreateAccountTableViewController: UITableViewController {
         setupBinding()
     }
 
+    @IBAction func changeProfileImageAction(_ sender: Any) {
+        self.viewModel.profilImage.value = self.userImageView.image ?? self.defaultImage
+    }
     @IBAction func createAccountAction(_ sender: Any) {
         viewModel.createAccount{
             Navigator.sharedInstance.navigateToMain(controller: self)
         }
-        
     }
     
     func setupBinding(){
@@ -66,9 +69,13 @@ class CreateAccountTableViewController: UITableViewController {
             .bind(to: viewModel.firstName)
             .disposed(by: disposeBag)
         
-        viewModel.imageUser.asObservable()
+        viewModel.profilImage.asObservable()
         .bind(to: self.userImageView.rx.image)
         .disposed(by: disposeBag)
+        
+        viewModel.profilImage.asObservable().subscribe({ image in
+            self.userImageView.image =  self.userImageView.circleImage(image: image.element!)
+        }).disposed(by: disposeBag)
         
         
     }

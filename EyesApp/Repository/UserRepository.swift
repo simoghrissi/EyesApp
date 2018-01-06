@@ -30,36 +30,40 @@ public final class UserRepository: UserRepositoryProtocol {
         return userRepositoryProtocol.getUser(post: post)
     }
     
-    func save(user : RestUser,imgeUser:UIImage?,completion: @escaping (Error?) -> Void)
-    {
-        // 1. reference to the database
-        let ref = DBFireReference.users(uid: user.idUser!).reference()
+    func create(email:String,password:String,success:@escaping(User?)->(),errorCreation:@escaping(Error?)->()){
         
-        // 2. setValue of the reference
-        ref.setValue(user.toSaveAsDictionary())
+         Auth.auth().createUser(withEmail: email, password: password, completion: { (firUser, error) in
+            if error != nil {
+                errorCreation(error)
+            }else{
+                success(firUser)
+            }
+        })
         
-        // 3. save the user's profile Image
-        if let profileImage = imgeUser {
-            let firImage = FIRImage(image: profileImage)
-            firImage.saveProfileImage(user.idUser!, { (error) in
-                // is caleld whenever the profile image is successfully uploaded - takes time!!!!!!
-                completion(error)
-            })
-        }
     }
     
-    func updateValue(user : RestUser,imgeUser:UIImage?,completion: @escaping (Error?) -> Void){
-       
+    
+    func signIn(email:String,password:String,success:@escaping()->(),errorSignIn:@escaping(Error?)->()){
+        
+        Auth.auth().signIn(withEmail: email, password: email, completion: { (firUser, error) in
+            if let error = error {
+                errorSignIn(error)
+            } else {
+                success()
+                print("SUCCESS SIGN IN")
+            }
+        })
+
+    }
+    func save(user:RestUser){
+        let ref = DBFireReference.users(uid: user.idUser!).reference()
+        ref.setValue(user.toSaveAsDictionary())
+    }
+    
+    
+    func update(user : RestUser){
         let ref = DBFireReference.users(uid: user.idUser!).reference()
         ref.updateChildValues(user.toUpdateAsDictionary())
-        
-        if let profileImage = imgeUser {
-            let firImage = FIRImage(image: profileImage)
-            firImage.saveProfileImage(user.idUser!, { (error) in
-                // is caleld whenever the profile image is successfully uploaded - takes time!!!!!!
-                completion(error)
-            })
-        }
     }
 
     

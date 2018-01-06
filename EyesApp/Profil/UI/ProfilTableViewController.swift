@@ -37,7 +37,7 @@ class ProfilTableViewController: UITableViewController,UIImagePickerControllerDe
 
     @IBAction func saveAction(_ sender: Any) {
         self.viewModel?.profilImage.value = self.profileImageView.image ?? self.defaultImage
-        viewModel?.saveUser()
+        viewModel?.updateUserInfo()
     }
     
     @IBAction func logoutAction(_ sender: Any) {

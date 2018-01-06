@@ -243,6 +243,9 @@
                                     <state key="normal" title="Change Profile Image">
                                         <color key="titleColor" red="0.64367266104061804" green="0.60994669684681868" blue="0.92758565989847719" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="changeProfileImageAction:" destination="1Dw-RP-GNg" eventType="touchUpInside" id="EZ4-tJ-5rl"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
