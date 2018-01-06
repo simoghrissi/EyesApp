@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class CreateAccountTableViewController: UITableViewController {
+class CreateAccountTableViewController: UITableViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var phoneNumberText: DesignableTextField!
@@ -20,19 +20,32 @@ class CreateAccountTableViewController: UITableViewController {
     @IBOutlet weak var firstNameText: DesignableTextField!
     @IBOutlet weak var emailAdressText: DesignableTextField!
     let defaultImage = UIImage(named: "defaultProfileImage")!
+    var imagePicker = UIImagePickerController()
 
     let viewModel = CreateAccountViewModel()
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        imagePicker.delegate = self
         setupBinding()
     }
 
-    @IBAction func changeProfileImageAction(_ sender: Any) {
-        self.viewModel.profilImage.value = self.userImageView.image ?? self.defaultImage
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [String : AnyObject])
+    {
+        var chosenImage = UIImage()
+        chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        userImageView.image = userImageView.circleImage(image: chosenImage)
+        dismiss(animated:true, completion: nil)
     }
+    
+    @IBAction func changeProfileImageAction(_ sender: Any) {
+        UIAlertController.alertShowCamera(controller: self, imagePicker: imagePicker, imageView: userImageView)
+    }
+    
     @IBAction func createAccountAction(_ sender: Any) {
+        self.viewModel.profilImage.value = self.userImageView.image ?? self.defaultImage
         viewModel.createAccount{
             Navigator.sharedInstance.navigateToMain(controller: self)
         }
