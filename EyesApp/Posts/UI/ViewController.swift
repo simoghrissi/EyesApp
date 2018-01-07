@@ -35,18 +35,18 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     override func viewWillAppear(_ animated: Bool) {
         // one-time sign-in - if the user logs in already or not
 
-        Auth.auth().addStateDidChangeListener({ (auth, user) in
-            if user != nil {
-                // we do have the user. the user did log in
-                // TODO: fetch posts, update newsfeed
-                self.timeLine.reloadData()
-
-                
-            } else {
-                // the user hasn't logged in or alreayd logged out
-                self.performSegue(withIdentifier: "LoginSegue", sender: nil)
-            }
-        })
+//        Auth.auth().addStateDidChangeListener({ (auth, user) in
+//            if user != nil {
+//                // we do have the user. the user did log in
+//                // TODO: fetch posts, update newsfeed
+//                self.timeLine.reloadData()
+//
+//
+//            } else {
+//                // the user hasn't logged in or alreayd logged out
+//                self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+//            }
+//        })
     }
 
      func numberOfSections(in tableView: UITableView) -> Int {

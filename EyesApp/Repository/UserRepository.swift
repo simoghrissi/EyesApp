@@ -42,6 +42,17 @@ public final class UserRepository: UserRepositoryProtocol {
         
     }
     
+    func save(user : RestUser,imgeUser:UIImage?)
+    {
+        // 1. reference to the database
+        let ref = DBFireReference.users(uid: user.idUser!).reference()
+        
+        // 2. setValue of the reference
+        ref.setValue(user.toSaveAsDictionary())
+        
+        // 3. save the user's profile Image
+      
+    }
     
     func signIn(email:String,password:String,success:@escaping()->(),errorSignIn:@escaping(Error?)->()){
         

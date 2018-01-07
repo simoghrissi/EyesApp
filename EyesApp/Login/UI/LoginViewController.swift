@@ -28,12 +28,12 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        Auth.auth().addStateDidChangeListener({ (auth, user) in
-            if user != nil {
-                // just logged in successfully
-                self.dismiss(animated: false, completion: nil)
-            }
-        })
+//        Auth.auth().addStateDidChangeListener({ (auth, user) in
+//            if user != nil {
+//                // just logged in successfully
+//                self.dismiss(animated: false, completion: nil)
+//            }
+//        })
         
     }
     override func didReceiveMemoryWarning() {

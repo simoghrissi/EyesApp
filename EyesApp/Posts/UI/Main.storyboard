@@ -130,25 +130,16 @@
                     <navigationItem key="navigationItem" id="XY8-iY-rVu"/>
                     <connections>
                         <outlet property="timeLine" destination="wS6-S9-im7" id="reX-vr-gCF"/>
-                        <segue destination="NmX-gc-B1l" kind="show" identifier="LoginSegue" id="kE5-Jb-ciB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BdW-Z7-Fw7" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="943" y="-1021"/>
         </scene>
-        <!--Login-->
-        <scene sceneID="auf-af-ndr">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Login" id="NmX-gc-B1l" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CAk-9k-qSJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1551" y="-1021"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="U3c-tb-beW">
             <objects>
-                <tabBarController storyboardIdentifier="TabBar" id="MSd-zq-bgw" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarMain" id="MSd-zq-bgw" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Pbl-hx-n4b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

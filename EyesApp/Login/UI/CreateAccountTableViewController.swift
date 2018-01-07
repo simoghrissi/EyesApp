@@ -85,7 +85,7 @@ class CreateAccountTableViewController: UITableViewController,UIImagePickerContr
         viewModel.profilImage.asObservable()
         .bind(to: self.userImageView.rx.image)
         .disposed(by: disposeBag)
-        
+
         viewModel.profilImage.asObservable().subscribe({ image in
             self.userImageView.image =  self.userImageView.circleImage(image: image.element!)
         }).disposed(by: disposeBag)

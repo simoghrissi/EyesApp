@@ -32,11 +32,13 @@ class LoginViewModel {
     }
     
     func signIn(success:@escaping()->()){
-        repository.signIn(email: self.emailAdress.value, password: self.password.value, success: {
-            success()
-        }) { error in
-            self.manageError(error: error)
-        }
+        Auth.auth().signIn(withEmail: self.emailAdress.value, password: self.password.value,  completion: { (firUser, error) in
+            if let error = error {
+                self.manageError(error: error)
+            }else{
+                success()
+            }
+        })
     }
     
     func manageError(error e: Error?) {

@@ -54,13 +54,21 @@ class CreateAccountViewModel{
         let day = calendar.component(.day, from: date)
         
         let newUser  = RestUser(idUser: user.uid, nomUser: self.lastName.value, prenomUser: self.firstName.value, mailUser: self.emailAdress.value, passwordUser: self.password.value, phoneUser: self.phoneNumber.value, dateCreateUser: "\(month)/\(day)/\(year)", nbrPointUser: "", adresse: nil,gender :"",profilePhotoUrl:self.profilImageUrl.value)
+        
         self.repository.save(user: newUser)
-        self.repository.signIn(email: self.emailAdress.value, password: self.password.value, success: {
-            success()
+        Auth.auth().signIn(withEmail: self.emailAdress.value, password: self.password.value,  completion: { (firUser, error) in
+            if let error = error {
+                self.manageError(error: error)
+            }else{
+                success()
+            }
         })
-        { error in
-            self.manageError(error: error)
-        }
+//        self.repository.signIn(email: self.emailAdress.value, password: self.password.value, success: {
+//            success()
+//        })
+//        { error in
+//            self.manageError(error: error)
+//        }
         
     }
     
