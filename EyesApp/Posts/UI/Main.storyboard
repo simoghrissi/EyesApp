@@ -130,11 +130,20 @@
                     <navigationItem key="navigationItem" id="XY8-iY-rVu"/>
                     <connections>
                         <outlet property="timeLine" destination="wS6-S9-im7" id="reX-vr-gCF"/>
+                        <segue destination="z7y-Fi-F6f" kind="show" identifier="loginSegue" id="eex-cY-X13"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BdW-Z7-Fw7" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="943" y="-1021"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="MHC-aS-cTd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="z7y-Fi-F6f" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xXG-4s-ICW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1557" y="-1002"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="U3c-tb-beW">
