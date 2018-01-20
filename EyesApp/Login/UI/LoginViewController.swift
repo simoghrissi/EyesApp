@@ -21,14 +21,12 @@ class LoginViewController: UIViewController,FBSDKLoginButtonDelegate {
     let viewModel = LoginViewModel()
     let disposeBag = DisposeBag()
     let loginButton = FBSDKLoginButton()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
         loginButton.delegate = self
-   //   loginButton.frame = facebookLoginView.frame
-        //let convertToSuperView = loginStackView.convert(fbLoginButton.frame, to: self.view)
-
+        
        facebookLoginView.addSubview(loginButton)
         loginButton.frame = CGRect(x: 0, y: 0, width:facebookLoginView.frame.width , height: facebookLoginView.frame.height)
        setupBinding()
@@ -46,22 +44,20 @@ class LoginViewController: UIViewController,FBSDKLoginButtonDelegate {
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        viewModel.signInWithFB {
+            Navigator.sharedInstance.navigateToMain(controller: self)
+
+        }
     }
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        if let token = FBSDKAccessToken.current() {
-            let credential = FacebookAuthProvider.credential(withAccessToken: token.tokenString)
-        
-            Auth.auth().signIn(with: credential) { (user, error) in
-                if let error = error {
-                    print(error)
-                    return
-                }else{
-                    Navigator.sharedInstance.navigateToMain(controller: self)
-                }
+        if error == nil{
+            viewModel.signInWithFB {
+                Navigator.sharedInstance.navigateToMain(controller: self)
                 
             }
         }
+       
     }
     @IBAction func loginWithFaceBookAction(_ sender: Any) {
 //        func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {

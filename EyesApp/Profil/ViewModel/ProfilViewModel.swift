@@ -31,10 +31,10 @@ class ProfilViewModel {
 
     init() {
         let user = firebaseAuth.currentUser
-        
+
         if let user = user {
             let ref = DBFireReference.users(uid: user.uid).reference()
-            
+
             ref.observeSingleEvent(of: .value, with: { (snapshot) in
                 // Get user value
                 let value = snapshot.value as? NSDictionary
@@ -49,9 +49,9 @@ class ProfilViewModel {
             }) { (error) in
                 print(error.localizedDescription)
             }
-            
+
             let refStrorage = DBFireStorage.profileImages.reference().child((user.uid))
-            
+
             refStrorage.getData(maxSize: 1 * 1024 * 1024) { data, error in
                 if let _ = error {
                     self.profilImage.value = UIImage(named: "defaultProfileImage")!
@@ -60,10 +60,10 @@ class ProfilViewModel {
                     self.profilImage.value  = imageProfile!
                 }
             }
-            
+
         }
     }
-
+    
     func logout(){
         
         do {

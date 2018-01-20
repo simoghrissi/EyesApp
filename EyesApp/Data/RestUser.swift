@@ -27,8 +27,10 @@ public struct RestUser:Codable{
     var gender:String?
     var birthDayUser :String?
     var profilePhotoUrl:String?
+    var isFromFB:Bool?
+
     let encoder = JSONEncoder()
-    init(idUser:String,nomUser:String,prenomUser:String,mailUser:String,passwordUser:String,phoneUser:String,dateCreateUser:String?,nbrPointUser:String,adresse:RestAdresse?,gender:String,profilePhotoUrl:String?) {
+    init(idUser:String,nomUser:String,prenomUser:String,mailUser:String,passwordUser:String,phoneUser:String,dateCreateUser:String?,nbrPointUser:String,adresse:RestAdresse?,gender:String,profilePhotoUrl:String?,isFromFB:Bool) {
 
         self.idUser = idUser
         self.nomUser = nomUser
@@ -41,6 +43,7 @@ public struct RestUser:Codable{
         self.adresse = adresse
         self.gender = gender
         self.profilePhotoUrl = profilePhotoUrl
+        self.isFromFB = isFromFB
     }
     
     init(idUser:String,nomUser:String,prenomUser:String,mailUser:String,passwordUser:String,phoneUser:String,adresse:RestAdresse?,gender:String,profilePhotoUrl:String,birthDayUser:String) {
@@ -54,6 +57,7 @@ public struct RestUser:Codable{
         self.gender = gender
         self.profilePhotoUrl = profilePhotoUrl
         self.birthDayUser = birthDayUser
+
     }
     
     enum CodingKeys: String, CodingKey {
@@ -69,7 +73,7 @@ public struct RestUser:Codable{
         case adresse = "adresse"
         case gender = "gender"
         case profilePhotoUrl = "profilePhotoUrl"
-
+        case isFromFB = "isFromFB"
     }
     
     public init(from decoder: Decoder) throws {
@@ -85,6 +89,7 @@ public struct RestUser:Codable{
         adresse = try values.decodeIfPresent(RestAdresse.self, forKey: .adresse)
         profilePhotoUrl = try values.decodeIfPresent(String.self, forKey: .profilePhotoUrl)
         gender = try values.decodeIfPresent(String.self, forKey: .gender)
+        isFromFB = try values.decodeIfPresent(Bool.self, forKey: .isFromFB)
 
 
     }
@@ -102,6 +107,7 @@ public struct RestUser:Codable{
             "nbrPointUser": self.nbrPointUser ?? "",
             "gender":self.gender ?? "",
             "profilePhotoUrl":self.profilePhotoUrl ?? "",
+            "isFromFB":self.isFromFB ,
             "adresse":
                 [
                     "numVoie": self.adresse?.numVoie ?? "",

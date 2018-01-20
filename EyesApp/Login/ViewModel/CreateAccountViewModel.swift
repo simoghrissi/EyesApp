@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import Firebase
 import FirebaseAuth
+import FBSDKLoginKit
 
 class CreateAccountViewModel{
 
@@ -23,7 +24,11 @@ class CreateAccountViewModel{
         var errorMessage = Variable<String>("")
         let repository = UserRepository()
         let isloaderHidden = Variable<Bool>(false)
-    
+        var phone = Variable<String>("")
+        var address = Variable<String>("")
+        var birthDay = Variable<String>("")
+        var gender = Variable<String>("")
+        var email = Variable<String>("")
     
     init(){
         
@@ -31,46 +36,43 @@ class CreateAccountViewModel{
     
     func createAccount(success:@escaping()->()){
         // 1. sign up a new account
-        
-        self.repository.create(email: self.emailAdress.value, password: self.password.value, success: { firstUser in
-            
-            if let firstUser = firstUser {
-                self.changeProfilImage(idUser: firstUser.uid, success: {
-                    self.saveUser(user: firstUser, imageUser: self.profilImage.value, success: {
-                        success()
+
+            self.repository.create(email: self.emailAdress.value, password: self.password.value, success: { firstUser in
+                
+                if let firstUser = firstUser {
+                    self.changeProfilImage(idUser: firstUser.uid, success: {
+                        self.saveUser(user: firstUser, imageUser: self.profilImage.value, success: {
+                            success()
+                        })
                     })
-                })
+                }
+            }) { error in
+                self.manageError(error: error)
             }
-        }) { error in
-            self.manageError(error: error)
-        }
+        
+        
     }
     
     func saveUser(user: User,imageUser: UIImage,success:@escaping()->()){
-        let date = Date()
-        let calendar = Calendar.current
-        let year = calendar.component(.year, from: date)
-        let month = calendar.component(.month, from: date)
-        let day = calendar.component(.day, from: date)
-        
-        let newUser  = RestUser(idUser: user.uid, nomUser: self.lastName.value, prenomUser: self.firstName.value, mailUser: self.emailAdress.value, passwordUser: self.password.value, phoneUser: self.phoneNumber.value, dateCreateUser: "\(month)/\(day)/\(year)", nbrPointUser: "", adresse: nil,gender :"",profilePhotoUrl:self.profilImageUrl.value)
-        
-        self.repository.save(user: newUser)
-        Auth.auth().signIn(withEmail: self.emailAdress.value, password: self.password.value,  completion: { (firUser, error) in
-            if let error = error {
-                self.manageError(error: error)
-            }else{
-                success()
-            }
-        })
-//        self.repository.signIn(email: self.emailAdress.value, password: self.password.value, success: {
-//            success()
-//        })
-//        { error in
-//            self.manageError(error: error)
-//        }
+       
+            let date = Date()
+            let calendar = Calendar.current
+            let year = calendar.component(.year, from: date)
+            let month = calendar.component(.month, from: date)
+            let day = calendar.component(.day, from: date)
+             let newUser  = RestUser(idUser: user.uid, nomUser: self.lastName.value, prenomUser: self.firstName.value, mailUser: self.emailAdress.value, passwordUser: self.password.value, phoneUser: self.phoneNumber.value, dateCreateUser: "\(month)/\(day)/\(year)", nbrPointUser: "",adresse:nil, gender :"", profilePhotoUrl:self.profilImageUrl.value, isFromFB: false)
+            self.repository.save(user: newUser)
+            Auth.auth().signIn(withEmail: self.emailAdress.value, password: self.password.value,  completion: { (firUser, error) in
+                if let error = error {
+                    self.manageError(error: error)
+                }else{
+                    success()
+                }
+            })
         
     }
+    
+
     
     func changeProfilImage(idUser:String,success:@escaping()->()){
         
