@@ -25,6 +25,7 @@ class ProfilViewModel {
     var firstName = Variable<String>("")
     var errorMessage = Variable<String>("")
     var profilImageUrl = Variable<String>("")
+    var isFromFB = Variable<Bool>(false)
     
     let repository = UserRepository()
     let firebaseAuth = Auth.auth()
@@ -34,7 +35,7 @@ class ProfilViewModel {
 
         if let user = user {
             let ref = DBFireReference.users(uid: user.uid).reference()
-
+            
             ref.observeSingleEvent(of: .value, with: { (snapshot) in
                 // Get user value
                 let value = snapshot.value as? NSDictionary
@@ -46,21 +47,25 @@ class ProfilViewModel {
                 self.birthDay.value = value?["birthDay"] as? String ?? ""
                 self.password.value = value?["passwordUser"] as? String ?? ""
                 self.address.value = value?["address"] as? String ?? ""
+                self.profilImageUrl.value = value?["profilePhotoUrl"] as? String ?? ""
+                self.isFromFB.value = value?["isFromFB"] as?  Bool ?? false
+
             }) { (error) in
                 print(error.localizedDescription)
             }
-
-            let refStrorage = DBFireStorage.profileImages.reference().child((user.uid))
-
-            refStrorage.getData(maxSize: 1 * 1024 * 1024) { data, error in
-                if let _ = error {
-                    self.profilImage.value = UIImage(named: "defaultProfileImage")!
-                } else {
-                   let imageProfile = UIImage(data: data!)
-                    self.profilImage.value  = imageProfile!
+            
+            if !isFromFB.value{
+                let refStrorage = DBFireStorage.profileImages.reference().child((user.uid))
+                
+                refStrorage.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                    if let _ = error {
+                        self.profilImage.value = UIImage(named: "defaultProfileImage")!
+                    } else {
+                        let imageProfile = UIImage(data: data!)
+                        self.profilImage.value  = imageProfile!
+                    }
                 }
             }
-
         }
     }
     
@@ -92,7 +97,7 @@ class ProfilViewModel {
     }
     
     func updateUserInfo(){
-        //let userRef = Database.database().reference().child("users").child(firebaseAuth.currentUser!.uid)
+        
       let user = firebaseAuth.currentUser
         self.changeProfilImage(idUser: (user?.uid)!, success: {
             let restUser = RestUser(idUser: (user?.uid)!, nomUser: self.lastName.value, prenomUser: self.firstName.value, mailUser: self.email.value, passwordUser: self.password.value, phoneUser: self.phone.value, adresse: nil, gender: self.gender.value,profilePhotoUrl: self.profilImageUrl.value,birthDayUser:self.birthDay.value)

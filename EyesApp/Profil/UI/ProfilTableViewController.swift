@@ -75,6 +75,14 @@ class ProfilTableViewController: UITableViewController,UIImagePickerControllerDe
                     UIAlertController.okAlert(controller: self, title: "Error_title".localized, message: (self.viewModel?.errorMessage.value)!)
                 }
         }
+        viewModel?.isFromFB.asObservable().subscribe({ isFromFB in
+            
+            if isFromFB.element!{
+                if let url = URL.init(string: (self.viewModel?.profilImageUrl.value)!) {
+                    self.profileImageView.downloadedFrom(url: url)
+                }
+            }
+        }).disposed(by: disposeBag)
 
         viewModel?.email.asObservable()
         .bind(to: self.emailText.rx.text)
