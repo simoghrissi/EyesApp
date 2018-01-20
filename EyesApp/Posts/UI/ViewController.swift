@@ -23,7 +23,20 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let cameraVC = storyboard.instantiateViewController(withIdentifier: "CameraViewController")as? CameraViewController
                     cameraVC?.delegate = self
-            
+        
+                Auth.auth().addStateDidChangeListener({ (auth, user) in
+                    if user != nil {
+                        // we do have the user. the user did log in
+                        // TODO: fetch posts, update newsfeed
+                        self.timeLine.reloadData()
+        
+        
+                    } else {
+                        // the user hasn't logged in or alreayd logged out
+                        self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                    }
+                })
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -32,23 +45,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        // one-time sign-in - if the user logs in already or not
-
-//        Auth.auth().addStateDidChangeListener({ (auth, user) in
-//            if user != nil {
-//                // we do have the user. the user did log in
-//                // TODO: fetch posts, update newsfeed
-//                self.timeLine.reloadData()
-//
-//
-//            } else {
-//                // the user hasn't logged in or alreayd logged out
-//                self.performSegue(withIdentifier: "LoginSegue", sender: nil)
-//            }
-//        })
-    }
-
      func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

@@ -45,7 +45,7 @@ class ProfilTableViewController: UITableViewController,UIImagePickerControllerDe
         self.performSegue(withIdentifier: "logout", sender: sender)
     }
     
-    @IBAction func changeProfilAction(_ sender: Any) {
+    @IBAction func changeProfilImageAction(_ sender: Any) {
         UIAlertController.alertShowCamera(controller: self, imagePicker: imagePicker, imageView: profileImageView)
 //        profileImageView.rx.observe(UIImage.self, "image")
 //            .map({$0 ?? self.defaultImage})

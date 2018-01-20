@@ -33,6 +33,7 @@
 		244C90721FF8F83B006D8475 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244C90711FF8F83B006D8475 /* Extension.swift */; };
 		2457A1D01FF4DB2800465FDF /* CreateAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2457A1CF1FF4DB2800465FDF /* CreateAccountTableViewController.swift */; };
 		2457A1D21FF4DB3C00465FDF /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2457A1D11FF4DB3C00465FDF /* CreateAccountViewModel.swift */; };
+		2459E530201346F600762489 /* EyesUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459E52F201346F600762489 /* EyesUser.swift */; };
 		248E85C71FF172C30047CADE /* Info_Stubs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 248E85C61FF172C30047CADE /* Info_Stubs.plist */; };
 		248E85CB1FF192950047CADE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 248E85CA1FF192950047CADE /* GoogleService-Info.plist */; };
 		248E85D11FF198660047CADE /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 248E85D01FF198660047CADE /* Login.storyboard */; };
@@ -90,6 +91,7 @@
 		244C90711FF8F83B006D8475 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = EyesApp/Common/Extension.swift; sourceTree = "<group>"; };
 		2457A1CF1FF4DB2800465FDF /* CreateAccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountTableViewController.swift; sourceTree = "<group>"; };
 		2457A1D11FF4DB3C00465FDF /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
+		2459E52F201346F600762489 /* EyesUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyesUser.swift; sourceTree = "<group>"; };
 		248E85C61FF172C30047CADE /* Info_Stubs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_Stubs.plist; sourceTree = "<group>"; };
 		248E85CA1FF192950047CADE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		248E85D01FF198660047CADE /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -324,6 +326,14 @@
 			path = FireBaseUtils;
 			sourceTree = "<group>";
 		};
+		2459E52E201346CC00762489 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				2459E52F201346F600762489 /* EyesUser.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		248E85CC1FF197F70047CADE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,6 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				244B18EA1FF04A7B00E50F14 /* Configuration */,
+				2459E52E201346CC00762489 /* Entity */,
 				24A7D7BB1FEEBA5E0077EC52 /* Repository */,
 				24A7D7BA1FEEB8D80077EC52 /* Network */,
 				24F888731FAFA677008E851A /* Data */,
@@ -675,6 +686,7 @@
 				243EA5241FDD6E8D00B8FBA3 /* RestDemande.swift in Sources */,
 				24A7D7C11FEECB8C0077EC52 /* Network.swift in Sources */,
 				24A7D7BF1FEEBB320077EC52 /* RestBaseParams.swift in Sources */,
+				2459E530201346F600762489 /* EyesUser.swift in Sources */,
 				244B18F21FF04E8800E50F14 /* UserRepository.swift in Sources */,
 				244C90721FF8F83B006D8475 /* Extension.swift in Sources */,
 				24A7D7BD1FEEBAB90077EC52 /* UserNetwork.swift in Sources */,

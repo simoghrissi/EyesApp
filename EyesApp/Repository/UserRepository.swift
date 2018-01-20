@@ -15,6 +15,8 @@ import UIKit
 
 public protocol UserRepositoryProtocol {
     func getUser(idUser: Int, mailUser: String) -> Observable<RestUser>
+    func getUser() -> Observable<EyesUser>
+
 }
 
 public final class UserRepository: UserRepositoryProtocol {
@@ -27,9 +29,25 @@ public final class UserRepository: UserRepositoryProtocol {
     
     public func getUser(idUser: Int, mailUser: String) -> Observable<RestUser> {
         let post: RestBaseParams = RestBaseParams(idUser: idUser, mailUser: mailUser)
-        return userRepositoryProtocol.getUser(post: post)
+        return userRepositoryProtocol.getUser(post: post).map{restUser in
+            
+            let realm = try! Realm()
+            let user = EyesUser(restUser: restUser)
+            try! realm.write {
+                realm.add(user, update: true)
+            }
+            return restUser
+        }
     }
-    
+    public func getUser() -> Observable<EyesUser> {
+        let realm = try! Realm()
+        let result = realm.objects(EyesUser.self)
+        return Observable.from(result)
+            .map { user in
+                return user
+        }
+    }
+    // MARK FireBase
     func create(email:String,password:String,success:@escaping(User?)->(),errorCreation:@escaping(Error?)->()){
         
          Auth.auth().createUser(withEmail: email, password: password, completion: { (firUser, error) in

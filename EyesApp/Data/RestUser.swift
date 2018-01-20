@@ -25,6 +25,7 @@ public struct RestUser:Codable{
     var nbrPointUser: String?
     var adresse: RestAdresse?
     var gender:String?
+    var birthDayUser :String?
     var profilePhotoUrl:String?
     let encoder = JSONEncoder()
     init(idUser:String,nomUser:String,prenomUser:String,mailUser:String,passwordUser:String,phoneUser:String,dateCreateUser:String?,nbrPointUser:String,adresse:RestAdresse?,gender:String,profilePhotoUrl:String?) {
@@ -42,7 +43,7 @@ public struct RestUser:Codable{
         self.profilePhotoUrl = profilePhotoUrl
     }
     
-    init(idUser:String,nomUser:String,prenomUser:String,mailUser:String,passwordUser:String,phoneUser:String,adresse:RestAdresse?,gender:String,profilePhotoUrl:String) {
+    init(idUser:String,nomUser:String,prenomUser:String,mailUser:String,passwordUser:String,phoneUser:String,adresse:RestAdresse?,gender:String,profilePhotoUrl:String,birthDayUser:String) {
         self.idUser = idUser
         self.nomUser = nomUser
         self.prenomUser = prenomUser
@@ -52,6 +53,7 @@ public struct RestUser:Codable{
         self.adresse = adresse
         self.gender = gender
         self.profilePhotoUrl = profilePhotoUrl
+        self.birthDayUser = birthDayUser
     }
     
     enum CodingKeys: String, CodingKey {
@@ -121,6 +123,7 @@ public struct RestUser:Codable{
             "phoneUser": self.phoneUser ?? "",
             "gender":self.gender ?? "",
             "profilePhotoUrl":self.profilePhotoUrl ?? "",
+            "birthDayUser":self.birthDayUser ?? "",
             "adresse":
                 [
                     "numVoie": self.adresse?.numVoie ?? "",

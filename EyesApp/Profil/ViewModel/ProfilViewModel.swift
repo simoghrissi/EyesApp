@@ -42,6 +42,10 @@ class ProfilViewModel {
                 self.lastName.value = value?["nomUser"] as? String ?? ""
                 self.firstName.value = value?["prenomUser"] as? String ?? ""
                 self.phone.value = value?["phoneUser"] as? String ?? ""
+                self.gender.value = value?["gender"] as? String ?? ""
+                self.birthDay.value = value?["birthDay"] as? String ?? ""
+                self.password.value = value?["passwordUser"] as? String ?? ""
+                self.address.value = value?["address"] as? String ?? ""
             }) { (error) in
                 print(error.localizedDescription)
             }
@@ -91,7 +95,7 @@ class ProfilViewModel {
         //let userRef = Database.database().reference().child("users").child(firebaseAuth.currentUser!.uid)
       let user = firebaseAuth.currentUser
         self.changeProfilImage(idUser: (user?.uid)!, success: {
-            let restUser = RestUser(idUser: (user?.uid)!, nomUser: self.lastName.value, prenomUser: self.firstName.value, mailUser: self.email.value, passwordUser: self.password.value, phoneUser: self.phone.value, adresse: nil, gender: "femme",profilePhotoUrl: self.profilImageUrl.value)
+            let restUser = RestUser(idUser: (user?.uid)!, nomUser: self.lastName.value, prenomUser: self.firstName.value, mailUser: self.email.value, passwordUser: self.password.value, phoneUser: self.phone.value, adresse: nil, gender: self.gender.value,profilePhotoUrl: self.profilImageUrl.value,birthDayUser:self.birthDay.value)
             self.repository.update(user: restUser)
         })
     }
