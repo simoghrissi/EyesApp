@@ -12,7 +12,6 @@ target 'EyesApp' do
     pod 'RxDataSources'
     pod 'RxAlamofire'
     pod 'RealmSwift'
-    pod 'AlamofireObjectMapper'
     pod 'RxRealm'
     pod 'Alamofire'
     pod 'Firebase'
@@ -20,6 +19,9 @@ target 'EyesApp' do
     pod 'Firebase/Auth'
     pod 'Firebase/Storage'
     pod 'Firebase/Core'
+    pod 'FBSDKCoreKit'
+    pod 'FBSDKShareKit'
+    pod 'FBSDKLoginKit'
 
 
 end

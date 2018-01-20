@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import FBSDKLoginKit
 
 class ProfilTableViewController: UITableViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
@@ -27,6 +28,7 @@ class ProfilTableViewController: UITableViewController,UIImagePickerControllerDe
 
     var viewModel:ProfilViewModel?
     let disposeBag = DisposeBag()
+    let loginManager = FBSDKLoginManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +44,7 @@ class ProfilTableViewController: UITableViewController,UIImagePickerControllerDe
     
     @IBAction func logoutAction(_ sender: Any) {
         viewModel?.logout()
+        loginManager.logOut()
         self.performSegue(withIdentifier: "logout", sender: sender)
     }
     

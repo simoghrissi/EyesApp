@@ -10,32 +10,30 @@ import UIKit
 import RxSwift
 import RxCocoa
 import FirebaseAuth
+import FBSDKLoginKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController,FBSDKLoginButtonDelegate {
 
+    @IBOutlet weak var facebookLoginView: UIView!
     @IBOutlet weak var passwordText: DesignableTextField!
     @IBOutlet weak var emailText: DesignableTextField!
     
     let viewModel = LoginViewModel()
     let disposeBag = DisposeBag()
+    let loginButton = FBSDKLoginButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        loginButton.delegate = self
+   //   loginButton.frame = facebookLoginView.frame
+        //let convertToSuperView = loginStackView.convert(fbLoginButton.frame, to: self.view)
+
+       facebookLoginView.addSubview(loginButton)
+        loginButton.frame = CGRect(x: 0, y: 0, width:facebookLoginView.frame.width , height: facebookLoginView.frame.height)
        setupBinding()
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-//        Auth.auth().addStateDidChangeListener({ (auth, user) in
-//            if user != nil {
-//                // just logged in successfully
-//                self.dismiss(animated: false, completion: nil)
-//            }
-//        })
-        
-    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -45,6 +43,35 @@ class LoginViewController: UIViewController {
         viewModel.signIn{
             Navigator.sharedInstance.navigateToMain(controller: self)
         }
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+    }
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if let token = FBSDKAccessToken.current() {
+            let credential = FacebookAuthProvider.credential(withAccessToken: token.tokenString)
+        
+            Auth.auth().signIn(with: credential) { (user, error) in
+                if let error = error {
+                    print(error)
+                    return
+                }else{
+                    Navigator.sharedInstance.navigateToMain(controller: self)
+                }
+                
+            }
+        }
+    }
+    @IBAction func loginWithFaceBookAction(_ sender: Any) {
+//        func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+//            if let error = error {
+//                print(error.localizedDescription)
+//                return
+//            }
+//            // ...
+//        }
+        
     }
     
     func setupBinding(){

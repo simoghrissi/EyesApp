@@ -34,6 +34,7 @@
 		2457A1D01FF4DB2800465FDF /* CreateAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2457A1CF1FF4DB2800465FDF /* CreateAccountTableViewController.swift */; };
 		2457A1D21FF4DB3C00465FDF /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2457A1D11FF4DB3C00465FDF /* CreateAccountViewModel.swift */; };
 		2459E530201346F600762489 /* EyesUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459E52F201346F600762489 /* EyesUser.swift */; };
+		2459E532201354B500762489 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2459E531201354B500762489 /* UIView.swift */; };
 		248E85C71FF172C30047CADE /* Info_Stubs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 248E85C61FF172C30047CADE /* Info_Stubs.plist */; };
 		248E85CB1FF192950047CADE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 248E85CA1FF192950047CADE /* GoogleService-Info.plist */; };
 		248E85D11FF198660047CADE /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 248E85D01FF198660047CADE /* Login.storyboard */; };
@@ -92,6 +93,8 @@
 		2457A1CF1FF4DB2800465FDF /* CreateAccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountTableViewController.swift; sourceTree = "<group>"; };
 		2457A1D11FF4DB3C00465FDF /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		2459E52F201346F600762489 /* EyesUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyesUser.swift; sourceTree = "<group>"; };
+		2459E531201354B500762489 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = EyesApp/Common/UIView.swift; sourceTree = "<group>"; };
+		2459E53E20136E7F00762489 /* EyesApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EyesApp.entitlements; sourceTree = "<group>"; };
 		248E85C61FF172C30047CADE /* Info_Stubs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info_Stubs.plist; sourceTree = "<group>"; };
 		248E85CA1FF192950047CADE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		248E85D01FF198660047CADE /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -150,6 +153,7 @@
 				242C19441FF6B0AC006DEA38 /* String.swift */,
 				242C19481FF70BED006DEA38 /* Navigator.swift */,
 				244C90711FF8F83B006D8475 /* Extension.swift */,
+				2459E531201354B500762489 /* UIView.swift */,
 			);
 			name = Common;
 			path = ..;
@@ -416,6 +420,7 @@
 		24AE744B1F4B5C1D007D2719 /* EyesApp */ = {
 			isa = PBXGroup;
 			children = (
+				2459E53E20136E7F00762489 /* EyesApp.entitlements */,
 				244B18EA1FF04A7B00E50F14 /* Configuration */,
 				2459E52E201346CC00762489 /* Entity */,
 				24A7D7BB1FEEBA5E0077EC52 /* Repository */,
@@ -512,6 +517,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = HHKSC9S7CP;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -609,11 +619,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-EyesApp/Pods-EyesApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
@@ -627,11 +639,13 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
@@ -679,6 +693,7 @@
 				242C19491FF70BED006DEA38 /* Navigator.swift in Sources */,
 				243EA51A1FDD670300B8FBA3 /* RestUser.swift in Sources */,
 				24AE14D41FAF99E50048BF4E /* ImageCollectionViewCell.swift in Sources */,
+				2459E532201354B500762489 /* UIView.swift in Sources */,
 				242C19411FF67CD5006DEA38 /* FirebaseReference.swift in Sources */,
 				248E85D31FF19D9C0047CADE /* LoginViewModel.swift in Sources */,
 				242C19471FF6D348006DEA38 /* UIAlertController.swift in Sources */,
@@ -772,10 +787,15 @@
 			baseConfigurationReference = 2F4201F6F82815A18881A936 /* Pods-EyesApp.stubs.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EyesApp/EyesApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HHKSC9S7CP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EyesApp/Frameworks",
+				);
 				INFOPLIST_FILE = EyesApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -888,10 +908,15 @@
 			baseConfigurationReference = 4845E3CDCDCB360E173B7025 /* Pods-EyesApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EyesApp/EyesApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HHKSC9S7CP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EyesApp/Frameworks",
+				);
 				INFOPLIST_FILE = EyesApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -907,10 +932,15 @@
 			baseConfigurationReference = 50A9930B2C7C2BD58C696513 /* Pods-EyesApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EyesApp/EyesApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HHKSC9S7CP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EyesApp/Frameworks",
+				);
 				INFOPLIST_FILE = EyesApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
