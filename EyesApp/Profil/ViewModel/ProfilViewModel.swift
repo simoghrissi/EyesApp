@@ -44,7 +44,7 @@ class ProfilViewModel {
                 self.firstName.value = value?["prenomUser"] as? String ?? ""
                 self.phone.value = value?["phoneUser"] as? String ?? ""
                 self.gender.value = value?["gender"] as? String ?? ""
-                self.birthDay.value = value?["birthDay"] as? String ?? ""
+                self.birthDay.value = value?["birthDayUser"] as? String ?? ""
                 self.password.value = value?["passwordUser"] as? String ?? ""
                 self.address.value = value?["address"] as? String ?? ""
                 self.profilImageUrl.value = value?["profilePhotoUrl"] as? String ?? ""
@@ -59,7 +59,10 @@ class ProfilViewModel {
                 
                 refStrorage.getData(maxSize: 1 * 1024 * 1024) { data, error in
                     if let _ = error {
-                        self.profilImage.value = UIImage(named: "defaultProfileImage")!
+                        if !self.isFromFB.value{
+                            self.profilImage.value = UIImage(named: "defaultProfileImage")!
+                        }
+                        
                     } else {
                         let imageProfile = UIImage(data: data!)
                         self.profilImage.value  = imageProfile!

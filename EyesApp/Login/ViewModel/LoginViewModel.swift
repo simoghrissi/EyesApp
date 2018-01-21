@@ -71,20 +71,37 @@ class LoginViewModel {
                             print(error)
                             return
                         }else{
-                            let date = Date()
-                            let calendar = Calendar.current
-                            let year = calendar.component(.year, from: date)
-                            let month = calendar.component(.month, from: date)
-                            let day = calendar.component(.day, from: date)
-                            let newUser  = RestUser(idUser: (user?.uid)!, nomUser: self.lastName.value, prenomUser: self.firstName.value, mailUser: self.emailAdress.value, passwordUser: self.password.value, phoneUser: self.phone.value, dateCreateUser: "\(month)/\(day)/\(year)", nbrPointUser: "",adresse:nil, gender :"", profilePhotoUrl:self.profilImageUrl.value, isFromFB:true )
-                            self.repository.save(user: newUser)
-                            success()
-                        }
+                            
+                            let user = Auth.auth().currentUser
+                            
+                            if let user = user {
+                                let ref = DBFireReference.users(uid: user.uid).reference()
+                                
+                                ref.observeSingleEvent(of: .value, with: { (snapshot) in
+                                    // Get user value
+                                    let value = snapshot.value as? NSDictionary
+                                    let idUser = value?["idUser"] as? String ?? ""
+                                    if idUser.isEmpty{
+                                        let date = Date()
+                                        let calendar = Calendar.current
+                                        let year = calendar.component(.year, from: date)
+                                        let month = calendar.component(.month, from: date)
+                                        let day = calendar.component(.day, from: date)
+                                        let newUser  = RestUser(idUser: (user.uid), nomUser: self.lastName.value, prenomUser: self.firstName.value, mailUser: self.emailAdress.value, passwordUser: self.password.value, phoneUser: self.phone.value, dateCreateUser: "\(month)/\(day)/\(year)", nbrPointUser: "",adresse:nil, gender :self.gender.value, profilePhotoUrl:self.profilImageUrl.value,birthDayUser:"", isFromFB:true )
+                                        self.repository.save(user: newUser)
+                                    }
+                                    success()
+                                    
+                                }) { (error) in
+                                    print(error.localizedDescription)
+                                }
+                                
+                            }
+                           }
                         
                     }
                     
                 }
-                
                 
             })
             

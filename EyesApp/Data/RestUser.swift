@@ -30,7 +30,7 @@ public struct RestUser:Codable{
     var isFromFB:Bool?
 
     let encoder = JSONEncoder()
-    init(idUser:String,nomUser:String,prenomUser:String,mailUser:String,passwordUser:String,phoneUser:String,dateCreateUser:String?,nbrPointUser:String,adresse:RestAdresse?,gender:String,profilePhotoUrl:String?,isFromFB:Bool) {
+    init(idUser:String,nomUser:String,prenomUser:String,mailUser:String,passwordUser:String,phoneUser:String,dateCreateUser:String?,nbrPointUser:String,adresse:RestAdresse?,gender:String,profilePhotoUrl:String?,birthDayUser:String,isFromFB:Bool) {
 
         self.idUser = idUser
         self.nomUser = nomUser
@@ -44,6 +44,7 @@ public struct RestUser:Codable{
         self.gender = gender
         self.profilePhotoUrl = profilePhotoUrl
         self.isFromFB = isFromFB
+        self.birthDayUser = birthDayUser
     }
     
     init(idUser:String,nomUser:String,prenomUser:String,mailUser:String,passwordUser:String,phoneUser:String,adresse:RestAdresse?,gender:String,profilePhotoUrl:String,birthDayUser:String) {
@@ -108,6 +109,7 @@ public struct RestUser:Codable{
             "gender":self.gender ?? "",
             "profilePhotoUrl":self.profilePhotoUrl ?? "",
             "isFromFB":self.isFromFB ,
+            "birthDayUser":self.birthDayUser ?? "",
             "adresse":
                 [
                     "numVoie": self.adresse?.numVoie ?? "",
