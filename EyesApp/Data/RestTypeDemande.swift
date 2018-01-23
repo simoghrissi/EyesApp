@@ -10,10 +10,10 @@ import Foundation
 
 public struct RestTypeDemande: Codable{
     
-    var idTypeDemande: Int?
+    var idTypeDemande: String?
     var descriptionTypeDemande: String?
     
-    init(idTypeDemande: Int,descriptionTypeDemande: String) {
+    init(idTypeDemande: String,descriptionTypeDemande: String) {
         
         self.idTypeDemande = idTypeDemande
         self.descriptionTypeDemande = descriptionTypeDemande

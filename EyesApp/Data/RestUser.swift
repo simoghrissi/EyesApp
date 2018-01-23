@@ -117,8 +117,6 @@ public struct RestUser:Codable{
                     "codePostal": self.adresse?.codePostal ?? "",
                     "ville": self.adresse?.ville ?? ""
             ]
-            
-            
         ]
     }
     func toUpdateAsDictionary() -> [String : Any]

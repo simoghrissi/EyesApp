@@ -10,13 +10,13 @@ import Foundation
 
 public struct RestLieu: Codable{
     
-    var idLieu: Int?
+    var idLieu: String?
     var libelleLieu: String?
     var latitudeLieu: String?
     var longitudeLieu: String?
     var adresseLieu: String?
     
-    init(idLieu:Int,libelleLieu:String,latitudeLieu:String,longitudeLieu: String,adresseLieu: String) {
+    init(idLieu:String,libelleLieu:String,latitudeLieu:String,longitudeLieu: String,adresseLieu: String) {
         
         self.idLieu = idLieu
         self.libelleLieu = libelleLieu

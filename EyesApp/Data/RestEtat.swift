@@ -10,11 +10,11 @@ import Foundation
 
 public struct RestEtat: Codable{
     
-    var idEtat: Int?
+    var idEtat: String?
     var libelle :String?
     var statut: String?
     
-    init(idEtat:Int,libelle:String,statut:String) {
+    init(idEtat:String,libelle:String,statut:String) {
         self.idEtat = idEtat
         self.libelle = libelle
         self.statut = statut
