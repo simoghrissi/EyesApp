@@ -8,25 +8,27 @@
 
 import UIKit
 import RxCocoa
-import RxSwift  
+import RxSwift
+
 class SuggestionTableView: UITableViewController {
     let disposeBag = DisposeBag()
-    let allCities = ["New York", "London", "Oslo", "Warsaw", "Frankfurt", "Prag", "Berlin", "Philadelphia", "Sao Paulo", "Milan", "Manila", "Tokio", "Los Angeles", "Paris", "Portland"] // Mocked API data
-    var shownCities = [String]()
-    let viewModel = PoiViewModel()
+    
+    let viewModel = SuggestViewModel()
     
     @IBOutlet weak var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = nil
         self.tableView.delegate = nil
-        self.viewModel.suggests.value = self.allCities
-        viewModel.suggests.asObservable().bind(to: self.tableView.rx.items(cellIdentifier: "suggestCell")){
+        self.viewModel.suggests.asObservable()
+            .bind(to: self.viewModel.shownSuggests)
+            .disposed(by: disposeBag)
+        viewModel.shownSuggests.asObservable().bind(to: self.tableView.rx.items(cellIdentifier: "suggestCell")){
             _,suggest,cell in
             if let suggestCell = cell as? SuggestTableViewCell{
                     suggestCell.configCell(text:  suggest)
             }
-            }.addDisposableTo(disposeBag)
+            }.disposed(by: disposeBag)
         
         searchBar
             .rx.text // Observable property thanks to RxCocoa
@@ -34,13 +36,12 @@ class SuggestionTableView: UITableViewController {
             .debounce(0.5, scheduler: MainScheduler.instance) // Wait 0.5 for changes.
             .distinctUntilChanged() // If they didn't occur, check if the new value is the same as old.
             .subscribe(onNext: { [unowned self] query in // Here we subscribe to every new value, that is not empty (thanks to filter above).
-                self.shownCities = self.allCities.filter { $0.hasPrefix(query) } // We now do our "API Request" to find cities.
-                self.viewModel.suggests.value = self.shownCities
+                self.viewModel.shownSuggests.value = self.viewModel.suggests.value.filter { $0.caseInsensitiveCompare(query) == ComparisonResult.orderedSame } // We now do our "API Request" to find cities.
                 if query.isEmpty{
-                    self.viewModel.suggests.value = self.allCities
+                    self.viewModel.shownSuggests.value = self.viewModel.suggests.value
                 }
             })
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
 //        invoiceTableView.rx.modelSelected(Invoice.self).subscribe(onNext:{
 //            invoice in
 //            self.navigator.navigateToWebView(rootControlleur: self, url: invoice.url, title: "Facture", isFromHtml: false)

@@ -43,6 +43,7 @@
 		24A7D7BD1FEEBAB90077EC52 /* UserNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A7D7BC1FEEBAB90077EC52 /* UserNetwork.swift */; };
 		24A7D7BF1FEEBB320077EC52 /* RestBaseParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A7D7BE1FEEBB320077EC52 /* RestBaseParams.swift */; };
 		24A7D7C11FEECB8C0077EC52 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A7D7C01FEECB8C0077EC52 /* Network.swift */; };
+		24AABBE020307C5C00678568 /* SuggestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AABBDF20307C5C00678568 /* SuggestViewModel.swift */; };
 		24AE14CB1FAF98F90048BF4E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE14C91FAF98F90048BF4E /* CameraViewController.swift */; };
 		24AE14CF1FAF99410048BF4E /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24AE14CC1FAF99410048BF4E /* LocationSearchTable.swift */; };
 		24AE14D01FAF99410048BF4E /* Maps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24AE14CD1FAF99410048BF4E /* Maps.storyboard */; };
@@ -103,6 +104,7 @@
 		24A7D7BC1FEEBAB90077EC52 /* UserNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetwork.swift; sourceTree = "<group>"; };
 		24A7D7BE1FEEBB320077EC52 /* RestBaseParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RestBaseParams.swift; path = Data/RestBaseParams.swift; sourceTree = "<group>"; };
 		24A7D7C01FEECB8C0077EC52 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		24AABBDF20307C5C00678568 /* SuggestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuggestViewModel.swift; path = EyesApp/Pois/ViewModel/SuggestViewModel.swift; sourceTree = "<group>"; };
 		24AE14C91FAF98F90048BF4E /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = EyesApp/Camera/UI/CameraViewController.swift; sourceTree = "<group>"; };
 		24AE14CC1FAF99410048BF4E /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationSearchTable.swift; path = EyesApp/Maps/UI/LocationSearchTable.swift; sourceTree = "<group>"; };
 		24AE14CD1FAF99410048BF4E /* Maps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Maps.storyboard; path = EyesApp/Maps/UI/Maps.storyboard; sourceTree = "<group>"; };
@@ -378,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				24F888851FAFA8C9008E851A /* PoiViewModel.swift */,
+				24AABBDF20307C5C00678568 /* SuggestViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -699,6 +702,7 @@
 				242C19471FF6D348006DEA38 /* UIAlertController.swift in Sources */,
 				248E85D51FF19DA70047CADE /* LoginViewController.swift in Sources */,
 				243EA5241FDD6E8D00B8FBA3 /* RestDemande.swift in Sources */,
+				24AABBE020307C5C00678568 /* SuggestViewModel.swift in Sources */,
 				24A7D7C11FEECB8C0077EC52 /* Network.swift in Sources */,
 				24A7D7BF1FEEBB320077EC52 /* RestBaseParams.swift in Sources */,
 				2459E530201346F600762489 /* EyesUser.swift in Sources */,

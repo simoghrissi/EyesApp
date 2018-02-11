@@ -15,6 +15,7 @@ enum DBFireReference
 {
     case root
     case users(uid: String)
+    case typeDemande
     
     // MARK: - Public
     
@@ -38,6 +39,8 @@ enum DBFireReference
             return ""
         case .users(let uid):
             return "users/\(uid)"
+        case .typeDemande:
+            return "TypeDemande"
         }
     }
 }
